@@ -1,0 +1,10 @@
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.exe.config
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.exe
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.pdb
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csprojResolveAssemblyReference.cache
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.FormObmen.resources
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Properties.Resources.resources
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csproj.GenerateResource.Cache
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.exe
+c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.pdb
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\NUnrar.dll
