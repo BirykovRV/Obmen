@@ -9,6 +9,13 @@ namespace Obmen
         public FormObmen()
         {
             InitializeComponent();
+            настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
+        }
+
+        private void НастройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings settingsView = new Settings();
+            settingsView.Show(); 
         }
 
         // Перетаскивание окна не по заголовку 

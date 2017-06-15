@@ -33,12 +33,15 @@
             this.butNo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butYes
             // 
-            this.butYes.BackColor = System.Drawing.Color.LightCyan;
-            this.butYes.FlatAppearance.BorderSize = 0;
             this.butYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butYes.Location = new System.Drawing.Point(67, 63);
             this.butYes.Name = "butYes";
@@ -50,9 +53,7 @@
             // 
             // butNo
             // 
-            this.butNo.BackColor = System.Drawing.Color.LightCyan;
             this.butNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.butNo.FlatAppearance.BorderSize = 0;
             this.butNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNo.Location = new System.Drawing.Point(196, 63);
             this.butNo.Name = "butNo";
@@ -82,24 +83,57 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(343, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиToolStripMenuItem,
+            this.выходToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Text = "Файл";
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            // 
             // FormObmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(343, 129);
+            this.ClientSize = new System.Drawing.Size(343, 133);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butNo);
             this.Controls.Add(this.butYes);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormObmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Обмен файлами";
+            this.Text = " ";
             this.TransparencyKey = System.Drawing.Color.White;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormObmen_MouseDown);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +145,10 @@
         private System.Windows.Forms.Button butNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }
 
