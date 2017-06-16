@@ -274,5 +274,29 @@ namespace Obmen.Properties {
                 this["radioButtonIP"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fromPostPayMod {
+            get {
+                return ((string)(this["fromPostPayMod"]));
+            }
+            set {
+                this["fromPostPayMod"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string toPostPayMod {
+            get {
+                return ((string)(this["toPostPayMod"]));
+            }
+            set {
+                this["toPostPayMod"] = value;
+            }
+        }
     }
 }

@@ -34,7 +34,9 @@ namespace Obmen
                 button13,
                 button14,
                 button15,
-                button16
+                button16,
+                button17,
+                button18
             };
             txtbox = new TextBox[]
             {
@@ -53,7 +55,9 @@ namespace Obmen
                 fsgCashFrom,
                 fsgCashTo,
                 regFSGFrom,
-                regFSGTo
+                regFSGTo,
+                fromPostPayMod,
+                toPostPayMod
             };
 
             configF130From.Text = Properties.Settings.Default.configF130From;
@@ -74,6 +78,8 @@ namespace Obmen
             regFSGTo.Text = Properties.Settings.Default.regFSGTo;
             radioButtonOps.Checked = Properties.Settings.Default.radioButtonOps;
             radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
+            fromPostPayMod.Text = Properties.Settings.Default.fromPostPayMod;
+            toPostPayMod.Text = Properties.Settings.Default.toPostPayMod;
         }
 
         private void ButSave_Click(object sender, EventArgs e)
@@ -96,6 +102,8 @@ namespace Obmen
             Properties.Settings.Default.regFSGTo = regFSGTo.Text;
             Properties.Settings.Default.radioButtonOps = radioButtonOps.Checked;
             Properties.Settings.Default.radioButtonIP = radioButtonIP.Checked;
+            Properties.Settings.Default.fromPostPayMod = fromPostPayMod.Text;
+            Properties.Settings.Default.toPostPayMod = toPostPayMod.Text;
             Properties.Settings.Default.Save();
         }
 

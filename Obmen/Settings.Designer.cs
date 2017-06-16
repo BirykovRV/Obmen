@@ -85,10 +85,10 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageOPS = new System.Windows.Forms.TabPage();
             this.tabPageIP = new System.Windows.Forms.TabPage();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -106,8 +106,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.fromPostPayMod = new System.Windows.Forms.TextBox();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
@@ -608,8 +608,8 @@
             // tabPageOPS
             // 
             this.tabPageOPS.Controls.Add(this.label26);
-            this.tabPageOPS.Controls.Add(this.button22);
-            this.tabPageOPS.Controls.Add(this.button21);
+            this.tabPageOPS.Controls.Add(this.button18);
+            this.tabPageOPS.Controls.Add(this.button17);
             this.tabPageOPS.Controls.Add(this.toPostPayMod);
             this.tabPageOPS.Controls.Add(this.fromPostPayMod);
             this.tabPageOPS.Controls.Add(this.label25);
@@ -671,10 +671,10 @@
             // 
             // tabPageIP
             // 
+            this.tabPageIP.Controls.Add(this.button22);
+            this.tabPageIP.Controls.Add(this.button21);
             this.tabPageIP.Controls.Add(this.button20);
             this.tabPageIP.Controls.Add(this.button19);
-            this.tabPageIP.Controls.Add(this.button18);
-            this.tabPageIP.Controls.Add(this.button17);
             this.tabPageIP.Controls.Add(this.textBox23);
             this.tabPageIP.Controls.Add(this.textBox22);
             this.tabPageIP.Controls.Add(this.textBox21);
@@ -692,50 +692,50 @@
             this.tabPageIP.Location = new System.Drawing.Point(4, 22);
             this.tabPageIP.Name = "tabPageIP";
             this.tabPageIP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIP.Size = new System.Drawing.Size(495, 438);
+            this.tabPageIP.Size = new System.Drawing.Size(495, 482);
             this.tabPageIP.TabIndex = 1;
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
             // 
+            // button22
+            // 
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.Location = new System.Drawing.Point(382, 176);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(30, 19);
+            this.button22.TabIndex = 53;
+            this.button22.Text = "...";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button21.Location = new System.Drawing.Point(382, 149);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(30, 19);
+            this.button21.TabIndex = 52;
+            this.button21.Text = "...";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
             // button20
             // 
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button20.Location = new System.Drawing.Point(382, 176);
+            this.button20.Location = new System.Drawing.Point(382, 123);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(30, 19);
-            this.button20.TabIndex = 53;
+            this.button20.TabIndex = 51;
             this.button20.Text = "...";
             this.button20.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button19.Location = new System.Drawing.Point(382, 149);
+            this.button19.Location = new System.Drawing.Point(382, 98);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(30, 19);
-            this.button19.TabIndex = 52;
+            this.button19.TabIndex = 50;
             this.button19.Text = "...";
             this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(382, 123);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(30, 19);
-            this.button18.TabIndex = 51;
-            this.button18.Text = "...";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Location = new System.Drawing.Point(382, 98);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(30, 19);
-            this.button17.TabIndex = 50;
-            this.button17.Text = "...";
-            this.button17.UseVisualStyleBackColor = true;
             // 
             // textBox23
             // 
@@ -873,25 +873,27 @@
             this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
             this.toPostPayMod.TabIndex = 55;
             // 
-            // button21
+            // button17
             // 
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button21.Location = new System.Drawing.Point(450, 428);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(30, 19);
-            this.button21.TabIndex = 56;
-            this.button21.Text = "...";
-            this.button21.UseVisualStyleBackColor = true;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button17.Location = new System.Drawing.Point(450, 428);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(30, 19);
+            this.button17.TabIndex = 56;
+            this.button17.Text = "...";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button22
+            // button18
             // 
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button22.Location = new System.Drawing.Point(450, 454);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(30, 19);
-            this.button22.TabIndex = 57;
-            this.button22.Text = "...";
-            this.button22.UseVisualStyleBackColor = true;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button18.Location = new System.Drawing.Point(450, 454);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(30, 19);
+            this.button18.TabIndex = 57;
+            this.button18.Text = "...";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.BrowseDialog);
             // 
             // label26
             // 
@@ -986,10 +988,10 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageOPS;
         private System.Windows.Forms.TabPage tabPageIP;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
@@ -1005,8 +1007,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TextBox toPostPayMod;
         private System.Windows.Forms.TextBox fromPostPayMod;
         private System.Windows.Forms.Label label25;
