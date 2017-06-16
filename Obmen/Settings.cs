@@ -38,27 +38,23 @@ namespace Obmen
             };
             txtbx = new TextBox[]
             {
-                textBox1,
-                textBox2,
-                textBox3,
-                textBox4,
-                textBox5,
-                textBox6,
-                textBox7,
-                textBox8,
-                textBox9,
-                textBox10,
-                textBox11,
-                textBox12,
-                textBox13,
-                textBox14,
-                textBox15,
-                textBox16
+                configF130From,
+                configF130To,
+                fromPostPay,
+                toPostPay,
+                fromF130,
+                toF130,
+                fromGibrid,
+                toGibrid,
+                fromPostPayBD,
+                toPostPayBD,
+                fromPension,
+                toPension,
+                fsgCashFrom,
+                fsgCashTo,
+                regFSGFrom,
+                regFSGTo
             };
-            //for(int i = 1; i < btns.Length-1; i++)
-            //{
-            //    btns[i].Click += new EventHandler(BrowseDialog);
-            //}
         }
 
         private void ButCancel_Click(object sender, EventArgs e)
