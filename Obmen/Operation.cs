@@ -131,6 +131,8 @@ namespace Obmen
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
             string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
+            string fromPostPayMod = Properties.Settings.Default.fsgCashTo + @"\";
+            string toPostPayMod = Properties.Settings.Default.regFSGTo + @"\";
             #endregion
 
             Thread th1 = new Thread(() => Operation.CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
@@ -143,6 +145,7 @@ namespace Obmen
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
+            ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
         }
 
         // Обмен данными с FTP

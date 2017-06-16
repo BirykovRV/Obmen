@@ -60,6 +60,7 @@ namespace Obmen
                 toPostPayMod
             };
 
+            #region Загрузка параметров
             configF130From.Text = Properties.Settings.Default.configF130From;
             configF130To.Text = Properties.Settings.Default.configF130To;
             fromPostPay.Text = Properties.Settings.Default.fromPostPay;
@@ -80,6 +81,8 @@ namespace Obmen
             radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
             fromPostPayMod.Text = Properties.Settings.Default.fromPostPayMod;
             toPostPayMod.Text = Properties.Settings.Default.toPostPayMod;
+            #endregion
+
         }
 
         private void ButSave_Click(object sender, EventArgs e)
