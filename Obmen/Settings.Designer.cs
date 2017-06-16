@@ -93,9 +93,9 @@
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxIP = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -103,6 +103,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.fromPostPayMod = new System.Windows.Forms.TextBox();
+            this.toPostPayMod = new System.Windows.Forms.TextBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -110,25 +116,21 @@
             // 
             // radioButtonOps
             // 
-            this.radioButtonOps.AutoCheck = false;
             this.radioButtonOps.AutoSize = true;
-            this.radioButtonOps.Location = new System.Drawing.Point(16, 45);
+            this.radioButtonOps.Location = new System.Drawing.Point(160, 18);
             this.radioButtonOps.Name = "radioButtonOps";
             this.radioButtonOps.Size = new System.Drawing.Size(48, 17);
             this.radioButtonOps.TabIndex = 0;
-            this.radioButtonOps.TabStop = true;
             this.radioButtonOps.Text = "ОПС";
             this.radioButtonOps.UseVisualStyleBackColor = true;
             // 
             // radioButtonIP
             // 
-            this.radioButtonIP.AutoCheck = false;
             this.radioButtonIP.AutoSize = true;
-            this.radioButtonIP.Location = new System.Drawing.Point(102, 45);
+            this.radioButtonIP.Location = new System.Drawing.Point(228, 18);
             this.radioButtonIP.Name = "radioButtonIP";
             this.radioButtonIP.Size = new System.Drawing.Size(41, 17);
             this.radioButtonIP.TabIndex = 1;
-            this.radioButtonIP.TabStop = true;
             this.radioButtonIP.Text = "ИП";
             this.radioButtonIP.UseVisualStyleBackColor = true;
             // 
@@ -143,16 +145,17 @@
             // 
             // butSave
             // 
-            this.butSave.Location = new System.Drawing.Point(353, 549);
+            this.butSave.Location = new System.Drawing.Point(353, 555);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(75, 23);
             this.butSave.TabIndex = 3;
             this.butSave.Text = "Применить";
             this.butSave.UseVisualStyleBackColor = true;
+            this.butSave.Click += new System.EventHandler(this.ButSave_Click);
             // 
             // butCancel
             // 
-            this.butCancel.Location = new System.Drawing.Point(434, 549);
+            this.butCancel.Location = new System.Drawing.Point(434, 555);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(75, 23);
             this.butCancel.TabIndex = 4;
@@ -373,7 +376,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 406);
+            this.label13.Location = new System.Drawing.Point(7, 406);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 13);
             this.label13.TabIndex = 36;
@@ -595,15 +598,21 @@
             // 
             this.tabControl.Controls.Add(this.tabPageOPS);
             this.tabControl.Controls.Add(this.tabPageIP);
-            this.tabControl.Location = new System.Drawing.Point(12, 79);
+            this.tabControl.Location = new System.Drawing.Point(16, 41);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(503, 464);
+            this.tabControl.Size = new System.Drawing.Size(503, 508);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 53;
             // 
             // tabPageOPS
             // 
+            this.tabPageOPS.Controls.Add(this.label26);
+            this.tabPageOPS.Controls.Add(this.button22);
+            this.tabPageOPS.Controls.Add(this.button21);
+            this.tabPageOPS.Controls.Add(this.toPostPayMod);
+            this.tabPageOPS.Controls.Add(this.fromPostPayMod);
+            this.tabPageOPS.Controls.Add(this.label25);
             this.tabPageOPS.Controls.Add(this.label2);
             this.tabPageOPS.Controls.Add(this.configF130From);
             this.tabPageOPS.Controls.Add(this.button13);
@@ -655,7 +664,7 @@
             this.tabPageOPS.Location = new System.Drawing.Point(4, 22);
             this.tabPageOPS.Name = "tabPageOPS";
             this.tabPageOPS.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOPS.Size = new System.Drawing.Size(495, 438);
+            this.tabPageOPS.Size = new System.Drawing.Size(495, 482);
             this.tabPageOPS.TabIndex = 0;
             this.tabPageOPS.Text = "ОПС";
             this.tabPageOPS.UseVisualStyleBackColor = true;
@@ -670,9 +679,9 @@
             this.tabPageIP.Controls.Add(this.textBox22);
             this.tabPageIP.Controls.Add(this.textBox21);
             this.tabPageIP.Controls.Add(this.textBox20);
-            this.tabPageIP.Controls.Add(this.textBox19);
-            this.tabPageIP.Controls.Add(this.textBox18);
-            this.tabPageIP.Controls.Add(this.textBox17);
+            this.tabPageIP.Controls.Add(this.textBoxPass);
+            this.tabPageIP.Controls.Add(this.textBoxLogin);
+            this.tabPageIP.Controls.Add(this.textBoxIP);
             this.tabPageIP.Controls.Add(this.label24);
             this.tabPageIP.Controls.Add(this.label23);
             this.tabPageIP.Controls.Add(this.label22);
@@ -756,26 +765,27 @@
             this.textBox20.Size = new System.Drawing.Size(235, 20);
             this.textBox20.TabIndex = 10;
             // 
-            // textBox19
+            // textBoxPass
             // 
-            this.textBox19.Location = new System.Drawing.Point(141, 71);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(235, 20);
-            this.textBox19.TabIndex = 9;
+            this.textBoxPass.Location = new System.Drawing.Point(141, 71);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.PasswordChar = '*';
+            this.textBoxPass.Size = new System.Drawing.Size(235, 20);
+            this.textBoxPass.TabIndex = 9;
             // 
-            // textBox18
+            // textBoxLogin
             // 
-            this.textBox18.Location = new System.Drawing.Point(141, 45);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(235, 20);
-            this.textBox18.TabIndex = 8;
+            this.textBoxLogin.Location = new System.Drawing.Point(141, 45);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(235, 20);
+            this.textBoxLogin.TabIndex = 8;
             // 
-            // textBox17
+            // textBoxIP
             // 
-            this.textBox17.Location = new System.Drawing.Point(141, 19);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(235, 20);
-            this.textBox17.TabIndex = 7;
+            this.textBoxIP.Location = new System.Drawing.Point(141, 19);
+            this.textBoxIP.Name = "textBoxIP";
+            this.textBoxIP.Size = new System.Drawing.Size(235, 20);
+            this.textBoxIP.TabIndex = 7;
             // 
             // label24
             // 
@@ -840,11 +850,63 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "IP:";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(4, 431);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(115, 13);
+            this.label25.TabIndex = 53;
+            this.label25.Text = " Импорт обновления:";
+            // 
+            // fromPostPayMod
+            // 
+            this.fromPostPayMod.Location = new System.Drawing.Point(145, 428);
+            this.fromPostPayMod.Name = "fromPostPayMod";
+            this.fromPostPayMod.Size = new System.Drawing.Size(299, 20);
+            this.fromPostPayMod.TabIndex = 54;
+            // 
+            // toPostPayMod
+            // 
+            this.toPostPayMod.Location = new System.Drawing.Point(145, 454);
+            this.toPostPayMod.Name = "toPostPayMod";
+            this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
+            this.toPostPayMod.TabIndex = 55;
+            // 
+            // button21
+            // 
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button21.Location = new System.Drawing.Point(450, 428);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(30, 19);
+            this.button21.TabIndex = 56;
+            this.button21.Text = "...";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.Location = new System.Drawing.Point(450, 454);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(30, 19);
+            this.button22.TabIndex = 57;
+            this.button22.Text = "...";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 457);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(118, 13);
+            this.label26.TabIndex = 58;
+            this.label26.Text = " Экспорт обновления:";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 580);
+            this.ClientSize = new System.Drawing.Size(528, 588);
             this.Controls.Add(this.butSave);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.butCancel);
@@ -932,9 +994,9 @@
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBoxPass;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -942,5 +1004,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox toPostPayMod;
+        private System.Windows.Forms.TextBox fromPostPayMod;
+        private System.Windows.Forms.Label label25;
     }
 }

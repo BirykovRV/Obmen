@@ -3,6 +3,7 @@ using System.IO;
 using NUnrar.Archive;
 using System.Windows.Forms;
 using System.IO.Compression;
+using System.Threading;
 
 namespace Obmen
 {
@@ -107,6 +108,47 @@ namespace Obmen
                 } 
             }
             return disk;
+        }
+
+        // Обмен данными с ОПС
+        public static void CopyForOps()
+        {
+            #region Присвоение путей
+            string fromPostPay = Properties.Settings.Default.fromPostPay;
+            string toPostPay = Properties.Settings.Default.toPostPay + @"\";
+
+            string configF130From = Properties.Settings.Default.configF130From;
+            string configF130To = Properties.Settings.Default.configF130To + @"\";
+            string fromF130 = Properties.Settings.Default.fromF130;
+            string toF130 = Properties.Settings.Default.toF130 + @"\";
+            string fromGibrid = Properties.Settings.Default.fromGibrid;
+            string toGibrid = Properties.Settings.Default.toGibrid + @"\";
+            string fromPostPayBD = Properties.Settings.Default.fromPostPayBD + @"\";
+            string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
+            string fromPension = Properties.Settings.Default.fromPension;
+            string toPension = Properties.Settings.Default.toPension + @"\";
+            string fsgCashFrom = Properties.Settings.Default.fsgCashFrom;
+            string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
+            string regFSGFrom = Properties.Settings.Default.regFSGFrom;
+            string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
+            #endregion
+
+            Thread th1 = new Thread(() => Operation.CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
+            th1.Start();
+
+            Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
+            Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
+            Copy(fromPension, toPension);          // Файлы по пенсии
+            CopyDir(configF130From, configF130To); // Ключ для 130
+            Copy(fromGibrid, toGibrid);            // Файлы по гибридным
+            CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
+            Copy(fromF130, toF130);                // Файлы для АСКУ 
+        }
+
+        // Обмен данными с FTP
+        public static void CopyForIp()
+        {
+
         }
     }
 }

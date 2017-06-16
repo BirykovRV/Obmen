@@ -6,13 +6,13 @@ namespace Obmen
     public partial class Settings : Form
     {
         Button[] btns;
-        TextBox[] txtbx;
+        TextBox[] txtbox;
         public Settings()
         {
             InitializeComponent();
             butCancel.Click += ButCancel_Click;
             Load += Settings_Load;
-            
+            butSave.Click += ButSave_Click;
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Obmen
                 button15,
                 button16
             };
-            txtbx = new TextBox[]
+            txtbox = new TextBox[]
             {
                 configF130From,
                 configF130To,
@@ -55,6 +55,48 @@ namespace Obmen
                 regFSGFrom,
                 regFSGTo
             };
+
+            configF130From.Text = Properties.Settings.Default.configF130From;
+            configF130To.Text = Properties.Settings.Default.configF130To;
+            fromPostPay.Text = Properties.Settings.Default.fromPostPay;
+            toPostPay.Text = Properties.Settings.Default.toPostPay;
+            fromF130.Text = Properties.Settings.Default.fromF130;
+            toF130.Text = Properties.Settings.Default.toF130;
+            fromGibrid.Text = Properties.Settings.Default.fromGibrid;
+            toGibrid.Text = Properties.Settings.Default.toGibrid;
+            fromPostPayBD.Text = Properties.Settings.Default.fromPostPayBD;
+            toPostPayBD.Text = Properties.Settings.Default.toPostPayBD;
+            fromPension.Text = Properties.Settings.Default.fromPension;
+            toPension.Text = Properties.Settings.Default.toPension;
+            fsgCashFrom.Text = Properties.Settings.Default.fsgCashFrom;
+            fsgCashTo.Text = Properties.Settings.Default.fsgCashTo;
+            regFSGFrom.Text = Properties.Settings.Default.regFSGFrom;
+            regFSGTo.Text = Properties.Settings.Default.regFSGTo;
+            radioButtonOps.Checked = Properties.Settings.Default.radioButtonOps;
+            radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
+        }
+
+        private void ButSave_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.configF130From = configF130From.Text;
+            Properties.Settings.Default.configF130To = configF130To.Text;
+            Properties.Settings.Default.fromPostPay = fromPostPay.Text;
+            Properties.Settings.Default.toPostPay = toPostPay.Text;
+            Properties.Settings.Default.fromF130 = fromF130.Text;
+            Properties.Settings.Default.toF130 = toF130.Text;
+            Properties.Settings.Default.fromGibrid = fromGibrid.Text;
+            Properties.Settings.Default.toGibrid = toGibrid.Text;
+            Properties.Settings.Default.fromPostPayBD = fromPostPayBD.Text;
+            Properties.Settings.Default.toPostPayBD = toPostPayBD.Text;
+            Properties.Settings.Default.fromPension = fromPension.Text;
+            Properties.Settings.Default.toPension = toPension.Text;
+            Properties.Settings.Default.fsgCashFrom = fsgCashFrom.Text;
+            Properties.Settings.Default.fsgCashTo = fsgCashTo.Text;
+            Properties.Settings.Default.regFSGFrom = regFSGFrom.Text;
+            Properties.Settings.Default.regFSGTo = regFSGTo.Text;
+            Properties.Settings.Default.radioButtonOps = radioButtonOps.Checked;
+            Properties.Settings.Default.radioButtonIP = radioButtonIP.Checked;
+            Properties.Settings.Default.Save();
         }
 
         private void ButCancel_Click(object sender, EventArgs e)
@@ -66,7 +108,7 @@ namespace Obmen
         {
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                txtbx[Array.IndexOf(btns, (sender as Button))].Text = folderBrowserDialog.SelectedPath;
+                txtbox[Array.IndexOf(btns, (sender as Button))].Text = folderBrowserDialog.SelectedPath;
             }
         }
     }
