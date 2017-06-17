@@ -32,7 +32,7 @@
             this.butYes = new System.Windows.Forms.Button();
             this.butNo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxPostPay = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,16 +72,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Запустить программу обмена?";
             // 
-            // checkBox1
+            // checkBoxPostPay
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(53, 100);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(246, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Обновить модуль \'Коммунальные платяжи\'";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxPostPay.AutoSize = true;
+            this.checkBoxPostPay.Location = new System.Drawing.Point(53, 100);
+            this.checkBoxPostPay.Name = "checkBoxPostPay";
+            this.checkBoxPostPay.Size = new System.Drawing.Size(246, 17);
+            this.checkBoxPostPay.TabIndex = 3;
+            this.checkBoxPostPay.Text = "Обновить модуль \'Коммунальные платяжи\'";
+            this.checkBoxPostPay.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -119,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 133);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxPostPay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butNo);
             this.Controls.Add(this.butYes);
@@ -131,7 +130,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.TransparencyKey = System.Drawing.Color.White;
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormObmen_MouseDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -144,7 +142,7 @@
         private System.Windows.Forms.Button butYes;
         private System.Windows.Forms.Button butNo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxPostPay;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;

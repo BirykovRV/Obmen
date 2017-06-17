@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Obmen
 {
-    class Operation
+    class Operation :FormObmen
     {
         public static void Copy(string pathFrom, string pathTo)
         {
@@ -60,11 +60,9 @@ namespace Obmen
         public static void CopyDB(string pathFrom, string pathTo)
         {
             DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            FileInfo [] fileInfo = dirFrom.GetFiles();
             try
             {
-                foreach (FileInfo file in fileInfo)
-                RarArchive.WriteToDirectory(pathFrom + file.Name, pathTo); // Разархивация .rar
+                RarArchive.WriteToDirectory(pathFrom, pathTo); // Разархивация .rar
             }
             catch (Exception ex)
             {
@@ -74,11 +72,11 @@ namespace Obmen
 
         public static void ExtractDistrib (string pathFrom, string pathTo)
         {
+            DirectoryInfo dirFrom = new DirectoryInfo(pathTo);
             try
             {
-                DirectoryInfo dirInfo = new DirectoryInfo(pathTo);
-                if (dirInfo.Exists) dirInfo.Delete(true);
-                    ZipFile.ExtractToDirectory(pathFrom, pathTo);
+                if (dirFrom.Exists) dirFrom.Delete(true);
+                    ZipFile.ExtractToDirectory(pathFrom, pathTo); // Разархивация .zip
             }
             catch (IOException e)
             {
@@ -111,6 +109,7 @@ namespace Obmen
         //}
 
         // Обмен данными с ОПС
+
         public static void CopyForOps()
         {
             #region Присвоение путей
@@ -123,7 +122,7 @@ namespace Obmen
             string toF130 = Properties.Settings.Default.toF130 + @"\";
             string fromGibrid = Properties.Settings.Default.fromGibrid;
             string toGibrid = Properties.Settings.Default.toGibrid + @"\";
-            string fromPostPayBD = Properties.Settings.Default.fromPostPayBD + @"\";
+            string fromPostPayBD = Properties.Settings.Default.fromPostPayBD;
             string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
             string fromPension = Properties.Settings.Default.fromPension;
             string toPension = Properties.Settings.Default.toPension + @"\";
@@ -131,8 +130,6 @@ namespace Obmen
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
             string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
-            string fromPostPayMod = Properties.Settings.Default.fromPostPayMod + @"\";
-            string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
             #endregion
 
             Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
@@ -145,6 +142,13 @@ namespace Obmen
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
+        }
+
+        public static void UpdetePostPay()
+        {
+            string fromPostPayMod = Properties.Settings.Default.fromPostPayMod;
+            string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
+
             ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
         }
 

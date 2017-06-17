@@ -122,5 +122,13 @@ namespace Obmen
                 txtbox[Array.IndexOf(btns, (sender as Button))].Text = folderBrowserDialog.SelectedPath;
             }
         }
+
+        private void FileDialog(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtbox[Array.IndexOf(btns, (sender as Button))].Text = openFileDialog.FileName;
+            }
+        }
     }
 }

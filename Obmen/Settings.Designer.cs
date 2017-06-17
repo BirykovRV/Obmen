@@ -109,6 +109,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -515,7 +516,7 @@
             this.button9.TabIndex = 48;
             this.button9.Text = "...";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.BrowseDialog);
+            this.button9.Click += new System.EventHandler(this.FileDialog);
             // 
             // button10
             // 
@@ -698,7 +699,7 @@
             this.button17.TabIndex = 56;
             this.button17.Text = "...";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.BrowseDialog);
+            this.button17.Click += new System.EventHandler(this.FileDialog);
             // 
             // toPostPayMod
             // 
@@ -904,6 +905,10 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "IP:";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1012,5 +1017,6 @@
         private System.Windows.Forms.TextBox toPostPayMod;
         private System.Windows.Forms.TextBox fromPostPayMod;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
