@@ -84,6 +84,12 @@
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageOPS = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.toPostPayMod = new System.Windows.Forms.TextBox();
+            this.fromPostPayMod = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.tabPageIP = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
@@ -103,12 +109,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.fromPostPayMod = new System.Windows.Forms.TextBox();
-            this.toPostPayMod = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -376,7 +376,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 406);
+            this.label13.Location = new System.Drawing.Point(6, 404);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 13);
             this.label13.TabIndex = 36;
@@ -669,6 +669,60 @@
             this.tabPageOPS.Text = "ОПС";
             this.tabPageOPS.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 457);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(115, 13);
+            this.label26.TabIndex = 58;
+            this.label26.Text = "Экспорт обновления:";
+            // 
+            // button18
+            // 
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button18.Location = new System.Drawing.Point(450, 454);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(30, 19);
+            this.button18.TabIndex = 57;
+            this.button18.Text = "...";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.BrowseDialog);
+            // 
+            // button17
+            // 
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button17.Location = new System.Drawing.Point(450, 428);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(30, 19);
+            this.button17.TabIndex = 56;
+            this.button17.Text = "...";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.BrowseDialog);
+            // 
+            // toPostPayMod
+            // 
+            this.toPostPayMod.Location = new System.Drawing.Point(145, 454);
+            this.toPostPayMod.Name = "toPostPayMod";
+            this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
+            this.toPostPayMod.TabIndex = 55;
+            // 
+            // fromPostPayMod
+            // 
+            this.fromPostPayMod.Location = new System.Drawing.Point(145, 428);
+            this.fromPostPayMod.Name = "fromPostPayMod";
+            this.fromPostPayMod.Size = new System.Drawing.Size(299, 20);
+            this.fromPostPayMod.TabIndex = 54;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 431);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(112, 13);
+            this.label25.TabIndex = 53;
+            this.label25.Text = "Импорт обновления:";
+            // 
             // tabPageIP
             // 
             this.tabPageIP.Controls.Add(this.button22);
@@ -849,60 +903,6 @@
             this.label18.Size = new System.Drawing.Size(20, 13);
             this.label18.TabIndex = 0;
             this.label18.Text = "IP:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(4, 431);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 13);
-            this.label25.TabIndex = 53;
-            this.label25.Text = " Импорт обновления:";
-            // 
-            // fromPostPayMod
-            // 
-            this.fromPostPayMod.Location = new System.Drawing.Point(145, 428);
-            this.fromPostPayMod.Name = "fromPostPayMod";
-            this.fromPostPayMod.Size = new System.Drawing.Size(299, 20);
-            this.fromPostPayMod.TabIndex = 54;
-            // 
-            // toPostPayMod
-            // 
-            this.toPostPayMod.Location = new System.Drawing.Point(145, 454);
-            this.toPostPayMod.Name = "toPostPayMod";
-            this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
-            this.toPostPayMod.TabIndex = 55;
-            // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Location = new System.Drawing.Point(450, 428);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(30, 19);
-            this.button17.TabIndex = 56;
-            this.button17.Text = "...";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.BrowseDialog);
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(450, 454);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(30, 19);
-            this.button18.TabIndex = 57;
-            this.button18.Text = "...";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.BrowseDialog);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 457);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(118, 13);
-            this.label26.TabIndex = 58;
-            this.label26.Text = " Экспорт обновления:";
             // 
             // Settings
             // 

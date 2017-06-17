@@ -78,7 +78,7 @@ namespace Obmen
             {
                 DirectoryInfo dirInfo = new DirectoryInfo(pathTo);
                 if (dirInfo.Exists) dirInfo.Delete(true);
-                ZipFile.ExtractToDirectory(pathFrom, pathTo);
+                    ZipFile.ExtractToDirectory(pathFrom, pathTo);
             }
             catch (IOException e)
             {
@@ -87,28 +87,28 @@ namespace Obmen
         }
 
         // Получаем букву съемного диска
-        public static string GetDisk()
-            {
-            DriveInfo[] allDrives = DriveInfo.GetDrives();
-            string disk = "";
+        //public static string GetDisk()
+        //    {
+        //    DriveInfo[] allDrives = DriveInfo.GetDrives();
+        //    string disk = "";
             
-            foreach (DriveInfo d in allDrives)
-            {
-                try
-                {
-                    if (d.DriveType == DriveType.Removable)
-                    {
-                        disk = d.Name;
-                        break;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
-            }
-            return disk;
-        }
+        //    foreach (DriveInfo d in allDrives)
+        //    {
+        //        try
+        //        {
+        //            if (d.DriveType == DriveType.Removable)
+        //            {
+        //                disk = d.Name;
+        //                break;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        } 
+        //    }
+        //    return disk;
+        //}
 
         // Обмен данными с ОПС
         public static void CopyForOps()
@@ -131,11 +131,11 @@ namespace Obmen
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
             string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
-            string fromPostPayMod = Properties.Settings.Default.fsgCashTo + @"\";
-            string toPostPayMod = Properties.Settings.Default.regFSGTo + @"\";
+            string fromPostPayMod = Properties.Settings.Default.fromPostPayMod + @"\";
+            string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
             #endregion
 
-            Thread th1 = new Thread(() => Operation.CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
+            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
             th1.Start();
 
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
