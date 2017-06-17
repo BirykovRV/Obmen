@@ -920,7 +920,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButtonIP);
             this.Controls.Add(this.radioButtonOps);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
