@@ -10,6 +10,12 @@ namespace Obmen
             InitializeComponent();
             настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
             checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
+            выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
+        }
+
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void CheckBoxPostPay_CheckedChanged(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace Obmen
             {
                 if (checkBoxPostPay.Checked)
                 {
-                    Operation.UpdetePostPay();
+                    Operation.UpdatePostPay();
                     Operation.CopyForOps();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }

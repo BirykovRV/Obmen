@@ -144,7 +144,7 @@ namespace Obmen
             Copy(fromF130, toF130);                // Файлы для АСКУ 
         }
 
-        public static void UpdetePostPay()
+        public static void UpdatePostPay()
         {
             string fromPostPayMod = Properties.Settings.Default.fromPostPayMod;
             string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";

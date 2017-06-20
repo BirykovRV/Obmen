@@ -152,7 +152,6 @@
             this.butSave.TabIndex = 3;
             this.butSave.Text = "Применить";
             this.butSave.UseVisualStyleBackColor = true;
-            this.butSave.Click += new System.EventHandler(this.ButSave_Click);
             // 
             // butCancel
             // 
@@ -847,36 +846,36 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(7, 178);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 13);
+            this.label24.Size = new System.Drawing.Size(73, 13);
             this.label24.TabIndex = 6;
-            this.label24.Text = "label24";
+            this.label24.Text = "Реестр ФСГ:";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(6, 152);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 13);
+            this.label23.Size = new System.Drawing.Size(88, 13);
             this.label23.TabIndex = 5;
-            this.label23.Text = "label23";
+            this.label23.Text = "Реестр PostPay:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(7, 126);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 13);
+            this.label22.Size = new System.Drawing.Size(48, 13);
             this.label22.TabIndex = 4;
-            this.label22.Text = "label22";
+            this.label22.Text = "Пенсия:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(7, 100);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.Size = new System.Drawing.Size(39, 13);
             this.label21.TabIndex = 3;
-            this.label21.Text = "label21";
+            this.label21.Text = "Ф130:";
             // 
             // label20
             // 

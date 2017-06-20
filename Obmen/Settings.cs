@@ -108,6 +108,7 @@ namespace Obmen
             Properties.Settings.Default.fromPostPayMod = fromPostPayMod.Text;
             Properties.Settings.Default.toPostPayMod = toPostPayMod.Text;
             Properties.Settings.Default.Save();
+            Close();
         }
 
         private void ButCancel_Click(object sender, EventArgs e)
