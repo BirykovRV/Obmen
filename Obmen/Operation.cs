@@ -7,19 +7,20 @@ using System.Threading;
 
 namespace Obmen
 {
-    class Operation :FormObmen
+    class Operation : FormObmen
     {
         public static void Copy(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-
             try
             {
-               FileInfo[] files = dirFrom.GetFiles();
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
 
-               foreach (FileInfo fInfo in files)
-                   fInfo.CopyTo(pathTo + fInfo.Name, true);
+
+                FileInfo[] files = dirFrom.GetFiles();
+
+                foreach (FileInfo fInfo in files)
+                    fInfo.CopyTo(pathTo + fInfo.Name, true);
             }
             catch (Exception ex)
             {
@@ -30,12 +31,13 @@ namespace Obmen
         // Копирование коталогов с разных дисков и их содержимое
         public static void CopyDir(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-            DirectoryInfo [] dir = dirFrom.GetDirectories();
-            
             try
             {
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+                DirectoryInfo[] dir = dirFrom.GetDirectories();
+
+
                 for (int i = 0; i < dir.Length; i++)
                 {
                     string destPath = pathTo + dir[i].Name + @"\";
@@ -59,9 +61,10 @@ namespace Obmen
         // Разархивация базы по комуналке с перемещением
         public static void CopyDB(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
             try
             {
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+
                 RarArchive.WriteToDirectory(pathFrom, pathTo); // Разархивация .rar
             }
             catch (Exception ex)
@@ -70,13 +73,14 @@ namespace Obmen
             }
         }
 
-        public static void ExtractDistrib (string pathFrom, string pathTo)
+        public static void ExtractDistrib(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathTo);
             try
             {
+                DirectoryInfo dirFrom = new DirectoryInfo(pathTo);
+
                 if (dirFrom.Exists) dirFrom.Delete(true);
-                    ZipFile.ExtractToDirectory(pathFrom, pathTo); // Разархивация .zip
+                ZipFile.ExtractToDirectory(pathFrom, pathTo); // Разархивация .zip
             }
             catch (IOException e)
             {
@@ -89,7 +93,7 @@ namespace Obmen
         //    {
         //    DriveInfo[] allDrives = DriveInfo.GetDrives();
         //    string disk = "";
-            
+
         //    foreach (DriveInfo d in allDrives)
         //    {
         //        try
@@ -149,7 +153,14 @@ namespace Obmen
             string fromPostPayMod = Properties.Settings.Default.fromPostPayMod;
             string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
 
-            ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
+            try
+            {
+                ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         // Обмен данными с FTP
