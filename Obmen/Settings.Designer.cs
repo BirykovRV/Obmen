@@ -64,20 +64,10 @@
             this.button18 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
             this.tabPageIP = new System.Windows.Forms.TabPage();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBoxFtp = new System.Windows.Forms.TextBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -428,20 +418,10 @@
             // 
             // tabPageIP
             // 
-            this.tabPageIP.Controls.Add(this.button22);
-            this.tabPageIP.Controls.Add(this.button21);
-            this.tabPageIP.Controls.Add(this.button20);
-            this.tabPageIP.Controls.Add(this.button19);
-            this.tabPageIP.Controls.Add(this.textBox23);
-            this.tabPageIP.Controls.Add(this.textBox22);
-            this.tabPageIP.Controls.Add(this.textBox21);
-            this.tabPageIP.Controls.Add(this.textBox20);
+            this.tabPageIP.Controls.Add(this.textBoxFtp);
             this.tabPageIP.Controls.Add(this.textBoxPass);
             this.tabPageIP.Controls.Add(this.textBoxLogin);
             this.tabPageIP.Controls.Add(this.textBoxIP);
-            this.tabPageIP.Controls.Add(this.label24);
-            this.tabPageIP.Controls.Add(this.label23);
-            this.tabPageIP.Controls.Add(this.label22);
             this.tabPageIP.Controls.Add(this.label21);
             this.tabPageIP.Controls.Add(this.label20);
             this.tabPageIP.Controls.Add(this.label19);
@@ -454,73 +434,12 @@
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // textBoxFtp
             // 
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button22.Location = new System.Drawing.Point(382, 176);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(30, 19);
-            this.button22.TabIndex = 53;
-            this.button22.Text = "...";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button21.Location = new System.Drawing.Point(382, 149);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(30, 19);
-            this.button21.TabIndex = 52;
-            this.button21.Text = "...";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button20.Location = new System.Drawing.Point(382, 123);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(30, 19);
-            this.button20.TabIndex = 51;
-            this.button20.Text = "...";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button19.Location = new System.Drawing.Point(382, 98);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(30, 19);
-            this.button19.TabIndex = 50;
-            this.button19.Text = "...";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(141, 175);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(235, 20);
-            this.textBox23.TabIndex = 13;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(141, 149);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(235, 20);
-            this.textBox22.TabIndex = 12;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(141, 123);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(235, 20);
-            this.textBox21.TabIndex = 11;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(141, 97);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(235, 20);
-            this.textBox20.TabIndex = 10;
+            this.textBoxFtp.Location = new System.Drawing.Point(141, 97);
+            this.textBoxFtp.Name = "textBoxFtp";
+            this.textBoxFtp.Size = new System.Drawing.Size(235, 20);
+            this.textBoxFtp.TabIndex = 10;
             // 
             // textBoxPass
             // 
@@ -544,41 +463,14 @@
             this.textBoxIP.Size = new System.Drawing.Size(235, 20);
             this.textBoxIP.TabIndex = 7;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(7, 178);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(73, 13);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "Реестр ФСГ:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 152);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(88, 13);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "Реестр PostPay:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 126);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "Пенсия:";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(7, 100);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 13);
+            this.label21.Size = new System.Drawing.Size(30, 13);
             this.label21.TabIndex = 3;
-            this.label21.Text = "Ф130:";
+            this.label21.Text = "FTP:";
             // 
             // label20
             // 
@@ -671,20 +563,10 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageOPS;
         private System.Windows.Forms.TabPage tabPageIP;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBoxFtp;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxIP;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
