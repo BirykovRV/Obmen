@@ -47,10 +47,6 @@ namespace Obmen
                     foreach (FileInfo fInfo in file)
                         fInfo.CopyTo(destPath + fInfo.Name, true);
                 }
-                FileInfo[] files = dirFrom.GetFiles();
-
-                foreach (FileInfo fInfo in files)
-                    fInfo.CopyTo(pathTo + fInfo.Name, true);
             }
             catch (Exception ex)
             {
@@ -64,8 +60,13 @@ namespace Obmen
             try
             {
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                FileInfo[] files = dirFrom.GetFiles();
 
-                RarArchive.WriteToDirectory(pathFrom, pathTo); // Разархивация .rar
+                for (int i = 0; i < files.Length; i++)
+                {
+                    string _pathFrom = dirFrom + files[i].Name;
+                    RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                }
             }
             catch (Exception ex)
             {
@@ -77,10 +78,16 @@ namespace Obmen
         {
             try
             {
-                DirectoryInfo dirFrom = new DirectoryInfo(pathTo);
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+                FileInfo[] files = dirFrom.GetFiles();
 
-                if (dirFrom.Exists) dirFrom.Delete(true);
-                ZipFile.ExtractToDirectory(pathFrom, pathTo); // Разархивация .zip
+                if (dirTo.Exists) dirTo.Delete(true);
+                for (int i = 0; i < files.Length; i++)
+                {
+                    string _pathFrom = dirFrom + files[i].Name;
+                    ZipFile.ExtractToDirectory(_pathFrom, pathTo); // Разархивация .zip
+                }
             }
             catch (IOException e)
             {
@@ -89,28 +96,28 @@ namespace Obmen
         }
 
         // Получаем букву съемного диска
-        //public static string GetDisk()
-        //    {
-        //    DriveInfo[] allDrives = DriveInfo.GetDrives();
-        //    string disk = "";
+        public static string GetDisk()
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            string disk = "";
 
-        //    foreach (DriveInfo d in allDrives)
-        //    {
-        //        try
-        //        {
-        //            if (d.DriveType == DriveType.Removable)
-        //            {
-        //                disk = d.Name;
-        //                break;
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        } 
-        //    }
-        //    return disk;
-        //}
+            foreach (DriveInfo d in allDrives)
+            {
+                try
+                {
+                    if (d.DriveType == DriveType.Removable)
+                    {
+                        disk = d.Name;
+                        break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return disk;
+        }
 
         // Обмен данными с ОПС
 
@@ -118,22 +125,22 @@ namespace Obmen
         {
             #region Присвоение путей
             string fromPostPay = Properties.Settings.Default.fromPostPay;
-            string toPostPay = Properties.Settings.Default.toPostPay + @"\";
+            string toPostPay = GetDisk() + @"Реестр коммунальных платежей\";
 
-            string configF130From = Properties.Settings.Default.configF130From;
+            string configF130From = GetDisk() + @"Config";
             string configF130To = Properties.Settings.Default.configF130To + @"\";
             string fromF130 = Properties.Settings.Default.fromF130;
-            string toF130 = Properties.Settings.Default.toF130 + @"\";
-            string fromGibrid = Properties.Settings.Default.fromGibrid;
+            string toF130 = GetDisk() + @"F130\";
+            string fromGibrid = GetDisk() + @"Гибридные переводы";
             string toGibrid = Properties.Settings.Default.toGibrid + @"\";
-            string fromPostPayBD = Properties.Settings.Default.fromPostPayBD;
+            string fromPostPayBD = GetDisk() + @"База по коммунальным платежам\";
             string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
             string fromPension = Properties.Settings.Default.fromPension;
-            string toPension = Properties.Settings.Default.toPension + @"\";
-            string fsgCashFrom = Properties.Settings.Default.fsgCashFrom;
+            string toPension = GetDisk() + @"Пенсия\";
+            string fsgCashFrom = GetDisk() + @"FSG\Кэш";
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
-            string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
+            string regFSGTo = GetDisk() + Properties.Settings.Default.regFSGTo + @"FSG\Реестры платежей\";
             #endregion
 
             Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
@@ -141,6 +148,7 @@ namespace Obmen
 
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
+            Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
             Copy(fromPension, toPension);          // Файлы по пенсии
             CopyDir(configF130From, configF130To); // Ключ для 130
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
@@ -150,16 +158,16 @@ namespace Obmen
 
         public static void UpdatePostPay()
         {
-            string fromPostPayMod = Properties.Settings.Default.fromPostPayMod;
+            string fromPostPayMod = GetDisk() + @"Обновление PostPay\";
             string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
 
             try
             {
                 ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

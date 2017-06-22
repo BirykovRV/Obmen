@@ -33,63 +33,36 @@
             this.label1 = new System.Windows.Forms.Label();
             this.butSave = new System.Windows.Forms.Button();
             this.butCancel = new System.Windows.Forms.Button();
-            this.configF130From = new System.Windows.Forms.TextBox();
             this.configF130To = new System.Windows.Forms.TextBox();
             this.fromPostPay = new System.Windows.Forms.TextBox();
-            this.toPostPay = new System.Windows.Forms.TextBox();
             this.fromF130 = new System.Windows.Forms.TextBox();
-            this.toF130 = new System.Windows.Forms.TextBox();
-            this.fromGibrid = new System.Windows.Forms.TextBox();
             this.toGibrid = new System.Windows.Forms.TextBox();
-            this.fromPostPayBD = new System.Windows.Forms.TextBox();
             this.toPostPayBD = new System.Windows.Forms.TextBox();
             this.fromPension = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.toPension = new System.Windows.Forms.TextBox();
-            this.fsgCashFrom = new System.Windows.Forms.TextBox();
             this.fsgCashTo = new System.Windows.Forms.TextBox();
             this.regFSGFrom = new System.Windows.Forms.TextBox();
-            this.regFSGTo = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageOPS = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
-            this.fromPostPayMod = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.tabPageIP = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
@@ -146,7 +119,7 @@
             // 
             // butSave
             // 
-            this.butSave.Location = new System.Drawing.Point(353, 555);
+            this.butSave.Location = new System.Drawing.Point(363, 355);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(75, 23);
             this.butSave.TabIndex = 3;
@@ -155,19 +128,12 @@
             // 
             // butCancel
             // 
-            this.butCancel.Location = new System.Drawing.Point(434, 555);
+            this.butCancel.Location = new System.Drawing.Point(444, 355);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(75, 23);
             this.butCancel.TabIndex = 4;
             this.butCancel.Text = "Отмена";
             this.butCancel.UseVisualStyleBackColor = true;
-            // 
-            // configF130From
-            // 
-            this.configF130From.Location = new System.Drawing.Point(145, 13);
-            this.configF130From.Name = "configF130From";
-            this.configF130From.Size = new System.Drawing.Size(299, 20);
-            this.configF130From.TabIndex = 5;
             // 
             // configF130To
             // 
@@ -183,70 +149,33 @@
             this.fromPostPay.Size = new System.Drawing.Size(299, 20);
             this.fromPostPay.TabIndex = 7;
             // 
-            // toPostPay
-            // 
-            this.toPostPay.Location = new System.Drawing.Point(145, 91);
-            this.toPostPay.Name = "toPostPay";
-            this.toPostPay.Size = new System.Drawing.Size(299, 20);
-            this.toPostPay.TabIndex = 8;
-            // 
             // fromF130
             // 
-            this.fromF130.Location = new System.Drawing.Point(145, 117);
+            this.fromF130.Location = new System.Drawing.Point(145, 91);
             this.fromF130.Name = "fromF130";
             this.fromF130.Size = new System.Drawing.Size(299, 20);
             this.fromF130.TabIndex = 9;
             // 
-            // toF130
-            // 
-            this.toF130.Location = new System.Drawing.Point(145, 143);
-            this.toF130.Name = "toF130";
-            this.toF130.Size = new System.Drawing.Size(299, 20);
-            this.toF130.TabIndex = 10;
-            // 
-            // fromGibrid
-            // 
-            this.fromGibrid.Location = new System.Drawing.Point(145, 169);
-            this.fromGibrid.Name = "fromGibrid";
-            this.fromGibrid.Size = new System.Drawing.Size(299, 20);
-            this.fromGibrid.TabIndex = 11;
-            // 
             // toGibrid
             // 
-            this.toGibrid.Location = new System.Drawing.Point(145, 194);
+            this.toGibrid.Location = new System.Drawing.Point(145, 117);
             this.toGibrid.Name = "toGibrid";
             this.toGibrid.Size = new System.Drawing.Size(299, 20);
             this.toGibrid.TabIndex = 12;
             // 
-            // fromPostPayBD
-            // 
-            this.fromPostPayBD.Location = new System.Drawing.Point(145, 221);
-            this.fromPostPayBD.Name = "fromPostPayBD";
-            this.fromPostPayBD.Size = new System.Drawing.Size(299, 20);
-            this.fromPostPayBD.TabIndex = 13;
-            // 
             // toPostPayBD
             // 
-            this.toPostPayBD.Location = new System.Drawing.Point(145, 247);
+            this.toPostPayBD.Location = new System.Drawing.Point(145, 143);
             this.toPostPayBD.Name = "toPostPayBD";
             this.toPostPayBD.Size = new System.Drawing.Size(299, 20);
             this.toPostPayBD.TabIndex = 14;
             // 
             // fromPension
             // 
-            this.fromPension.Location = new System.Drawing.Point(145, 273);
+            this.fromPension.Location = new System.Drawing.Point(145, 169);
             this.fromPension.Name = "fromPension";
             this.fromPension.Size = new System.Drawing.Size(299, 20);
             this.fromPension.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Импорт Config:";
             // 
             // label3
             // 
@@ -266,64 +195,28 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Импорт Реестра PostPay:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Экспорт Ф130:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 120);
+            this.label6.Location = new System.Drawing.Point(6, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 20;
             this.label6.Text = "Импорт Ф130:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Экспорт реестра PostPay:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 224);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Импорт базы PostPay:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 197);
+            this.label9.Location = new System.Drawing.Point(6, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 13);
             this.label9.TabIndex = 23;
             this.label9.Text = "Экспорт Гибриды:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 172);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Импорт Гибриды:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 275);
+            this.label11.Location = new System.Drawing.Point(5, 171);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 26;
@@ -332,60 +225,30 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 250);
+            this.label12.Location = new System.Drawing.Point(6, 146);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 13);
             this.label12.TabIndex = 25;
             this.label12.Text = "Экспорт базы PostPay:";
             // 
-            // toPension
-            // 
-            this.toPension.Location = new System.Drawing.Point(145, 298);
-            this.toPension.Name = "toPension";
-            this.toPension.Size = new System.Drawing.Size(299, 20);
-            this.toPension.TabIndex = 31;
-            // 
-            // fsgCashFrom
-            // 
-            this.fsgCashFrom.Location = new System.Drawing.Point(145, 323);
-            this.fsgCashFrom.Name = "fsgCashFrom";
-            this.fsgCashFrom.Size = new System.Drawing.Size(299, 20);
-            this.fsgCashFrom.TabIndex = 30;
-            // 
             // fsgCashTo
             // 
-            this.fsgCashTo.Location = new System.Drawing.Point(145, 350);
+            this.fsgCashTo.Location = new System.Drawing.Point(145, 195);
             this.fsgCashTo.Name = "fsgCashTo";
             this.fsgCashTo.Size = new System.Drawing.Size(299, 20);
             this.fsgCashTo.TabIndex = 29;
             // 
             // regFSGFrom
             // 
-            this.regFSGFrom.Location = new System.Drawing.Point(145, 376);
+            this.regFSGFrom.Location = new System.Drawing.Point(145, 221);
             this.regFSGFrom.Name = "regFSGFrom";
             this.regFSGFrom.Size = new System.Drawing.Size(299, 20);
             this.regFSGFrom.TabIndex = 28;
             // 
-            // regFSGTo
-            // 
-            this.regFSGTo.Location = new System.Drawing.Point(145, 402);
-            this.regFSGTo.Name = "regFSGTo";
-            this.regFSGTo.Size = new System.Drawing.Size(299, 20);
-            this.regFSGTo.TabIndex = 27;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 404);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 13);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Экспорт реестра ФСГ:";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 380);
+            this.label14.Location = new System.Drawing.Point(6, 225);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(120, 13);
             this.label14.TabIndex = 35;
@@ -394,40 +257,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 354);
+            this.label15.Location = new System.Drawing.Point(6, 199);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 13);
             this.label15.TabIndex = 34;
             this.label15.Text = "Экспорт КЭШ ФСГ:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 327);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(102, 13);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "Импорт КЭШ ФСГ:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 301);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 13);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Экспорт пенсии:";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(450, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 19);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BrowseDialog);
             // 
             // button2
             // 
@@ -451,21 +285,10 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(450, 92);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 19);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.BrowseDialog);
-            // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(450, 118);
+            this.button5.Location = new System.Drawing.Point(450, 92);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 19);
             this.button5.TabIndex = 44;
@@ -473,32 +296,10 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button6
-            // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(450, 143);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 19);
-            this.button6.TabIndex = 43;
-            this.button6.Text = "...";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.BrowseDialog);
-            // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(450, 169);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 19);
-            this.button7.TabIndex = 42;
-            this.button7.Text = "...";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.BrowseDialog);
-            // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(450, 194);
+            this.button8.Location = new System.Drawing.Point(450, 117);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 19);
             this.button8.TabIndex = 41;
@@ -506,21 +307,10 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Location = new System.Drawing.Point(450, 222);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 19);
-            this.button9.TabIndex = 48;
-            this.button9.Text = "...";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.FileDialog);
-            // 
             // button10
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(450, 247);
+            this.button10.Location = new System.Drawing.Point(450, 143);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 19);
             this.button10.TabIndex = 47;
@@ -531,7 +321,7 @@
             // button11
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Location = new System.Drawing.Point(450, 272);
+            this.button11.Location = new System.Drawing.Point(450, 168);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 19);
             this.button11.TabIndex = 46;
@@ -539,32 +329,10 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button12
-            // 
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Location = new System.Drawing.Point(450, 298);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 19);
-            this.button12.TabIndex = 45;
-            this.button12.Text = "...";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.BrowseDialog);
-            // 
-            // button13
-            // 
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Location = new System.Drawing.Point(450, 324);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(30, 19);
-            this.button13.TabIndex = 52;
-            this.button13.Text = "...";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.BrowseDialog);
-            // 
             // button14
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Location = new System.Drawing.Point(450, 350);
+            this.button14.Location = new System.Drawing.Point(450, 195);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(30, 19);
             this.button14.TabIndex = 51;
@@ -575,24 +343,13 @@
             // button15
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Location = new System.Drawing.Point(450, 375);
+            this.button15.Location = new System.Drawing.Point(450, 220);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(30, 19);
             this.button15.TabIndex = 50;
             this.button15.Text = "...";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.BrowseDialog);
-            // 
-            // button16
-            // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.Location = new System.Drawing.Point(450, 401);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(30, 19);
-            this.button16.TabIndex = 49;
-            this.button16.Text = "...";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.BrowseDialog);
             // 
             // tabControl
             // 
@@ -601,7 +358,7 @@
             this.tabControl.Location = new System.Drawing.Point(16, 41);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(503, 508);
+            this.tabControl.Size = new System.Drawing.Size(503, 308);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 53;
             // 
@@ -609,62 +366,35 @@
             // 
             this.tabPageOPS.Controls.Add(this.label26);
             this.tabPageOPS.Controls.Add(this.button18);
-            this.tabPageOPS.Controls.Add(this.button17);
             this.tabPageOPS.Controls.Add(this.toPostPayMod);
-            this.tabPageOPS.Controls.Add(this.fromPostPayMod);
-            this.tabPageOPS.Controls.Add(this.label25);
-            this.tabPageOPS.Controls.Add(this.label2);
-            this.tabPageOPS.Controls.Add(this.configF130From);
-            this.tabPageOPS.Controls.Add(this.button13);
             this.tabPageOPS.Controls.Add(this.configF130To);
             this.tabPageOPS.Controls.Add(this.button14);
             this.tabPageOPS.Controls.Add(this.fromPostPay);
             this.tabPageOPS.Controls.Add(this.button15);
-            this.tabPageOPS.Controls.Add(this.toPostPay);
-            this.tabPageOPS.Controls.Add(this.button16);
             this.tabPageOPS.Controls.Add(this.fromF130);
-            this.tabPageOPS.Controls.Add(this.button9);
-            this.tabPageOPS.Controls.Add(this.toF130);
             this.tabPageOPS.Controls.Add(this.button10);
-            this.tabPageOPS.Controls.Add(this.fromGibrid);
             this.tabPageOPS.Controls.Add(this.button11);
             this.tabPageOPS.Controls.Add(this.toGibrid);
-            this.tabPageOPS.Controls.Add(this.button12);
-            this.tabPageOPS.Controls.Add(this.fromPostPayBD);
             this.tabPageOPS.Controls.Add(this.button5);
             this.tabPageOPS.Controls.Add(this.toPostPayBD);
-            this.tabPageOPS.Controls.Add(this.button6);
             this.tabPageOPS.Controls.Add(this.fromPension);
-            this.tabPageOPS.Controls.Add(this.button7);
             this.tabPageOPS.Controls.Add(this.label3);
             this.tabPageOPS.Controls.Add(this.button8);
             this.tabPageOPS.Controls.Add(this.label4);
             this.tabPageOPS.Controls.Add(this.button3);
-            this.tabPageOPS.Controls.Add(this.label7);
-            this.tabPageOPS.Controls.Add(this.button4);
             this.tabPageOPS.Controls.Add(this.label6);
             this.tabPageOPS.Controls.Add(this.button2);
-            this.tabPageOPS.Controls.Add(this.label5);
-            this.tabPageOPS.Controls.Add(this.button1);
-            this.tabPageOPS.Controls.Add(this.label10);
-            this.tabPageOPS.Controls.Add(this.label13);
             this.tabPageOPS.Controls.Add(this.label9);
             this.tabPageOPS.Controls.Add(this.label14);
-            this.tabPageOPS.Controls.Add(this.label8);
             this.tabPageOPS.Controls.Add(this.label15);
             this.tabPageOPS.Controls.Add(this.label12);
-            this.tabPageOPS.Controls.Add(this.label16);
             this.tabPageOPS.Controls.Add(this.label11);
-            this.tabPageOPS.Controls.Add(this.label17);
-            this.tabPageOPS.Controls.Add(this.regFSGTo);
-            this.tabPageOPS.Controls.Add(this.toPension);
             this.tabPageOPS.Controls.Add(this.regFSGFrom);
-            this.tabPageOPS.Controls.Add(this.fsgCashFrom);
             this.tabPageOPS.Controls.Add(this.fsgCashTo);
             this.tabPageOPS.Location = new System.Drawing.Point(4, 22);
             this.tabPageOPS.Name = "tabPageOPS";
             this.tabPageOPS.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOPS.Size = new System.Drawing.Size(495, 482);
+            this.tabPageOPS.Size = new System.Drawing.Size(495, 282);
             this.tabPageOPS.TabIndex = 0;
             this.tabPageOPS.Text = "ОПС";
             this.tabPageOPS.UseVisualStyleBackColor = true;
@@ -672,7 +402,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 457);
+            this.label26.Location = new System.Drawing.Point(6, 250);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(115, 13);
             this.label26.TabIndex = 58;
@@ -681,7 +411,7 @@
             // button18
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(450, 454);
+            this.button18.Location = new System.Drawing.Point(450, 247);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(30, 19);
             this.button18.TabIndex = 57;
@@ -689,39 +419,12 @@
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.BrowseDialog);
             // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Location = new System.Drawing.Point(450, 428);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(30, 19);
-            this.button17.TabIndex = 56;
-            this.button17.Text = "...";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.FileDialog);
-            // 
             // toPostPayMod
             // 
-            this.toPostPayMod.Location = new System.Drawing.Point(145, 454);
+            this.toPostPayMod.Location = new System.Drawing.Point(145, 247);
             this.toPostPayMod.Name = "toPostPayMod";
             this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
             this.toPostPayMod.TabIndex = 55;
-            // 
-            // fromPostPayMod
-            // 
-            this.fromPostPayMod.Location = new System.Drawing.Point(145, 428);
-            this.fromPostPayMod.Name = "fromPostPayMod";
-            this.fromPostPayMod.Size = new System.Drawing.Size(299, 20);
-            this.fromPostPayMod.TabIndex = 54;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 431);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(112, 13);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "Импорт обновления:";
             // 
             // tabPageIP
             // 
@@ -746,7 +449,7 @@
             this.tabPageIP.Location = new System.Drawing.Point(4, 22);
             this.tabPageIP.Name = "tabPageIP";
             this.tabPageIP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIP.Size = new System.Drawing.Size(495, 482);
+            this.tabPageIP.Size = new System.Drawing.Size(495, 282);
             this.tabPageIP.TabIndex = 1;
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
@@ -912,7 +615,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 588);
+            this.ClientSize = new System.Drawing.Size(528, 389);
             this.Controls.Add(this.butSave);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.butCancel);
@@ -940,54 +643,30 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button butSave;
         private System.Windows.Forms.Button butCancel;
-        private System.Windows.Forms.TextBox configF130From;
         private System.Windows.Forms.TextBox configF130To;
         private System.Windows.Forms.TextBox fromPostPay;
-        private System.Windows.Forms.TextBox toPostPay;
         private System.Windows.Forms.TextBox fromF130;
-        private System.Windows.Forms.TextBox toF130;
-        private System.Windows.Forms.TextBox fromGibrid;
         private System.Windows.Forms.TextBox toGibrid;
-        private System.Windows.Forms.TextBox fromPostPayBD;
         private System.Windows.Forms.TextBox toPostPayBD;
         private System.Windows.Forms.TextBox fromPension;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox toPension;
-        private System.Windows.Forms.TextBox fsgCashFrom;
         private System.Windows.Forms.TextBox fsgCashTo;
         private System.Windows.Forms.TextBox regFSGFrom;
-        private System.Windows.Forms.TextBox regFSGTo;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageOPS;
@@ -1012,10 +691,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TextBox toPostPayMod;
-        private System.Windows.Forms.TextBox fromPostPayMod;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
