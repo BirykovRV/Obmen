@@ -137,42 +137,42 @@
             // 
             // configF130To
             // 
-            this.configF130To.Location = new System.Drawing.Point(145, 39);
+            this.configF130To.Location = new System.Drawing.Point(156, 39);
             this.configF130To.Name = "configF130To";
             this.configF130To.Size = new System.Drawing.Size(299, 20);
             this.configF130To.TabIndex = 6;
             // 
             // fromPostPay
             // 
-            this.fromPostPay.Location = new System.Drawing.Point(145, 65);
+            this.fromPostPay.Location = new System.Drawing.Point(156, 65);
             this.fromPostPay.Name = "fromPostPay";
             this.fromPostPay.Size = new System.Drawing.Size(299, 20);
             this.fromPostPay.TabIndex = 7;
             // 
             // fromF130
             // 
-            this.fromF130.Location = new System.Drawing.Point(145, 91);
+            this.fromF130.Location = new System.Drawing.Point(156, 91);
             this.fromF130.Name = "fromF130";
             this.fromF130.Size = new System.Drawing.Size(299, 20);
             this.fromF130.TabIndex = 9;
             // 
             // toGibrid
             // 
-            this.toGibrid.Location = new System.Drawing.Point(145, 117);
+            this.toGibrid.Location = new System.Drawing.Point(156, 117);
             this.toGibrid.Name = "toGibrid";
             this.toGibrid.Size = new System.Drawing.Size(299, 20);
             this.toGibrid.TabIndex = 12;
             // 
             // toPostPayBD
             // 
-            this.toPostPayBD.Location = new System.Drawing.Point(145, 143);
+            this.toPostPayBD.Location = new System.Drawing.Point(156, 143);
             this.toPostPayBD.Name = "toPostPayBD";
             this.toPostPayBD.Size = new System.Drawing.Size(299, 20);
             this.toPostPayBD.TabIndex = 14;
             // 
             // fromPension
             // 
-            this.fromPension.Location = new System.Drawing.Point(145, 169);
+            this.fromPension.Location = new System.Drawing.Point(156, 169);
             this.fromPension.Name = "fromPension";
             this.fromPension.Size = new System.Drawing.Size(299, 20);
             this.fromPension.TabIndex = 15;
@@ -182,65 +182,65 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Экспорт Config:";
+            this.label3.Text = "Config F130:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 13);
+            this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Импорт Реестра PostPay:";
+            this.label4.Text = "Реестра PostPay:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Импорт Ф130:";
+            this.label6.Text = "Файлы F130:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 120);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 13);
+            this.label9.Size = new System.Drawing.Size(144, 13);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Экспорт Гибриды:";
+            this.label9.Text = "Справочники по Гибридам:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 171);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.Size = new System.Drawing.Size(101, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "Импорт пенсии:";
+            this.label11.Text = "Файлы по пенсии:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 146);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 13);
+            this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Экспорт базы PostPay:";
+            this.label12.Text = "База PostPay:";
             // 
             // fsgCashTo
             // 
-            this.fsgCashTo.Location = new System.Drawing.Point(145, 195);
+            this.fsgCashTo.Location = new System.Drawing.Point(156, 195);
             this.fsgCashTo.Name = "fsgCashTo";
             this.fsgCashTo.Size = new System.Drawing.Size(299, 20);
             this.fsgCashTo.TabIndex = 29;
             // 
             // regFSGFrom
             // 
-            this.regFSGFrom.Location = new System.Drawing.Point(145, 221);
+            this.regFSGFrom.Location = new System.Drawing.Point(156, 221);
             this.regFSGFrom.Name = "regFSGFrom";
             this.regFSGFrom.Size = new System.Drawing.Size(299, 20);
             this.regFSGFrom.TabIndex = 28;
@@ -250,23 +250,23 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(6, 225);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 13);
+            this.label14.Size = new System.Drawing.Size(88, 13);
             this.label14.TabIndex = 35;
-            this.label14.Text = "Импорт реестра ФСГ:";
+            this.label14.Text = "Реестр по ФСГ:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 199);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 13);
+            this.label15.Size = new System.Drawing.Size(60, 13);
             this.label15.TabIndex = 34;
-            this.label15.Text = "Экспорт КЭШ ФСГ:";
+            this.label15.Text = "КЭШ ФСГ:";
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(450, 39);
+            this.button2.Location = new System.Drawing.Point(461, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 19);
             this.button2.TabIndex = 38;
@@ -277,7 +277,7 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(450, 66);
+            this.button3.Location = new System.Drawing.Point(461, 66);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 19);
             this.button3.TabIndex = 40;
@@ -288,7 +288,7 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(450, 92);
+            this.button5.Location = new System.Drawing.Point(461, 92);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 19);
             this.button5.TabIndex = 44;
@@ -299,7 +299,7 @@
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(450, 117);
+            this.button8.Location = new System.Drawing.Point(461, 117);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 19);
             this.button8.TabIndex = 41;
@@ -310,7 +310,7 @@
             // button10
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(450, 143);
+            this.button10.Location = new System.Drawing.Point(461, 143);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 19);
             this.button10.TabIndex = 47;
@@ -321,7 +321,7 @@
             // button11
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Location = new System.Drawing.Point(450, 168);
+            this.button11.Location = new System.Drawing.Point(461, 168);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 19);
             this.button11.TabIndex = 46;
@@ -332,7 +332,7 @@
             // button14
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Location = new System.Drawing.Point(450, 195);
+            this.button14.Location = new System.Drawing.Point(461, 195);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(30, 19);
             this.button14.TabIndex = 51;
@@ -343,7 +343,7 @@
             // button15
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Location = new System.Drawing.Point(450, 220);
+            this.button15.Location = new System.Drawing.Point(461, 220);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(30, 19);
             this.button15.TabIndex = 50;
@@ -404,14 +404,14 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(6, 250);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 13);
+            this.label26.Size = new System.Drawing.Size(114, 13);
             this.label26.TabIndex = 58;
-            this.label26.Text = "Экспорт обновления:";
+            this.label26.Text = "Обновление PostPay:";
             // 
             // button18
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(450, 247);
+            this.button18.Location = new System.Drawing.Point(461, 247);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(30, 19);
             this.button18.TabIndex = 57;
@@ -421,7 +421,7 @@
             // 
             // toPostPayMod
             // 
-            this.toPostPayMod.Location = new System.Drawing.Point(145, 247);
+            this.toPostPayMod.Location = new System.Drawing.Point(156, 247);
             this.toPostPayMod.Name = "toPostPayMod";
             this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
             this.toPostPayMod.TabIndex = 55;
