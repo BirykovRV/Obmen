@@ -54,8 +54,21 @@ namespace Obmen
             radioButtonOps.Checked = Properties.Settings.Default.radioButtonOps;
             radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
             toPostPayMod.Text = Properties.Settings.Default.toPostPayMod;
+            comboBoxPost.Text = Properties.Settings.Default.comboBoxPost;
+            textBoxIP.Text = Properties.Settings.Default.textBoxIP;
+            textBoxLogin.Text = Properties.Settings.Default.textBoxLogin;
+            textBoxPass.Text = Properties.Settings.Default.textBoxPass;
             #endregion
 
+            string[] post =
+            {
+                "Брянск", "Дядьково", "Жирятино",
+                "Жуковка", "Клинцы", "Локоть",
+                "Новозыбков", "Почеп", "Стародуб",
+                "Трубчевск", "Унеча"
+            };
+
+            comboBoxPost.Items.AddRange(post);
         }
 
         private void ButSave_Click(object sender, EventArgs e)
@@ -71,6 +84,10 @@ namespace Obmen
             Properties.Settings.Default.radioButtonOps = radioButtonOps.Checked;
             Properties.Settings.Default.radioButtonIP = radioButtonIP.Checked;
             Properties.Settings.Default.toPostPayMod = toPostPayMod.Text;
+            Properties.Settings.Default.comboBoxPost = comboBoxPost.Text;
+            Properties.Settings.Default.textBoxIP = textBoxIP.Text;
+            Properties.Settings.Default.textBoxLogin = textBoxLogin.Text;
+            Properties.Settings.Default.textBoxPass = textBoxPass.Text;
             Properties.Settings.Default.Save();
             Close();
         }

@@ -64,7 +64,6 @@
             this.button18 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
             this.tabPageIP = new System.Windows.Forms.TabPage();
-            this.textBoxFtp = new System.Windows.Forms.TextBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
@@ -73,6 +72,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.comboBoxPost = new System.Windows.Forms.ComboBox();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -418,7 +418,7 @@
             // 
             // tabPageIP
             // 
-            this.tabPageIP.Controls.Add(this.textBoxFtp);
+            this.tabPageIP.Controls.Add(this.comboBoxPost);
             this.tabPageIP.Controls.Add(this.textBoxPass);
             this.tabPageIP.Controls.Add(this.textBoxLogin);
             this.tabPageIP.Controls.Add(this.textBoxIP);
@@ -433,13 +433,6 @@
             this.tabPageIP.TabIndex = 1;
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
-            // 
-            // textBoxFtp
-            // 
-            this.textBoxFtp.Location = new System.Drawing.Point(141, 97);
-            this.textBoxFtp.Name = "textBoxFtp";
-            this.textBoxFtp.Size = new System.Drawing.Size(235, 20);
-            this.textBoxFtp.TabIndex = 10;
             // 
             // textBoxPass
             // 
@@ -468,9 +461,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(7, 100);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(30, 13);
+            this.label21.Size = new System.Drawing.Size(53, 13);
             this.label21.TabIndex = 3;
-            this.label21.Text = "FTP:";
+            this.label21.Text = "Почтамт:";
             // 
             // label20
             // 
@@ -502,6 +495,14 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // comboBoxPost
+            // 
+            this.comboBoxPost.FormattingEnabled = true;
+            this.comboBoxPost.Location = new System.Drawing.Point(140, 97);
+            this.comboBoxPost.Name = "comboBoxPost";
+            this.comboBoxPost.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPost.TabIndex = 10;
             // 
             // Settings
             // 
@@ -563,7 +564,6 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageOPS;
         private System.Windows.Forms.TabPage tabPageIP;
-        private System.Windows.Forms.TextBox textBoxFtp;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxIP;
@@ -575,5 +575,6 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TextBox toPostPayMod;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.ComboBox comboBoxPost;
     }
 }

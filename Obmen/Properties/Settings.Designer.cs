@@ -26,18 +26,6 @@ namespace Obmen.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string configF130From {
-            get {
-                return ((string)(this["configF130From"]));
-            }
-            set {
-                this["configF130From"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string configF130To {
             get {
                 return ((string)(this["configF130To"]));
@@ -62,18 +50,6 @@ namespace Obmen.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string toPostPay {
-            get {
-                return ((string)(this["toPostPay"]));
-            }
-            set {
-                this["toPostPay"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string fromF130 {
             get {
                 return ((string)(this["fromF130"]));
@@ -86,48 +62,12 @@ namespace Obmen.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string toF130 {
-            get {
-                return ((string)(this["toF130"]));
-            }
-            set {
-                this["toF130"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string fromGibrid {
-            get {
-                return ((string)(this["fromGibrid"]));
-            }
-            set {
-                this["fromGibrid"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string toGibrid {
             get {
                 return ((string)(this["toGibrid"]));
             }
             set {
                 this["toGibrid"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string fromPostPayBD {
-            get {
-                return ((string)(this["fromPostPayBD"]));
-            }
-            set {
-                this["fromPostPayBD"] = value;
             }
         }
         
@@ -158,30 +98,6 @@ namespace Obmen.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string toPension {
-            get {
-                return ((string)(this["toPension"]));
-            }
-            set {
-                this["toPension"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string fsgCashFrom {
-            get {
-                return ((string)(this["fsgCashFrom"]));
-            }
-            set {
-                this["fsgCashFrom"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string fsgCashTo {
             get {
                 return ((string)(this["fsgCashTo"]));
@@ -200,18 +116,6 @@ namespace Obmen.Properties {
             }
             set {
                 this["regFSGFrom"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string regFSGTo {
-            get {
-                return ((string)(this["regFSGTo"]));
-            }
-            set {
-                this["regFSGTo"] = value;
             }
         }
         
@@ -278,24 +182,24 @@ namespace Obmen.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string fromPostPayMod {
-            get {
-                return ((string)(this["fromPostPayMod"]));
-            }
-            set {
-                this["fromPostPayMod"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string toPostPayMod {
             get {
                 return ((string)(this["toPostPayMod"]));
             }
             set {
                 this["toPostPayMod"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string comboBoxPost {
+            get {
+                return ((string)(this["comboBoxPost"]));
+            }
+            set {
+                this["comboBoxPost"] = value;
             }
         }
     }

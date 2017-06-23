@@ -140,7 +140,7 @@ namespace Obmen
             string fsgCashFrom = GetDisk() + @"FSG\Кэш";
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
-            string regFSGTo = GetDisk() + Properties.Settings.Default.regFSGTo + @"FSG\Реестры платежей\";
+            string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
 
             Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
@@ -174,7 +174,23 @@ namespace Obmen
         // Обмен данными с FTP
         public static void CopyForIp()
         {
+            #region Присвоение путей
+            string pensiaFrom = @"Пенсия";
+            string f130From = @"F130";
+            string regPostPayFrom = @"Реестр коммунальных платежей";
+            string regFSGFrom = @"FSG\Реестры платежей";
 
+            string pensiaTo = @"\Пенсия\";
+            string f130To = @"/F130/";
+            string regPostPayTo = @"/Реестр коммунальных платежей/";
+            string regFSGTo = @"/FSG/Реестры платежей/";
+            #endregion
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.Copy(pensiaFrom, pensiaTo);
+            CopyFtp.Copy(f130From, f130To);
+            CopyFtp.Copy(regPostPayFrom, regPostPayTo);
+            CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
     }
 }
