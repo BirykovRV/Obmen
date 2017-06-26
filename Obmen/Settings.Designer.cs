@@ -64,6 +64,7 @@
             this.button18 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
             this.tabPageIP = new System.Windows.Forms.TabPage();
+            this.comboBoxPost = new System.Windows.Forms.ComboBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.comboBoxPost = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // butCancel
             // 
+            this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.butCancel.Location = new System.Drawing.Point(444, 355);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(75, 23);
@@ -354,6 +356,7 @@
             // 
             // tabPageOPS
             // 
+            this.tabPageOPS.Controls.Add(this.label2);
             this.tabPageOPS.Controls.Add(this.label26);
             this.tabPageOPS.Controls.Add(this.button18);
             this.tabPageOPS.Controls.Add(this.toPostPayMod);
@@ -434,6 +437,14 @@
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
             // 
+            // comboBoxPost
+            // 
+            this.comboBoxPost.FormattingEnabled = true;
+            this.comboBoxPost.Location = new System.Drawing.Point(140, 97);
+            this.comboBoxPost.Name = "comboBoxPost";
+            this.comboBoxPost.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPost.TabIndex = 10;
+            // 
             // textBoxPass
             // 
             this.textBoxPass.Location = new System.Drawing.Point(141, 71);
@@ -496,18 +507,21 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // comboBoxPost
+            // label2
             // 
-            this.comboBoxPost.FormattingEnabled = true;
-            this.comboBoxPost.Location = new System.Drawing.Point(140, 97);
-            this.comboBoxPost.Name = "comboBoxPost";
-            this.comboBoxPost.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPost.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(72, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(360, 20);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Укажите расположение папок на компьютере:";
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.butCancel;
             this.ClientSize = new System.Drawing.Size(528, 389);
             this.Controls.Add(this.butSave);
             this.Controls.Add(this.tabControl);
@@ -515,10 +529,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButtonIP);
             this.Controls.Add(this.radioButtonOps);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
+            this.TopMost = true;
             this.tabControl.ResumeLayout(false);
             this.tabPageOPS.ResumeLayout(false);
             this.tabPageOPS.PerformLayout();
@@ -576,5 +591,6 @@
         private System.Windows.Forms.TextBox toPostPayMod;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ComboBox comboBoxPost;
+        private System.Windows.Forms.Label label2;
     }
 }

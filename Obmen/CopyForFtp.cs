@@ -45,9 +45,6 @@ namespace Obmen
                 {
                     string pathIndex = @"D:\FTP\" + allDrives[i].VolumeLabel;
                     CopyToFtp(allDrives[i].Name + pathFrom, pathIndex + pathTo);
-                    //CopyToFtp(d.Name + f130From, pathIndex + @"/F130/");
-                    //CopyToFtp(d.Name + regPostPayFrom, pathIndex + @"/Реестр коммунальных платежей/");
-                    //CopyToFtp(d.Name + regFSGFrom, pathIndex + @"/FSG/Реестры платежей/");
                 }
             }
         }

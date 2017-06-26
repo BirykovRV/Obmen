@@ -68,9 +68,9 @@ namespace Obmen
                     RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Проверьте правильность путей и наличие rar архива на флешке.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -89,9 +89,9 @@ namespace Obmen
                     ZipFile.ExtractToDirectory(_pathFrom, pathTo); // Разархивация .zip
                 }
             }
-            catch (IOException e)
+            catch (IOException)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Убедитесь в наличии zip архива на флешке, а также к доступу к папке: " + pathTo, "Ошибка");
             }
         }
 
@@ -120,7 +120,6 @@ namespace Obmen
         }
 
         // Обмен данными с ОПС
-
         public static void CopyForOps()
         {
             #region Присвоение путей
@@ -143,7 +142,8 @@ namespace Obmen
             string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
 
-            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
+            // База по комуналке
+            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD)); 
             th1.Start();
 
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
@@ -156,6 +156,7 @@ namespace Obmen
             Copy(fromF130, toF130);                // Файлы для АСКУ 
         }
 
+        // Метод для обновления Ppsplugin
         public static void UpdatePostPay()
         {
             string fromPostPayMod = GetDisk() + @"Обновление PostPay\";
