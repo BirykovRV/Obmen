@@ -5,6 +5,8 @@ namespace Obmen
 {
     public partial class FormObmen : Form
     {
+        Settings set = new Settings();
+
         public FormObmen()
         {
             InitializeComponent();
@@ -12,7 +14,7 @@ namespace Obmen
             checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
             выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
         }
-
+        
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,6 +44,9 @@ namespace Obmen
         {
             bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
             bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
+            string ipAdress = Properties.Settings.Default.textBoxIP;
+            string login = Properties.Settings.Default.textBoxLogin;
+            string pass = Properties.Settings.Default.textBoxPass;
 
             if (_radioButtonOps == true)
             {
@@ -57,11 +62,13 @@ namespace Obmen
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
-            else if (_radioButtonIP == true)
+            else 
             {
-                Operation.CopyForIp();
+                if (_radioButtonIP == true)
+                {
+                    Operation.CopyForIp(ipAdress, login, pass);
+                }
             }
-
         }
 
         private void ButNo_Click(object sender, EventArgs e)

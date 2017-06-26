@@ -3,28 +3,28 @@
   <Profiles />
   <Settings>
     <Setting Name="configF130To" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Program Files (x86)\ИПФ Сервер\Дневник Ф130\Config</Value>
     </Setting>
     <Setting Name="fromPostPay" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="fromF130" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Program Files (x86)\ИПФ Сервер\Дневник Ф130\Archives\ASKUExport</Value>
     </Setting>
     <Setting Name="toGibrid" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Гибридные переводы</Value>
     </Setting>
     <Setting Name="toPostPayBD" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\База по коммунальным платежам</Value>
     </Setting>
     <Setting Name="fromPension" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="fsgCashTo" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Users\birykov.roman\Documents\FSG\Кэш</Value>
     </Setting>
     <Setting Name="regFSGFrom" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\Users\Public\Documents\FSG\Реестры платежей</Value>
     </Setting>
     <Setting Name="textBoxIP" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

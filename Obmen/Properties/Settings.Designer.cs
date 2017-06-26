@@ -25,7 +25,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\ИПФ Сервер\\Дневник Ф130\\Config")]
         public string configF130To {
             get {
                 return ((string)(this["configF130To"]));
@@ -49,7 +49,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\ИПФ Сервер\\Дневник Ф130\\Archives\\ASKUExport")]
         public string fromF130 {
             get {
                 return ((string)(this["fromF130"]));
@@ -61,7 +61,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Гибридные переводы")]
         public string toGibrid {
             get {
                 return ((string)(this["toGibrid"]));
@@ -73,7 +73,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\База по коммунальным платежам")]
         public string toPostPayBD {
             get {
                 return ((string)(this["toPostPayBD"]));
@@ -97,7 +97,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\birykov.roman\\Documents\\FSG\\Кэш")]
         public string fsgCashTo {
             get {
                 return ((string)(this["fsgCashTo"]));
@@ -109,7 +109,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Documents\\FSG\\Реестры платежей")]
         public string regFSGFrom {
             get {
                 return ((string)(this["regFSGFrom"]));

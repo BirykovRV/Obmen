@@ -173,21 +173,26 @@ namespace Obmen
         }
 
         // Обмен данными с FTP
-        public static void CopyForIp()
+        public static void CopyForIp(string ipAdress, string login, string pass)
         {
             #region Присвоение путей
             string pensiaFrom = @"Пенсия";
             string f130From = @"F130";
             string regPostPayFrom = @"Реестр коммунальных платежей";
             string regFSGFrom = @"FSG\Реестры платежей";
-
+            
             string pensiaTo = @"\Пенсия\";
             string f130To = @"/F130/";
             string regPostPayTo = @"/Реестр коммунальных платежей/";
             string regFSGTo = @"/FSG/Реестры платежей/";
             #endregion
 
+
             CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.IpAdress = ipAdress;
+            CopyFtp.Login = login;
+            CopyFtp.Password = pass;
+
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
             CopyFtp.Copy(regPostPayFrom, regPostPayTo);
