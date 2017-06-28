@@ -97,7 +97,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\birykov.roman\\Documents\\FSG\\Кэш")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Documents\\FSG\\Кэш")]
         public string fsgCashTo {
             get {
                 return ((string)(this["fsgCashTo"]));
@@ -181,7 +181,7 @@ namespace Obmen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\ProgramData\\PostPay\\ExecutiveVersion")]
         public string toPostPayMod {
             get {
                 return ((string)(this["toPostPayMod"]));

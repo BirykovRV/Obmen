@@ -21,7 +21,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="fsgCashTo" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\birykov.roman\Documents\FSG\Кэш</Value>
+      <Value Profile="(Default)">C:\Users\Public\Documents\FSG\Кэш</Value>
     </Setting>
     <Setting Name="regFSGFrom" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Users\Public\Documents\FSG\Реестры платежей</Value>
@@ -42,7 +42,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="toPostPayMod" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\ProgramData\PostPay\ExecutiveVersion</Value>
     </Setting>
     <Setting Name="comboBoxPost" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -60,6 +60,7 @@
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageOPS = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
@@ -73,7 +74,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -110,7 +111,7 @@
             // 
             // butSave
             // 
-            this.butSave.Location = new System.Drawing.Point(363, 355);
+            this.butSave.Location = new System.Drawing.Point(345, 355);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(75, 23);
             this.butSave.TabIndex = 3;
@@ -120,7 +121,7 @@
             // butCancel
             // 
             this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.butCancel.Location = new System.Drawing.Point(444, 355);
+            this.butCancel.Location = new System.Drawing.Point(442, 355);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(75, 23);
             this.butCancel.TabIndex = 4;
@@ -183,9 +184,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Реестра PostPay:";
+            this.label4.Text = "Реестр PostPay:";
             // 
             // label6
             // 
@@ -392,6 +393,16 @@
             this.tabPageOPS.Text = "ОПС";
             this.tabPageOPS.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(72, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(360, 20);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Укажите расположение папок на компьютере:";
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -507,15 +518,14 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // label2
+            // btnReset
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(72, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 20);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Укажите расположение папок на компьютере:";
+            this.btnReset.Location = new System.Drawing.Point(16, 355);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(98, 23);
+            this.btnReset.TabIndex = 54;
+            this.btnReset.Text = "По-умолчанию";
+            this.btnReset.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
@@ -523,6 +533,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.butCancel;
             this.ClientSize = new System.Drawing.Size(528, 389);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.butSave);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.butCancel);
@@ -592,5 +603,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ComboBox comboBoxPost;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnReset;
     }
 }
