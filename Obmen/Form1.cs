@@ -47,6 +47,7 @@ namespace Obmen
             string ipAdress = Properties.Settings.Default.textBoxIP;
             string login = Properties.Settings.Default.textBoxLogin;
             string pass = Properties.Settings.Default.textBoxPass;
+            string post = Properties.Settings.Default.comboBoxPost;
 
             if (_radioButtonOps == true)
             {
@@ -66,7 +67,7 @@ namespace Obmen
             {
                 if (_radioButtonIP == true)
                 {
-                    Operation.CopyForIp(ipAdress, login, pass);
+                    Operation.CopyForIp(ipAdress, login, pass, post);
                 }
             }
         }

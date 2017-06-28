@@ -66,6 +66,16 @@ namespace Obmen
                 toPostPayMod
             };
 
+            string[] post =
+            {
+                "Брянск", "Дядьково", "Жирятино",
+                "Жуковка", "Клинцы", "Локоть",
+                "Новозыбков", "Почеп", "Стародуб",
+                "Трубчевск", "Унеча"
+            };
+
+            comboBoxPost.Items.AddRange(post);
+
             #region Загрузка параметров
             configF130To.Text = Properties.Settings.Default.configF130To;
             fromPostPay.Text = Properties.Settings.Default.fromPostPay;
@@ -83,16 +93,7 @@ namespace Obmen
             textBoxLogin.Text = Properties.Settings.Default.textBoxLogin;
             textBoxPass.Text = Properties.Settings.Default.textBoxPass;
             #endregion
-
-            string[] post =
-            {
-                "Брянск", "Дядьково", "Жирятино",
-                "Жуковка", "Клинцы", "Локоть",
-                "Новозыбков", "Почеп", "Стародуб",
-                "Трубчевск", "Унеча"
-            };
-
-            comboBoxPost.Items.AddRange(post);
+            
         }
 
         private void ButSave_Click(object sender, EventArgs e)

@@ -75,35 +75,37 @@
             this.label18 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnReset = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButtonOps
             // 
             this.radioButtonOps.AutoSize = true;
-            this.radioButtonOps.Location = new System.Drawing.Point(160, 18);
+            this.radioButtonOps.Location = new System.Drawing.Point(20, 19);
             this.radioButtonOps.Name = "radioButtonOps";
-            this.radioButtonOps.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonOps.Size = new System.Drawing.Size(78, 17);
             this.radioButtonOps.TabIndex = 0;
-            this.radioButtonOps.Text = "ОПС";
+            this.radioButtonOps.Text = "- Для ОПС";
             this.radioButtonOps.UseVisualStyleBackColor = true;
             // 
             // radioButtonIP
             // 
             this.radioButtonIP.AutoSize = true;
-            this.radioButtonIP.Location = new System.Drawing.Point(228, 18);
+            this.radioButtonIP.Location = new System.Drawing.Point(20, 41);
             this.radioButtonIP.Name = "radioButtonIP";
-            this.radioButtonIP.Size = new System.Drawing.Size(41, 17);
+            this.radioButtonIP.Size = new System.Drawing.Size(71, 17);
             this.radioButtonIP.TabIndex = 1;
-            this.radioButtonIP.Text = "ИП";
+            this.radioButtonIP.Text = "- Для ИП";
             this.radioButtonIP.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 18);
+            this.label1.Location = new System.Drawing.Point(17, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 2;
@@ -111,7 +113,8 @@
             // 
             // butSave
             // 
-            this.butSave.Location = new System.Drawing.Point(345, 355);
+            this.butSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.butSave.Location = new System.Drawing.Point(319, 396);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(75, 23);
             this.butSave.TabIndex = 3;
@@ -120,8 +123,9 @@
             // 
             // butCancel
             // 
+            this.butCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.butCancel.Location = new System.Drawing.Point(442, 355);
+            this.butCancel.Location = new System.Drawing.Point(419, 396);
             this.butCancel.Name = "butCancel";
             this.butCancel.Size = new System.Drawing.Size(75, 23);
             this.butCancel.TabIndex = 4;
@@ -130,48 +134,55 @@
             // 
             // configF130To
             // 
-            this.configF130To.Location = new System.Drawing.Point(156, 39);
+            this.configF130To.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.configF130To.Location = new System.Drawing.Point(149, 39);
             this.configF130To.Name = "configF130To";
-            this.configF130To.Size = new System.Drawing.Size(299, 20);
+            this.configF130To.Size = new System.Drawing.Size(279, 20);
             this.configF130To.TabIndex = 6;
             // 
             // fromPostPay
             // 
-            this.fromPostPay.Location = new System.Drawing.Point(156, 65);
+            this.fromPostPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromPostPay.Location = new System.Drawing.Point(149, 65);
             this.fromPostPay.Name = "fromPostPay";
-            this.fromPostPay.Size = new System.Drawing.Size(299, 20);
+            this.fromPostPay.Size = new System.Drawing.Size(279, 20);
             this.fromPostPay.TabIndex = 7;
             // 
             // fromF130
             // 
-            this.fromF130.Location = new System.Drawing.Point(156, 91);
+            this.fromF130.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromF130.Location = new System.Drawing.Point(149, 91);
             this.fromF130.Name = "fromF130";
-            this.fromF130.Size = new System.Drawing.Size(299, 20);
+            this.fromF130.Size = new System.Drawing.Size(279, 20);
             this.fromF130.TabIndex = 9;
             // 
             // toGibrid
             // 
-            this.toGibrid.Location = new System.Drawing.Point(156, 117);
+            this.toGibrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toGibrid.Location = new System.Drawing.Point(149, 117);
             this.toGibrid.Name = "toGibrid";
-            this.toGibrid.Size = new System.Drawing.Size(299, 20);
+            this.toGibrid.Size = new System.Drawing.Size(279, 20);
             this.toGibrid.TabIndex = 12;
             // 
             // toPostPayBD
             // 
-            this.toPostPayBD.Location = new System.Drawing.Point(156, 143);
+            this.toPostPayBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toPostPayBD.Location = new System.Drawing.Point(149, 143);
             this.toPostPayBD.Name = "toPostPayBD";
-            this.toPostPayBD.Size = new System.Drawing.Size(299, 20);
+            this.toPostPayBD.Size = new System.Drawing.Size(279, 20);
             this.toPostPayBD.TabIndex = 14;
             // 
             // fromPension
             // 
-            this.fromPension.Location = new System.Drawing.Point(156, 169);
+            this.fromPension.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromPension.Location = new System.Drawing.Point(149, 169);
             this.fromPension.Name = "fromPension";
-            this.fromPension.Size = new System.Drawing.Size(299, 20);
+            this.fromPension.Size = new System.Drawing.Size(279, 20);
             this.fromPension.TabIndex = 15;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
@@ -181,6 +192,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 68);
             this.label4.Name = "label4";
@@ -190,6 +202,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 94);
             this.label6.Name = "label6";
@@ -199,6 +212,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 120);
             this.label9.Name = "label9";
@@ -208,6 +222,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 171);
             this.label11.Name = "label11";
@@ -217,6 +232,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 146);
             this.label12.Name = "label12";
@@ -226,20 +242,23 @@
             // 
             // fsgCashTo
             // 
-            this.fsgCashTo.Location = new System.Drawing.Point(156, 195);
+            this.fsgCashTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fsgCashTo.Location = new System.Drawing.Point(149, 195);
             this.fsgCashTo.Name = "fsgCashTo";
-            this.fsgCashTo.Size = new System.Drawing.Size(299, 20);
+            this.fsgCashTo.Size = new System.Drawing.Size(279, 20);
             this.fsgCashTo.TabIndex = 29;
             // 
             // regFSGFrom
             // 
-            this.regFSGFrom.Location = new System.Drawing.Point(156, 221);
+            this.regFSGFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.regFSGFrom.Location = new System.Drawing.Point(149, 221);
             this.regFSGFrom.Name = "regFSGFrom";
-            this.regFSGFrom.Size = new System.Drawing.Size(299, 20);
+            this.regFSGFrom.Size = new System.Drawing.Size(279, 20);
             this.regFSGFrom.TabIndex = 28;
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(6, 225);
             this.label14.Name = "label14";
@@ -249,6 +268,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 199);
             this.label15.Name = "label15";
@@ -258,8 +278,9 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(461, 39);
+            this.button2.Location = new System.Drawing.Point(434, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 19);
             this.button2.TabIndex = 38;
@@ -269,8 +290,9 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(461, 66);
+            this.button3.Location = new System.Drawing.Point(434, 66);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 19);
             this.button3.TabIndex = 40;
@@ -280,8 +302,9 @@
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(461, 92);
+            this.button5.Location = new System.Drawing.Point(434, 92);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 19);
             this.button5.TabIndex = 44;
@@ -291,8 +314,9 @@
             // 
             // button8
             // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(461, 117);
+            this.button8.Location = new System.Drawing.Point(434, 117);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 19);
             this.button8.TabIndex = 41;
@@ -302,8 +326,9 @@
             // 
             // button10
             // 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(461, 143);
+            this.button10.Location = new System.Drawing.Point(434, 143);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 19);
             this.button10.TabIndex = 47;
@@ -313,8 +338,9 @@
             // 
             // button11
             // 
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Location = new System.Drawing.Point(461, 168);
+            this.button11.Location = new System.Drawing.Point(434, 168);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 19);
             this.button11.TabIndex = 46;
@@ -324,8 +350,9 @@
             // 
             // button14
             // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Location = new System.Drawing.Point(461, 195);
+            this.button14.Location = new System.Drawing.Point(434, 195);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(30, 19);
             this.button14.TabIndex = 51;
@@ -335,8 +362,9 @@
             // 
             // button15
             // 
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Location = new System.Drawing.Point(461, 220);
+            this.button15.Location = new System.Drawing.Point(434, 220);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(30, 19);
             this.button15.TabIndex = 50;
@@ -346,12 +374,15 @@
             // 
             // tabControl
             // 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPageOPS);
             this.tabControl.Controls.Add(this.tabPageIP);
-            this.tabControl.Location = new System.Drawing.Point(16, 41);
+            this.tabControl.Location = new System.Drawing.Point(17, 82);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(503, 308);
+            this.tabControl.Size = new System.Drawing.Size(476, 308);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 53;
             // 
@@ -388,7 +419,7 @@
             this.tabPageOPS.Location = new System.Drawing.Point(4, 22);
             this.tabPageOPS.Name = "tabPageOPS";
             this.tabPageOPS.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOPS.Size = new System.Drawing.Size(495, 282);
+            this.tabPageOPS.Size = new System.Drawing.Size(468, 282);
             this.tabPageOPS.TabIndex = 0;
             this.tabPageOPS.Text = "ОПС";
             this.tabPageOPS.UseVisualStyleBackColor = true;
@@ -405,6 +436,7 @@
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(6, 250);
             this.label26.Name = "label26";
@@ -414,8 +446,9 @@
             // 
             // button18
             // 
+            this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(461, 247);
+            this.button18.Location = new System.Drawing.Point(434, 247);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(30, 19);
             this.button18.TabIndex = 57;
@@ -425,9 +458,10 @@
             // 
             // toPostPayMod
             // 
-            this.toPostPayMod.Location = new System.Drawing.Point(156, 247);
+            this.toPostPayMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toPostPayMod.Location = new System.Drawing.Point(149, 247);
             this.toPostPayMod.Name = "toPostPayMod";
-            this.toPostPayMod.Size = new System.Drawing.Size(299, 20);
+            this.toPostPayMod.Size = new System.Drawing.Size(279, 20);
             this.toPostPayMod.TabIndex = 55;
             // 
             // tabPageIP
@@ -443,7 +477,7 @@
             this.tabPageIP.Location = new System.Drawing.Point(4, 22);
             this.tabPageIP.Name = "tabPageIP";
             this.tabPageIP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIP.Size = new System.Drawing.Size(495, 282);
+            this.tabPageIP.Size = new System.Drawing.Size(468, 282);
             this.tabPageIP.TabIndex = 1;
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
@@ -453,7 +487,7 @@
             this.comboBoxPost.FormattingEnabled = true;
             this.comboBoxPost.Location = new System.Drawing.Point(140, 97);
             this.comboBoxPost.Name = "comboBoxPost";
-            this.comboBoxPost.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPost.Size = new System.Drawing.Size(152, 21);
             this.comboBoxPost.TabIndex = 10;
             // 
             // textBoxPass
@@ -461,21 +495,21 @@
             this.textBoxPass.Location = new System.Drawing.Point(141, 71);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
-            this.textBoxPass.Size = new System.Drawing.Size(235, 20);
+            this.textBoxPass.Size = new System.Drawing.Size(151, 20);
             this.textBoxPass.TabIndex = 9;
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(141, 45);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(235, 20);
+            this.textBoxLogin.Size = new System.Drawing.Size(151, 20);
             this.textBoxLogin.TabIndex = 8;
             // 
             // textBoxIP
             // 
             this.textBoxIP.Location = new System.Drawing.Point(141, 19);
             this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.Size = new System.Drawing.Size(235, 20);
+            this.textBoxIP.Size = new System.Drawing.Size(151, 20);
             this.textBoxIP.TabIndex = 7;
             // 
             // label21
@@ -520,26 +554,36 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(16, 355);
+            this.btnReset.Location = new System.Drawing.Point(17, 396);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(98, 23);
             this.btnReset.TabIndex = 54;
             this.btnReset.Text = "По-умолчанию";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.radioButtonIP);
+            this.groupBox1.Controls.Add(this.radioButtonOps);
+            this.groupBox1.Location = new System.Drawing.Point(17, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(472, 64);
+            this.groupBox1.TabIndex = 55;
+            this.groupBox1.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.butCancel;
-            this.ClientSize = new System.Drawing.Size(528, 389);
+            this.ClientSize = new System.Drawing.Size(504, 431);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.butSave);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.butCancel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButtonIP);
-            this.Controls.Add(this.radioButtonOps);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -550,8 +594,9 @@
             this.tabPageOPS.PerformLayout();
             this.tabPageIP.ResumeLayout(false);
             this.tabPageIP.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -604,5 +649,6 @@
         private System.Windows.Forms.ComboBox comboBoxPost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

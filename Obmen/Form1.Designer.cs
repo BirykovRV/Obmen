@@ -38,13 +38,15 @@
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butYes
             // 
             this.butYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butYes.Location = new System.Drawing.Point(67, 63);
+            this.butYes.Location = new System.Drawing.Point(49, 34);
             this.butYes.Name = "butYes";
             this.butYes.Size = new System.Drawing.Size(75, 23);
             this.butYes.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             this.butNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.butNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butNo.Location = new System.Drawing.Point(196, 63);
+            this.butNo.Location = new System.Drawing.Point(178, 34);
             this.butNo.Name = "butNo";
             this.butNo.Size = new System.Drawing.Size(75, 23);
             this.butNo.TabIndex = 1;
@@ -67,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 30);
+            this.label1.Location = new System.Drawing.Point(71, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 13);
             this.label1.TabIndex = 2;
@@ -76,7 +78,7 @@
             // checkBoxPostPay
             // 
             this.checkBoxPostPay.AutoSize = true;
-            this.checkBoxPostPay.Location = new System.Drawing.Point(53, 100);
+            this.checkBoxPostPay.Location = new System.Drawing.Point(35, 71);
             this.checkBoxPostPay.Name = "checkBoxPostPay";
             this.checkBoxPostPay.Size = new System.Drawing.Size(246, 17);
             this.checkBoxPostPay.TabIndex = 3;
@@ -88,7 +90,8 @@
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(343, 24);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(334, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -119,15 +122,25 @@
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBoxPostPay);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.butNo);
+            this.groupBox1.Controls.Add(this.butYes);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(310, 94);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
             // FormObmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 133);
-            this.Controls.Add(this.checkBoxPostPay);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.butNo);
-            this.Controls.Add(this.butYes);
+            this.ClientSize = new System.Drawing.Size(334, 132);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -135,9 +148,10 @@
             this.Name = "FormObmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Обмен";
-            this.TransparencyKey = System.Drawing.Color.White;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

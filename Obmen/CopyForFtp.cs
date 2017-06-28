@@ -1,33 +1,49 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Net;
 
 namespace Obmen
 {
     class CopyForFtp
     {
-        public string IpAdress { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string PostIndex { get; set; }
+        private string ipAdress;
+        private string login;
+        private string password;
+        private string postIndex;
+
+        public string IpAdress
+        {
+            get { return ipAdress; }
+            set { ipAdress = value; }
+        }
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public string PostIndex
+        {
+            get { return postIndex; }
+            set { postIndex = value; }
+        }
 
         void CopyToFtp(string pathFrom, string pathTo)
         {
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + IpAdress + "/Shared/" + PostIndex + "/TestObmen");
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + ipAdress + "/Shared/ZHUKOVKA/TestObmen/" + postIndex);
             request.Credentials = new NetworkCredential(Login, Password);
             request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-            Console.WriteLine("Содержимое сервера:");
-            Console.WriteLine();
 
             Stream responseStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(responseStream);
-            Console.WriteLine(reader.ReadToEnd());
+            System.Windows.Forms.MessageBox.Show(reader.ReadToEnd());
 
             reader.Close();
             response.Close();
-            Console.Read();
-
 
             //DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
             //DirectoryInfo dirTo = new DirectoryInfo(pathTo);
