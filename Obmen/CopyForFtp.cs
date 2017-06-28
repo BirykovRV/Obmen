@@ -25,7 +25,6 @@ namespace Obmen
             Console.WriteLine(reader.ReadToEnd());
 
             reader.Close();
-            responseStream.Close();
             response.Close();
             Console.Read();
 

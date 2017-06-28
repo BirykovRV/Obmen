@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Obmen")]
+[assembly: AssemblyTitle("Обмен")]
 [assembly: AssemblyDescription("Программа для обмена файлами в ОПС")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Роман Бирюков (r.v.birykov@yandex.ru)")]
+[assembly: AssemblyCompany("r.v.birykov@yandex.ru")]
 [assembly: AssemblyProduct("Obmen")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

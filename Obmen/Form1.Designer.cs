@@ -134,7 +134,7 @@
             this.MaximizeBox = false;
             this.Name = "FormObmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Обмен";
             this.TransparencyKey = System.Drawing.Color.White;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
