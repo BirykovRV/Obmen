@@ -70,10 +70,6 @@ namespace Obmen
                 }
             }
         }
-
-        private void ButNo_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
     }
 }
