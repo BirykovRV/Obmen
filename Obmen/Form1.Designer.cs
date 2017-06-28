@@ -82,7 +82,7 @@
             this.checkBoxPostPay.Name = "checkBoxPostPay";
             this.checkBoxPostPay.Size = new System.Drawing.Size(246, 17);
             this.checkBoxPostPay.TabIndex = 3;
-            this.checkBoxPostPay.Text = "Обновить модуль \'Коммунальные платяжи\'";
+            this.checkBoxPostPay.Text = "Обновить модуль \'Коммунальные платежи\'";
             // 
             // menuStrip1
             // 
