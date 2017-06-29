@@ -31,19 +31,9 @@ namespace Obmen
             set { postIndex = value; }
         }
 
-        void CopyToFtp(string pathFrom, string pathTo)
+        void CopyToFtp(string pathFrom, string pathTo, string _postIndex)
         {
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + ipAdress + "/Shared/ZHUKOVKA/TestObmen/" + postIndex);
-            request.Credentials = new NetworkCredential(Login, Password);
-            request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
-            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-            Stream responseStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(responseStream);
-            System.Windows.Forms.MessageBox.Show(reader.ReadToEnd());
-
-            reader.Close();
-            response.Close();
+            
 
             //DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
             //DirectoryInfo dirTo = new DirectoryInfo(pathTo);
@@ -63,7 +53,7 @@ namespace Obmen
                 if (allDrives[i].DriveType == DriveType.Removable)
                 {
                     string pathIndex = @"D:\FTP\" + allDrives[i].VolumeLabel;
-                    CopyToFtp(allDrives[i].Name + pathFrom, pathIndex + pathTo);
+                    CopyToFtp(allDrives[i].Name + pathFrom, pathIndex + pathTo, "242700");
                 }
             }
         }

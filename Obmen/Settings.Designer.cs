@@ -134,50 +134,50 @@
             // 
             // configF130To
             // 
-            this.configF130To.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.configF130To.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.configF130To.Location = new System.Drawing.Point(149, 39);
             this.configF130To.Name = "configF130To";
-            this.configF130To.Size = new System.Drawing.Size(279, 20);
+            this.configF130To.Size = new System.Drawing.Size(277, 20);
             this.configF130To.TabIndex = 6;
             // 
             // fromPostPay
             // 
-            this.fromPostPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromPostPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.fromPostPay.Location = new System.Drawing.Point(149, 65);
             this.fromPostPay.Name = "fromPostPay";
-            this.fromPostPay.Size = new System.Drawing.Size(279, 20);
+            this.fromPostPay.Size = new System.Drawing.Size(277, 20);
             this.fromPostPay.TabIndex = 7;
             // 
             // fromF130
             // 
-            this.fromF130.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromF130.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.fromF130.Location = new System.Drawing.Point(149, 91);
             this.fromF130.Name = "fromF130";
-            this.fromF130.Size = new System.Drawing.Size(279, 20);
+            this.fromF130.Size = new System.Drawing.Size(277, 20);
             this.fromF130.TabIndex = 9;
             // 
             // toGibrid
             // 
-            this.toGibrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toGibrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.toGibrid.Location = new System.Drawing.Point(149, 117);
             this.toGibrid.Name = "toGibrid";
-            this.toGibrid.Size = new System.Drawing.Size(279, 20);
+            this.toGibrid.Size = new System.Drawing.Size(277, 20);
             this.toGibrid.TabIndex = 12;
             // 
             // toPostPayBD
             // 
-            this.toPostPayBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toPostPayBD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.toPostPayBD.Location = new System.Drawing.Point(149, 143);
             this.toPostPayBD.Name = "toPostPayBD";
-            this.toPostPayBD.Size = new System.Drawing.Size(279, 20);
+            this.toPostPayBD.Size = new System.Drawing.Size(277, 20);
             this.toPostPayBD.TabIndex = 14;
             // 
             // fromPension
             // 
-            this.fromPension.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fromPension.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.fromPension.Location = new System.Drawing.Point(149, 169);
             this.fromPension.Name = "fromPension";
-            this.fromPension.Size = new System.Drawing.Size(279, 20);
+            this.fromPension.Size = new System.Drawing.Size(277, 20);
             this.fromPension.TabIndex = 15;
             // 
             // label3
@@ -242,18 +242,18 @@
             // 
             // fsgCashTo
             // 
-            this.fsgCashTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fsgCashTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.fsgCashTo.Location = new System.Drawing.Point(149, 195);
             this.fsgCashTo.Name = "fsgCashTo";
-            this.fsgCashTo.Size = new System.Drawing.Size(279, 20);
+            this.fsgCashTo.Size = new System.Drawing.Size(277, 20);
             this.fsgCashTo.TabIndex = 29;
             // 
             // regFSGFrom
             // 
-            this.regFSGFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.regFSGFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.regFSGFrom.Location = new System.Drawing.Point(149, 221);
             this.regFSGFrom.Name = "regFSGFrom";
-            this.regFSGFrom.Size = new System.Drawing.Size(279, 20);
+            this.regFSGFrom.Size = new System.Drawing.Size(277, 20);
             this.regFSGFrom.TabIndex = 28;
             // 
             // label14
@@ -278,11 +278,11 @@
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(434, 39);
+            this.button2.Location = new System.Drawing.Point(432, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 19);
+            this.button2.Size = new System.Drawing.Size(28, 19);
             this.button2.TabIndex = 38;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = true;
@@ -290,11 +290,11 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(434, 66);
+            this.button3.Location = new System.Drawing.Point(432, 66);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 19);
+            this.button3.Size = new System.Drawing.Size(28, 19);
             this.button3.TabIndex = 40;
             this.button3.Text = "...";
             this.button3.UseVisualStyleBackColor = true;
@@ -302,11 +302,11 @@
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(434, 92);
+            this.button5.Location = new System.Drawing.Point(432, 92);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 19);
+            this.button5.Size = new System.Drawing.Size(28, 19);
             this.button5.TabIndex = 44;
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
@@ -314,11 +314,11 @@
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(434, 117);
+            this.button8.Location = new System.Drawing.Point(432, 117);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 19);
+            this.button8.Size = new System.Drawing.Size(28, 19);
             this.button8.TabIndex = 41;
             this.button8.Text = "...";
             this.button8.UseVisualStyleBackColor = true;
@@ -326,11 +326,11 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Location = new System.Drawing.Point(434, 143);
+            this.button10.Location = new System.Drawing.Point(432, 143);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 19);
+            this.button10.Size = new System.Drawing.Size(28, 19);
             this.button10.TabIndex = 47;
             this.button10.Text = "...";
             this.button10.UseVisualStyleBackColor = true;
@@ -338,11 +338,11 @@
             // 
             // button11
             // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Location = new System.Drawing.Point(434, 168);
+            this.button11.Location = new System.Drawing.Point(432, 168);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 19);
+            this.button11.Size = new System.Drawing.Size(28, 19);
             this.button11.TabIndex = 46;
             this.button11.Text = "...";
             this.button11.UseVisualStyleBackColor = true;
@@ -350,11 +350,11 @@
             // 
             // button14
             // 
-            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Location = new System.Drawing.Point(434, 195);
+            this.button14.Location = new System.Drawing.Point(432, 195);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(30, 19);
+            this.button14.Size = new System.Drawing.Size(28, 19);
             this.button14.TabIndex = 51;
             this.button14.Text = "...";
             this.button14.UseVisualStyleBackColor = true;
@@ -362,11 +362,11 @@
             // 
             // button15
             // 
-            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Location = new System.Drawing.Point(434, 220);
+            this.button15.Location = new System.Drawing.Point(432, 220);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(30, 19);
+            this.button15.Size = new System.Drawing.Size(28, 19);
             this.button15.TabIndex = 50;
             this.button15.Text = "...";
             this.button15.UseVisualStyleBackColor = true;
@@ -446,11 +446,11 @@
             // 
             // button18
             // 
-            this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button18.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Location = new System.Drawing.Point(434, 247);
+            this.button18.Location = new System.Drawing.Point(432, 247);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(30, 19);
+            this.button18.Size = new System.Drawing.Size(28, 19);
             this.button18.TabIndex = 57;
             this.button18.Text = "...";
             this.button18.UseVisualStyleBackColor = true;
@@ -458,10 +458,10 @@
             // 
             // toPostPayMod
             // 
-            this.toPostPayMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toPostPayMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.toPostPayMod.Location = new System.Drawing.Point(149, 247);
             this.toPostPayMod.Name = "toPostPayMod";
-            this.toPostPayMod.Size = new System.Drawing.Size(279, 20);
+            this.toPostPayMod.Size = new System.Drawing.Size(277, 20);
             this.toPostPayMod.TabIndex = 55;
             // 
             // tabPageIP
