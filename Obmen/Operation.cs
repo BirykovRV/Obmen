@@ -194,7 +194,7 @@ namespace Obmen
             CopyFtp.Password = pass;
 
             CopyFtp.Copy(pensiaFrom, pensiaTo);
-            //CopyFtp.Copy(f130From, f130To);
+            CopyFtp.Copy(f130From, f130To);
             //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
             //CopyFtp.Copy(regFSGFrom, regFSGTo);
         }

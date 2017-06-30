@@ -90,16 +90,6 @@ namespace Obmen
                 byte[] byteBuffer = new byte[uploadedFile.Length];
                 uploadedFile.Read(byteBuffer, 0, byteBuffer.Length);
                 /* Upload the File by Sending the Buffered Data Until the Transfer is Complete */
-                //try
-                //{
-                //    while (bytesSent != 0)
-                //    {
-                //        ftpStream.Write(byteBuffer, 0, bytesSent);
-                //        bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
-                //    }
-                //}
-                //catch (Exception ex) { Console.WriteLine(ex.ToString()); }
-                /* Resource Cleanup */
                 uploadedFile.Close();
 
                 ftpStream.Write(byteBuffer, 0, byteBuffer.Length);
