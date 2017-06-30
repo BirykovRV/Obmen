@@ -7,7 +7,6 @@ namespace Obmen
         private string ipAdress;
         private string login;
         private string password;
-        private string postIndex;
 
         public string IpAdress
         {
@@ -24,26 +23,27 @@ namespace Obmen
             get { return password; }
             set { password = value; }
         }
-        public string PostIndex
-        {
-            get { return postIndex; }
-            set { postIndex = value; }
-        }
 
         void CopyToFtp(string pathFrom, string uploadPath)
         {
             ftp ftpClient = new ftp(ipAdress, login, password);
 
             string[] files = Directory.GetFiles(pathFrom, "*.*");
-            string[] subDir = Directory.GetDirectories(pathFrom);
+            string[] subDirs = Directory.GetDirectories(pathFrom);
 
             foreach (string file in files)
             {
-                ftpClient.Upload(uploadPath + "/" + Path.GetFileName(file), file);
+                ftpClient.Upload(uploadPath + Path.GetFileName(file), file);
+            }
+
+            foreach (string subDir in subDirs)
+            {
+                ftpClient.CreateDirectory(uploadPath + Path.GetFileName(subDir));
+                CopyToFtp(subDir, uploadPath + Path.GetFileName(subDir) + "/");
             }
         }
 
-        public void Copy(string pathFrom, string uploadPath)
+        public void Copy(string pathFrom, string _uploadPath)
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
 
@@ -51,8 +51,8 @@ namespace Obmen
             {
                 if (allDrives[i].DriveType == DriveType.Removable)
                 {
-                    string uploadPathIndex = "ftp://" + ipAdress + "/" + allDrives[i].VolumeLabel + "/";
-                    CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + uploadPath);
+                    string uploadPathIndex = allDrives[i].VolumeLabel;
+                    CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + _uploadPath);
                 }
             }
         }

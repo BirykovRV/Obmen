@@ -173,7 +173,7 @@ namespace Obmen
         }
 
         // Обмен данными с FTP
-        public static void CopyForIp(string ipAdress, string login, string pass, string indexPos)
+        public static void CopyForIp(string ipAdress, string login, string pass)
         {
             #region Присвоение путей
             string pensiaFrom = @"Пенсия";
@@ -192,7 +192,6 @@ namespace Obmen
             CopyFtp.IpAdress = ipAdress;
             CopyFtp.Login = login;
             CopyFtp.Password = pass;
-            CopyFtp.PostIndex = indexPos;
 
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
