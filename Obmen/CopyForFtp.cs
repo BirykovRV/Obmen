@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Obmen
 {
@@ -47,14 +49,26 @@ namespace Obmen
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
 
-            for (int i = 0; i < allDrives.Length; i++)
+            foreach (DriveInfo d in allDrives)
             {
-                if (allDrives[i].DriveType == DriveType.Removable)
+                try
                 {
-                    string uploadPathIndex = allDrives[i].VolumeLabel;
-                    CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + _uploadPath);
+                    for (int i = 0; i < allDrives.Length; i++)
+                    {
+                        if (allDrives[i].DriveType == DriveType.Removable)
+                        {
+                            string uploadPathIndex = allDrives[i].VolumeLabel;
+                            CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + _uploadPath);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            
         }
     }
 }
