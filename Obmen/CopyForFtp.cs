@@ -53,13 +53,10 @@ namespace Obmen
             {
                 try
                 {
-                    for (int i = 0; i < allDrives.Length; i++)
+                    if (d.DriveType == DriveType.Removable)
                     {
-                        if (allDrives[i].DriveType == DriveType.Removable)
-                        {
-                            string uploadPathIndex = allDrives[i].VolumeLabel;
-                            CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + _uploadPath);
-                        }
+                        string uploadPathIndex = d.VolumeLabel;
+                        CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath);
                     }
                 }
                 catch (Exception ex)
@@ -68,7 +65,7 @@ namespace Obmen
                 }
             }
 
-            
+
         }
     }
 }
