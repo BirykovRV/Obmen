@@ -7,44 +7,16 @@ using System.Threading;
 
 namespace Obmen
 {
-    class Operation
+    class Operation : FormObmen
     {
         public static void Copy(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-
             try
             {
-               FileInfo[] files = dirFrom.GetFiles();
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
 
-               foreach (FileInfo fInfo in files)
-                   fInfo.CopyTo(pathTo + fInfo.Name, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        // Копирование коталогов с разных дисков и их содержимое
-        public static void CopyDir(string pathFrom, string pathTo)
-        {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-            DirectoryInfo [] dir = dirFrom.GetDirectories();
-            
-            try
-            {
-                for (int i = 0; i < dir.Length; i++)
-                {
-                    string destPath = pathTo + dir[i].Name + @"\";
-                    Directory.CreateDirectory(destPath);
-
-                    FileInfo[] file = dir[i].GetFiles();
-                    foreach (FileInfo fInfo in file)
-                        fInfo.CopyTo(destPath + fInfo.Name, true);
-                }
                 FileInfo[] files = dirFrom.GetFiles();
 
                 foreach (FileInfo fInfo in files)
@@ -56,15 +28,25 @@ namespace Obmen
             }
         }
 
-        // Разархивация базы по комуналке с перемещением
-        public static void CopyDB(string pathFrom, string pathTo)
+        // Копирование коталогов с разных дисков и их содержимое
+        public static void CopyDir(string pathFrom, string pathTo)
         {
-            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            FileInfo [] fileInfo = dirFrom.GetFiles();
             try
             {
-                foreach (FileInfo file in fileInfo)
-                RarArchive.WriteToDirectory(pathFrom + file.Name, pathTo); // Разархивация .rar
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+                DirectoryInfo[] dir = dirFrom.GetDirectories();
+
+
+                for (int i = 0; i < dir.Length; i++)
+                {
+                    string destPath = pathTo + dir[i].Name + @"\";
+                    Directory.CreateDirectory(destPath);
+
+                    FileInfo[] file = dir[i].GetFiles();
+                    foreach (FileInfo fInfo in file)
+                        fInfo.CopyTo(destPath + fInfo.Name, true);
+                }
             }
             catch (Exception ex)
             {
@@ -72,26 +54,53 @@ namespace Obmen
             }
         }
 
-        public static void ExtractDistrib (string pathFrom, string pathTo)
+        // Разархивация базы по комуналке с перемещением
+        public static void CopyDB(string pathFrom, string pathTo)
         {
             try
             {
-                DirectoryInfo dirInfo = new DirectoryInfo(pathTo);
-                if (dirInfo.Exists) dirInfo.Delete(true);
-                ZipFile.ExtractToDirectory(pathFrom, pathTo);
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                FileInfo[] files = dirFrom.GetFiles();
+
+                for (int i = 0; i < files.Length; i++)
+                {
+                    string _pathFrom = dirFrom + files[i].Name;
+                    RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                }
             }
-            catch (IOException e)
+            catch (Exception)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Проверьте правильность путей и наличие rar архива на флешке.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void ExtractDistrib(string pathFrom, string pathTo)
+        {
+            try
+            {
+                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+                FileInfo[] files = dirFrom.GetFiles();
+
+                if (dirTo.Exists) dirTo.Delete(true);
+                for (int i = 0; i < files.Length; i++)
+                {
+                    string _pathFrom = dirFrom + files[i].Name;
+                    ZipFile.ExtractToDirectory(_pathFrom, pathTo); // Разархивация .zip
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Убедитесь в наличии zip архива на флешке, а также к доступу к папке: " + pathTo, "Ошибка");
             }
         }
 
         // Получаем букву съемного диска
         public static string GetDisk()
-            {
+        {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
             string disk = "";
-            
+
             foreach (DriveInfo d in allDrives)
             {
                 try
@@ -105,7 +114,7 @@ namespace Obmen
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
+                }
             }
             return disk;
         }
@@ -115,42 +124,92 @@ namespace Obmen
         {
             #region Присвоение путей
             string fromPostPay = Properties.Settings.Default.fromPostPay;
-            string toPostPay = Properties.Settings.Default.toPostPay + @"\";
+            string toPostPay = GetDisk() + @"Реестр коммунальных платежей\";
 
-            string configF130From = Properties.Settings.Default.configF130From;
+            string configF130From = GetDisk() + @"Config";
             string configF130To = Properties.Settings.Default.configF130To + @"\";
             string fromF130 = Properties.Settings.Default.fromF130;
-            string toF130 = Properties.Settings.Default.toF130 + @"\";
-            string fromGibrid = Properties.Settings.Default.fromGibrid;
+            string toF130 = GetDisk() + @"F130\";
+            string fromGibrid = GetDisk() + @"Гибридные переводы";
             string toGibrid = Properties.Settings.Default.toGibrid + @"\";
-            string fromPostPayBD = Properties.Settings.Default.fromPostPayBD + @"\";
+            string fromPostPayBD = GetDisk() + @"База по коммунальным платежам\";
             string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
             string fromPension = Properties.Settings.Default.fromPension;
-            string toPension = Properties.Settings.Default.toPension + @"\";
-            string fsgCashFrom = Properties.Settings.Default.fsgCashFrom;
+            string toPension = GetDisk() + @"Пенсия\";
+            string fsgCashFrom = GetDisk() + @"FSG\Кэш";
             string fsgCashTo = Properties.Settings.Default.fsgCashTo + @"\";
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
-            string regFSGTo = Properties.Settings.Default.regFSGTo + @"\";
-            string fromPostPayMod = Properties.Settings.Default.fsgCashTo + @"\";
-            string toPostPayMod = Properties.Settings.Default.regFSGTo + @"\";
+            string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
 
-            Thread th1 = new Thread(() => Operation.CopyDB(fromPostPayBD, toPostPayBD));    // База по комуналке
+            // База по комуналке
+            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD)); 
             th1.Start();
 
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
+            Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
             Copy(fromPension, toPension);          // Файлы по пенсии
             CopyDir(configF130From, configF130To); // Ключ для 130
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
-            ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
+        }
+
+        // Метод для обновления Ppsplugin
+        public static void UpdatePostPay()
+        {
+            string fromPostPayMod = GetDisk() + @"Обновление PostPay\";
+            string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
+
+            try
+            {
+                ExtractDistrib(fromPostPayMod, toPostPayMod); //Обновление PostPay
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Обмен данными с FTP
-        public static void CopyForIp()
+        public static void CopyForIp(string ipAdress, string login, string pass)
         {
+            #region Присвоение путей
+            string pensiaFrom = @"Пенсия";
+            string f130From = @"F130";
+            string regPostPayFrom = @"Реестр коммунальных платежей";
+            string regFSGFrom = @"FSG\Реестры платежей";
+            
+            string pensiaTo = "/Пенсия/";
+            string f130To = "/F130/";
+            string regPostPayTo = "/Реестр коммунальных платежей/";
+            string regFSGTo = "/FSG/Реестры платежей/";
+            #endregion
+
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.IpAdress = ipAdress;
+            CopyFtp.Login = login;
+            CopyFtp.Password = pass;
+
+            CopyFtp.Copy(pensiaFrom, pensiaTo);
+            //CopyFtp.Copy(f130From, f130To);
+            //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
+            //CopyFtp.Copy(regFSGFrom, regFSGTo);
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Operation
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(334, 132);
+            this.Name = "Operation";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
     }
