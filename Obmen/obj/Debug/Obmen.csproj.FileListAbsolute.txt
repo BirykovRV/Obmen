@@ -9,3 +9,4 @@ c:\users\birykov.roman\documents\visual studio 2017\Projects\Obmen\Obmen\obj\Deb
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\NUnrar.dll
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Settings.resources
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csprojResolveAssemblyReference.cache
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Operation.resources
