@@ -181,10 +181,10 @@ namespace Obmen
             string regPostPayFrom = @"Реестр коммунальных платежей";
             string regFSGFrom = @"FSG\Реестры платежей";
             
-            string pensiaTo = @"\Пенсия\";
-            string f130To = @"/F130/";
-            string regPostPayTo = @"/Реестр коммунальных платежей/";
-            string regFSGTo = @"/FSG/Реестры платежей/";
+            string pensiaTo = "/Пенсия/";
+            string f130To = "/F130/";
+            string regPostPayTo = "/Реестр коммунальных платежей/";
+            string regFSGTo = "/FSG/Реестры платежей/";
             #endregion
 
 

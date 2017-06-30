@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Net;
 
 namespace Obmen
 {
@@ -31,20 +30,20 @@ namespace Obmen
             set { postIndex = value; }
         }
 
-        void CopyToFtp(string pathFrom, string pathTo, string _postIndex)
+        void CopyToFtp(string pathFrom, string uploadPath)
         {
-            
+            ftp ftpClient = new ftp(ipAdress, login, password);
 
-            //DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-            //DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-            //FileInfo[] files = dirFrom.GetFiles();
-            //foreach (FileInfo item in files)
-            //{
-            //    item.CopyTo(pathTo + item.Name, true);
-            //}
+            string[] files = Directory.GetFiles(pathFrom, "*.*");
+            string[] subDir = Directory.GetDirectories(pathFrom);
+
+            foreach (string file in files)
+            {
+                ftpClient.Upload(uploadPath + "/" + Path.GetFileName(file), file);
+            }
         }
 
-        public void Copy(string pathFrom, string pathTo)
+        public void Copy(string pathFrom, string uploadPath)
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
 
@@ -52,8 +51,8 @@ namespace Obmen
             {
                 if (allDrives[i].DriveType == DriveType.Removable)
                 {
-                    string pathIndex = @"D:\FTP\" + allDrives[i].VolumeLabel;
-                    CopyToFtp(allDrives[i].Name + pathFrom, pathIndex + pathTo, "242700");
+                    string uploadPathIndex = "ftp://" + ipAdress + "/" + allDrives[i].VolumeLabel + "/";
+                    CopyToFtp(allDrives[i].Name + pathFrom, uploadPathIndex + uploadPath);
                 }
             }
         }

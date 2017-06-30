@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -65,16 +64,6 @@ namespace Obmen
                 regFSGFrom,
                 toPostPayMod
             };
-
-            string[] post =
-            {
-                "Брянск", "Дядьково", "Жирятино",
-                "Жуковка", "Клинцы", "Локоть",
-                "Новозыбков", "Почеп", "Стародуб",
-                "Трубчевск", "Унеча"
-            };
-
-            comboBoxPost.Items.AddRange(post);
 
             #region Загрузка параметров
             configF130To.Text = Properties.Settings.Default.configF130To;

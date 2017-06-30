@@ -65,11 +65,9 @@
             this.button18 = new System.Windows.Forms.Button();
             this.toPostPayMod = new System.Windows.Forms.TextBox();
             this.tabPageIP = new System.Windows.Forms.TabPage();
-            this.comboBoxPost = new System.Windows.Forms.ComboBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -466,11 +464,9 @@
             // 
             // tabPageIP
             // 
-            this.tabPageIP.Controls.Add(this.comboBoxPost);
             this.tabPageIP.Controls.Add(this.textBoxPass);
             this.tabPageIP.Controls.Add(this.textBoxLogin);
             this.tabPageIP.Controls.Add(this.textBoxIP);
-            this.tabPageIP.Controls.Add(this.label21);
             this.tabPageIP.Controls.Add(this.label20);
             this.tabPageIP.Controls.Add(this.label19);
             this.tabPageIP.Controls.Add(this.label18);
@@ -482,44 +478,27 @@
             this.tabPageIP.Text = "ИП";
             this.tabPageIP.UseVisualStyleBackColor = true;
             // 
-            // comboBoxPost
-            // 
-            this.comboBoxPost.FormattingEnabled = true;
-            this.comboBoxPost.Location = new System.Drawing.Point(140, 97);
-            this.comboBoxPost.Name = "comboBoxPost";
-            this.comboBoxPost.Size = new System.Drawing.Size(152, 21);
-            this.comboBoxPost.TabIndex = 10;
-            // 
             // textBoxPass
             // 
             this.textBoxPass.Location = new System.Drawing.Point(141, 71);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
-            this.textBoxPass.Size = new System.Drawing.Size(151, 20);
+            this.textBoxPass.Size = new System.Drawing.Size(182, 20);
             this.textBoxPass.TabIndex = 9;
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(141, 45);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(151, 20);
+            this.textBoxLogin.Size = new System.Drawing.Size(182, 20);
             this.textBoxLogin.TabIndex = 8;
             // 
             // textBoxIP
             // 
             this.textBoxIP.Location = new System.Drawing.Point(141, 19);
             this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.Size = new System.Drawing.Size(151, 20);
+            this.textBoxIP.Size = new System.Drawing.Size(182, 20);
             this.textBoxIP.TabIndex = 7;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 100);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 13);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Почтамт:";
             // 
             // label20
             // 
@@ -638,7 +617,6 @@
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxIP;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -646,7 +624,6 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TextBox toPostPayMod;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.ComboBox comboBoxPost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox groupBox1;
