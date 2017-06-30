@@ -71,6 +71,7 @@ namespace Obmen
         {
             try
             {
+
                 /* Create an FTP Request */
                 ftpRequest = (FtpWebRequest)WebRequest.Create(host + "/" + remoteFile);
                 /* Log in to the FTP Server with the User Name and Password Provided */
@@ -84,22 +85,24 @@ namespace Obmen
                 /* Establish Return Communication with the FTP Server */
                 ftpStream = ftpRequest.GetRequestStream();
                 /* Open a File Stream to Read the File for Upload */
-                FileStream localFileStream = new FileStream(localFile, FileMode.Create);
+                FileStream uploadedFile = new FileStream(localFile, FileMode.Open, FileAccess.Read);
                 /* Buffer for the Downloaded Data */
-                byte[] byteBuffer = new byte[bufferSize];
-                int bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
+                byte[] byteBuffer = new byte[uploadedFile.Length];
+                uploadedFile.Read(byteBuffer, 0, byteBuffer.Length);
                 /* Upload the File by Sending the Buffered Data Until the Transfer is Complete */
-                try
-                {
-                    while (bytesSent != 0)
-                    {
-                        ftpStream.Write(byteBuffer, 0, bytesSent);
-                        bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
-                    }
-                }
-                catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+                //try
+                //{
+                //    while (bytesSent != 0)
+                //    {
+                //        ftpStream.Write(byteBuffer, 0, bytesSent);
+                //        bytesSent = localFileStream.Read(byteBuffer, 0, bufferSize);
+                //    }
+                //}
+                //catch (Exception ex) { Console.WriteLine(ex.ToString()); }
                 /* Resource Cleanup */
-                localFileStream.Close();
+                uploadedFile.Close();
+
+                ftpStream.Write(byteBuffer, 0, byteBuffer.Length);
                 ftpStream.Close();
                 ftpRequest = null;
             }

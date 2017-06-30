@@ -10,3 +10,15 @@ C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Deb
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Settings.resources
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csprojResolveAssemblyReference.cache
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Operation.resources
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.exe.config
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.exe
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\Obmen.pdb
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Debug\NUnrar.dll
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csprojResolveAssemblyReference.cache
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.FormObmen.resources
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Operation.resources
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Properties.Resources.resources
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.Settings.resources
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csproj.GenerateResource.Cache
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.exe
+C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.pdb
