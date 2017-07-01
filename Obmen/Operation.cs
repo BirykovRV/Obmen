@@ -132,7 +132,7 @@ namespace Obmen
             string toF130 = GetDisk() + @"F130\";
             string fromGibrid = GetDisk() + @"Гибридные переводы";
             string toGibrid = Properties.Settings.Default.toGibrid + @"\";
-            string fromPostPayBD = GetDisk() + @"База по коммунальным платежам\";
+            string fromPostPayBD = GetDisk() + @"PostPay\DB\";
             string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
             string fromPension = Properties.Settings.Default.fromPension;
             string toPension = GetDisk() + @"Пенсия\";
@@ -159,7 +159,7 @@ namespace Obmen
         // Метод для обновления Ppsplugin
         public static void UpdatePostPay()
         {
-            string fromPostPayMod = GetDisk() + @"Обновление PostPay\";
+            string fromPostPayMod = GetDisk() + @"PostPay\Update\";
             string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
 
             try
@@ -186,15 +186,15 @@ namespace Obmen
             string regPostPayTo = "/Реестр коммунальных платежей/";
             string regFSGTo = "/FSG/Реестры платежей/";
 
-            string configFrom = "ToOPS/Config";
-            string esppFrom = "ToOPS/ESPP/";
-            string postPayDBFrom = "ToOPS/PostPay/DB/";
-            string postPayUpdate = "ToOPS/PostPay/Update/";
+            string configFrom = "/Config/";
+            string esppFrom = "/ESPP/";
+            string postPayDBFrom = "/PostPay/DB/";
+            string postPayUpdate = "/PostPay/Update/";
 
             string configTo = @"Config\";
             string esppTo = @"\Гибридные переводы\";
             string postPayDBTo = @"\PostPay\DB\";
-            string postPayUpdateTo = @"/PostPay/Update/";
+            string postPayUpdateTo = @"\PostPay\Update\";
             #endregion
 
             CopyForFtp CopyFtp = new CopyForFtp();
@@ -202,11 +202,12 @@ namespace Obmen
             CopyFtp.Login = login;
             CopyFtp.Password = pass;
 
-            CopyFtp.Copy(pensiaFrom, pensiaTo, configFrom, configTo);
-            //CopyFtp.Copy(f130From, f130To);
-            //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
-            //CopyFtp.Copy(regFSGFrom, regFSGTo);
+
+            CopyFtp.Copy(regPostPayFrom, regPostPayTo);
+            CopyFtp.Copy(pensiaFrom, pensiaTo);
+            CopyFtp.Copy(f130From, f130To);
+            CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
-        
+
     }
 }

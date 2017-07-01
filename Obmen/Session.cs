@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace ConsoleApp1
+namespace Obmen
 {
     class Session
     {

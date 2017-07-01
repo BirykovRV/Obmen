@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Net;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -45,10 +47,9 @@ namespace Obmen
             }
         }
 
-        public void Copy(string pathFrom, string _uploadPath, string remoteFile, string localFile)
+        public void Copy(string pathFrom, string _uploadPath)
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
-            ftp ftpClient = new ftp(ipAdress, login, password);
 
             foreach (DriveInfo d in allDrives)
             {
@@ -58,7 +59,6 @@ namespace Obmen
                     {
                         string uploadPathIndex = d.VolumeLabel;
                         CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath);
-                        ftpClient.DownloadFtpDirectory(remoteFile, d.Name + localFile);
                     }
                 }
                 catch (Exception ex)
@@ -66,6 +66,34 @@ namespace Obmen
                     MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        public void CopyFromFtp(string remoteFile, string localFile)
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            Session download = new Session();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                try
+                {
+                    if (d.DriveType == DriveType.Removable)
+                    {
+                        string url = "ftp://" + ipAdress + "/ToOPS";
+                        NetworkCredential credentials = new NetworkCredential(login, password);
+                        string uploadPathIndex = d.VolumeLabel;
+                        Thread thread = new Thread(() =>
+                        download.DownloadFtpDirectory(url + remoteFile, credentials, d.Name + localFile));
+                        thread.Start();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
         }
     }
 }
