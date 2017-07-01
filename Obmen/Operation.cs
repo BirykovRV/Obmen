@@ -186,8 +186,7 @@ namespace Obmen
             string regPostPayTo = "/Реестр коммунальных платежей/";
             string regFSGTo = "/FSG/Реестры платежей/";
             #endregion
-
-
+            
             CopyForFtp CopyFtp = new CopyForFtp();
             CopyFtp.IpAdress = ipAdress;
             CopyFtp.Login = login;
@@ -195,8 +194,8 @@ namespace Obmen
 
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
-            //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
-            //CopyFtp.Copy(regFSGFrom, regFSGTo);
+            CopyFtp.Copy(regPostPayFrom, regPostPayTo);
+            CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
         
     }
