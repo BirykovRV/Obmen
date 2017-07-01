@@ -185,17 +185,27 @@ namespace Obmen
             string f130To = "/F130/";
             string regPostPayTo = "/Реестр коммунальных платежей/";
             string regFSGTo = "/FSG/Реестры платежей/";
+
+            string configFrom = "ToOPS/Config";
+            string esppFrom = "ToOPS/ESPP/";
+            string postPayDBFrom = "ToOPS/PostPay/DB/";
+            string postPayUpdate = "ToOPS/PostPay/Update/";
+
+            string configTo = @"Config\";
+            string esppTo = @"\Гибридные переводы\";
+            string postPayDBTo = @"\PostPay\DB\";
+            string postPayUpdateTo = @"/PostPay/Update/";
             #endregion
-            
+
             CopyForFtp CopyFtp = new CopyForFtp();
             CopyFtp.IpAdress = ipAdress;
             CopyFtp.Login = login;
             CopyFtp.Password = pass;
 
-            CopyFtp.Copy(pensiaFrom, pensiaTo);
-            CopyFtp.Copy(f130From, f130To);
-            CopyFtp.Copy(regPostPayFrom, regPostPayTo);
-            CopyFtp.Copy(regFSGFrom, regFSGTo);
+            CopyFtp.Copy(pensiaFrom, pensiaTo, configFrom, configTo);
+            //CopyFtp.Copy(f130From, f130To);
+            //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
+            //CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
         
     }
