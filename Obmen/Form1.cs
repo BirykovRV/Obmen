@@ -67,6 +67,7 @@ namespace Obmen
                 if (_radioButtonIP == true)
                 {
                     Operation.CopyForIp(ipAdress, login, pass);
+                    MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
         }

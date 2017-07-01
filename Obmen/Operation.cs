@@ -194,23 +194,10 @@ namespace Obmen
             CopyFtp.Password = pass;
 
             CopyFtp.Copy(pensiaFrom, pensiaTo);
-            //CopyFtp.Copy(f130From, f130To);
+            CopyFtp.Copy(f130From, f130To);
             //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
             //CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Operation
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(334, 132);
-            this.Name = "Operation";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
-        }
+        
     }
 }
