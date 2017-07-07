@@ -31,9 +31,7 @@ namespace Obmen
             radioButtonOps.Checked = Properties.Settings.Default.radioButtonOps;
             radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
             toPostPayMod.Text = Properties.Settings.Default.toPostPayMod;
-            textBoxIP.Text = Properties.Settings.Default.textBoxIP;
-            textBoxLogin.Text = Properties.Settings.Default.textBoxLogin;
-            textBoxPass.Text = Properties.Settings.Default.textBoxPass;
+            
             #endregion
         }
 
