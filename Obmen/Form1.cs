@@ -23,7 +23,7 @@ namespace Obmen
         private void CheckBoxPostPay_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxPostPay.Checked)
-                MessageBox.Show("Прежде чем обновлять модуль 'Коммунальные платяжи'\nнеобходимо выйти из программы ЕАС.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Прежде чем обновлять модуль 'Коммунальные платежи'\nнеобходимо выйти из программы ЕАС.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void НастройкиToolStripMenuItem_Click(object sender, EventArgs e)
