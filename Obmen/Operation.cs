@@ -184,7 +184,7 @@ namespace Obmen
             string pensiaTo = "/Пенсия/";
             string f130To = "/F130/";
             string regPostPayTo = "/Реестр коммунальных платежей/";
-            string regFSGTo = "/FSG/Реестры платежей/";
+            string regFSGTo = "/FSG/";
 
             string configFrom = "/Config/";
             string esppFrom = "/ESPP/";
