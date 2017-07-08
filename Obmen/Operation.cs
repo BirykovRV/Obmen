@@ -141,11 +141,8 @@ namespace Obmen
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
             string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
-
-            // База по комуналке
-            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));
-            th1.Start();
-
+            
+            CopyDB(fromPostPayBD, toPostPayBD);     // База по комуналке
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
             Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
@@ -154,6 +151,7 @@ namespace Obmen
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
+
         }
 
         // Метод для обновления Ppsplugin
@@ -197,7 +195,6 @@ namespace Obmen
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
             CopyFtp.Copy(regFSGFrom, regFSGTo);
-
         }
 
         public static void CopyFromFtp(string ipAdress, string login, string pass)
@@ -226,6 +223,5 @@ namespace Obmen
             CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
             CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
         }
-
     }
 }

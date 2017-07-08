@@ -58,9 +58,7 @@ namespace Obmen
                     if (d.DriveType == DriveType.Removable)
                     {
                         string uploadPathIndex = d.VolumeLabel;
-                        Thread uploadThread = new Thread (() =>
-                        CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath));
-                        uploadThread.Start();
+                        CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath);
                     }
                 }
                 catch (Exception ex)
@@ -74,7 +72,6 @@ namespace Obmen
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
             Session download = new Session();
-            NetworkCredential credentials = new NetworkCredential(login, password);
 
             foreach (DriveInfo d in allDrives)
             {
@@ -83,11 +80,9 @@ namespace Obmen
                     if (d.DriveType == DriveType.Removable)
                     {
                         string url = "ftp://" + ipAdress + "/ToOPS";
-                        
+                        NetworkCredential credentials = new NetworkCredential(login, password);
                         string uploadPathIndex = d.VolumeLabel;
-                        Thread downloadThread = new Thread(() =>
-                        download.DownloadFtpDirectory(url + remoteFile, credentials, d.Name + localFile));
-                        downloadThread.Start();
+                        download.DownloadFtpDirectory(url + remoteFile, credentials, d.Name + localFile);
                     }
                 }
                 catch (Exception ex)
@@ -95,8 +90,6 @@ namespace Obmen
                     MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
         }
     }
 }

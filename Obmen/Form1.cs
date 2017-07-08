@@ -98,7 +98,7 @@ namespace Obmen
             {
                 Operation.CopyFromFtp(ipAdress, login, pass);
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
-            };
+            }
         }
 
         private void ButNo_Click(object sender, EventArgs e)
