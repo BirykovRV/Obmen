@@ -74,6 +74,7 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
@@ -543,6 +544,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioButtonIP);
             this.groupBox1.Controls.Add(this.radioButtonOps);
@@ -551,6 +553,14 @@
             this.groupBox1.Size = new System.Drawing.Size(472, 64);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(140, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 3;
             // 
             // Settings
             // 
@@ -581,8 +591,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButtonOps;
-        private System.Windows.Forms.RadioButton radioButtonIP;
+        public System.Windows.Forms.RadioButton radioButtonOps;
+        public System.Windows.Forms.RadioButton radioButtonIP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button butSave;
         private System.Windows.Forms.Button butCancel;
@@ -627,5 +637,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

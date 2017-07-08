@@ -7,6 +7,7 @@ namespace Obmen
     {
         Button[] btns;
         TextBox[] txtbox;
+
         public Settings()
         {
             InitializeComponent();
@@ -15,7 +16,7 @@ namespace Obmen
             butSave.Click += ButSave_Click;
             btnReset.Click += BtnReset_Click;
         }
-
+        
         private void BtnReset_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
@@ -98,6 +99,8 @@ namespace Obmen
             Properties.Settings.Default.textBoxLogin = textBoxLogin.Text;
             Properties.Settings.Default.textBoxPass = textBoxPass.Text;
             Properties.Settings.Default.Save();
+            
+            Application.Restart();
             Close();
         }
 

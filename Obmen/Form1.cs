@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Obmen
 {
     public partial class FormObmen : Form
     {
-        Settings set = new Settings();
+        bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
+        bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
+        Button butUpdate = new Button();
 
         public FormObmen()
         {
@@ -13,8 +16,49 @@ namespace Obmen
             настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
             checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
             выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
+            butUpdate.Click += ButUpdate_Click;
+
+            if (_radioButtonIP == true)
+            {
+                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y);
+                butYes.Text = "Выгрузить";
+                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y);
+                butNo.Text = "Выход";
+                label1.Text = "Выбран режим работы для ИП";
+                butUpdate.Location = new Point(butYes.Location.X + 99, butYes.Location.Y);
+                butUpdate.FlatStyle = FlatStyle.Flat;
+                butUpdate.Name = "butUpdate";
+                butUpdate.Size = new Size(75, 23);
+                butUpdate.TabIndex = 0;
+                butUpdate.Text = "Скачать";
+                butUpdate.UseVisualStyleBackColor = false;
+                groupBox1.Controls.Add(butUpdate);
+            }
         }
-        
+
+        private void ButUpdate_Click(object sender, EventArgs e)
+        {
+            string configFrom = "/Config/";
+            string esppFrom = "/ESPP/";
+            string postPayDBFrom = "/PostPay/DB/";
+            string postPayUpdate = "/PostPay/Update/";
+            string cashFsgFrom = "/FSG/";
+
+            string configTo = @"Config\";
+            string esppTo = @"Гибридные переводы\";
+            string postPayDBTo = @"PostPay\DB\";
+            string postPayUpdateTo = @"PostPay\Update\";
+            string cashFsgTo = @"FSG\Кэш\";
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            // Загрузка с FTP
+            CopyFtp.CopyFromFtp(configFrom, configTo);
+            CopyFtp.CopyFromFtp(esppFrom, esppTo);
+            CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
+            CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
+            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
+        }
+
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -29,7 +73,8 @@ namespace Obmen
         private void НастройкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings settingsView = new Settings();
-            settingsView.Show();
+            settingsView.Owner = this;
+            settingsView.ShowDialog();
         }
 
         // Перетаскивание окна не по заголовку 
@@ -42,8 +87,6 @@ namespace Obmen
 
         private void ButYes_Click(object sender, EventArgs e)
         {
-            bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
-            bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
             string ipAdress = Properties.Settings.Default.textBoxIP;
             string login = Properties.Settings.Default.textBoxLogin;
             string pass = Properties.Settings.Default.textBoxPass;
@@ -62,7 +105,7 @@ namespace Obmen
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
-            else 
+            else
             {
                 if (_radioButtonIP == true)
                 {
