@@ -58,7 +58,9 @@ namespace Obmen
                     if (d.DriveType == DriveType.Removable)
                     {
                         string uploadPathIndex = d.VolumeLabel;
-                        CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath);
+                        Thread uploadThread = new Thread (() =>
+                        CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath));
+                        uploadThread.Start();
                     }
                 }
                 catch (Exception ex)
@@ -82,9 +84,9 @@ namespace Obmen
                         string url = "ftp://" + ipAdress + "/ToOPS";
                         NetworkCredential credentials = new NetworkCredential(login, password);
                         string uploadPathIndex = d.VolumeLabel;
-                        Thread thread = new Thread(() =>
+                        Thread downloadThread = new Thread(() =>
                         download.DownloadFtpDirectory(url + remoteFile, credentials, d.Name + localFile));
-                        thread.Start();
+                        downloadThread.Start();
                     }
                 }
                 catch (Exception ex)

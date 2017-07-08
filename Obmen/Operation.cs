@@ -190,11 +190,13 @@ namespace Obmen
             string esppFrom = "/ESPP/";
             string postPayDBFrom = "/PostPay/DB/";
             string postPayUpdate = "/PostPay/Update/";
+            string cashFsgFrom = "/FSG/";
 
             string configTo = @"Config\";
-            string esppTo = @"\Гибридные переводы\";
-            string postPayDBTo = @"\PostPay\DB\";
-            string postPayUpdateTo = @"\PostPay\Update\";
+            string esppTo = @"Гибридные переводы\";
+            string postPayDBTo = @"PostPay\DB\";
+            string postPayUpdateTo = @"PostPay\Update\";
+            string cashFsgTo = @"FSG\Кэш\";
             #endregion
 
             CopyForFtp CopyFtp = new CopyForFtp();
@@ -202,11 +204,18 @@ namespace Obmen
             CopyFtp.Login = login;
             CopyFtp.Password = pass;
 
-
+            // Выгрузка на FTP
             CopyFtp.Copy(regPostPayFrom, regPostPayTo);
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
             CopyFtp.Copy(regFSGFrom, regFSGTo);
+
+            // Загрузка с FTP
+            CopyFtp.CopyFromFtp(configFrom, configTo);
+            CopyFtp.CopyFromFtp(esppFrom, esppTo);
+            CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
+            CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
+            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
         }
 
     }
