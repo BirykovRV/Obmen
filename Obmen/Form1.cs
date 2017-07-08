@@ -9,6 +9,9 @@ namespace Obmen
         bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
         bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
         Button butUpdate = new Button();
+        string ipAdress = Properties.Settings.Default.textBoxIP;
+        string login = Properties.Settings.Default.textBoxLogin;
+        string pass = Properties.Settings.Default.textBoxPass;
 
         public FormObmen()
         {
@@ -16,7 +19,6 @@ namespace Obmen
             настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
             checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
             выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
-            butUpdate.Click += ButUpdate_Click;
 
             if (_radioButtonIP == true)
             {
@@ -25,6 +27,7 @@ namespace Obmen
                 butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y);
                 butNo.Text = "Выход";
                 label1.Text = "Выбран режим работы для ИП";
+                checkBoxPostPay.Visible = false;
                 butUpdate.Location = new Point(butYes.Location.X + 99, butYes.Location.Y);
                 butUpdate.FlatStyle = FlatStyle.Flat;
                 butUpdate.Name = "butUpdate";
@@ -32,31 +35,9 @@ namespace Obmen
                 butUpdate.TabIndex = 0;
                 butUpdate.Text = "Скачать";
                 butUpdate.UseVisualStyleBackColor = false;
+                butUpdate.Click += ButUpdate_Click;
                 groupBox1.Controls.Add(butUpdate);
             }
-        }
-
-        private void ButUpdate_Click(object sender, EventArgs e)
-        {
-            string configFrom = "/Config/";
-            string esppFrom = "/ESPP/";
-            string postPayDBFrom = "/PostPay/DB/";
-            string postPayUpdate = "/PostPay/Update/";
-            string cashFsgFrom = "/FSG/";
-
-            string configTo = @"Config\";
-            string esppTo = @"Гибридные переводы\";
-            string postPayDBTo = @"PostPay\DB\";
-            string postPayUpdateTo = @"PostPay\Update\";
-            string cashFsgTo = @"FSG\Кэш\";
-
-            CopyForFtp CopyFtp = new CopyForFtp();
-            // Загрузка с FTP
-            CopyFtp.CopyFromFtp(configFrom, configTo);
-            CopyFtp.CopyFromFtp(esppFrom, esppTo);
-            CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
-            CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
-            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
         }
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,10 +68,6 @@ namespace Obmen
 
         private void ButYes_Click(object sender, EventArgs e)
         {
-            string ipAdress = Properties.Settings.Default.textBoxIP;
-            string login = Properties.Settings.Default.textBoxLogin;
-            string pass = Properties.Settings.Default.textBoxPass;
-
             if (_radioButtonOps == true)
             {
                 if (checkBoxPostPay.Checked)
@@ -113,6 +90,15 @@ namespace Obmen
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
+        }
+
+        private void ButUpdate_Click(object sender, EventArgs e)
+        {
+            if (_radioButtonIP == true)
+            {
+                Operation.CopyFromFtp(ipAdress, login, pass);
+                MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
+            };
         }
 
         private void ButNo_Click(object sender, EventArgs e)

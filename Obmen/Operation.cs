@@ -143,7 +143,7 @@ namespace Obmen
             #endregion
 
             // База по комуналке
-            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD)); 
+            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD));
             th1.Start();
 
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
@@ -180,7 +180,7 @@ namespace Obmen
             string f130From = @"F130";
             string regPostPayFrom = @"Реестр коммунальных платежей";
             string regFSGFrom = @"FSG\Реестры платежей";
-            
+
             string pensiaTo = "/Пенсия/";
             string f130To = "/F130/";
             string regPostPayTo = "/Реестр коммунальных платежей/";
@@ -197,7 +197,34 @@ namespace Obmen
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
             CopyFtp.Copy(regFSGFrom, regFSGTo);
-                        
+
+        }
+
+        public static void CopyFromFtp(string ipAdress, string login, string pass)
+        {
+            string configFrom = "/Config/";
+            string esppFrom = "/ESPP/";
+            string postPayDBFrom = "/PostPay/DB/";
+            string postPayUpdate = "/PostPay/Update/";
+            string cashFsgFrom = "/FSG/";
+
+            string configTo = @"Config\";
+            string esppTo = @"Гибридные переводы\";
+            string postPayDBTo = @"PostPay\DB\";
+            string postPayUpdateTo = @"PostPay\Update\";
+            string cashFsgTo = @"FSG\Кэш\";
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.IpAdress = ipAdress;
+            CopyFtp.Login = login;
+            CopyFtp.Password = pass;
+
+            // Загрузка с FTP
+            CopyFtp.CopyFromFtp(configFrom, configTo);
+            CopyFtp.CopyFromFtp(esppFrom, esppTo);
+            CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
+            CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
+            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
         }
 
     }
