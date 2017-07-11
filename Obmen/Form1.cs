@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Obmen
 {
     public partial class FormObmen : Form
     {
-        Settings set = new Settings();
+        bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
+        bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
+        Button butUpdate = new Button();
+        string ipAdress = Properties.Settings.Default.textBoxIP;
+        string login = Properties.Settings.Default.textBoxLogin;
+        string pass = Properties.Settings.Default.textBoxPass;
 
         public FormObmen()
         {
@@ -13,8 +19,27 @@ namespace Obmen
             настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
             checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
             выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
+
+            if (_radioButtonIP == true)
+            {
+                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y);
+                butYes.Text = "Выгрузить";
+                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y);
+                butNo.Text = "Выход";
+                label1.Text = "Выбран режим работы для ИП";
+                checkBoxPostPay.Visible = false;
+                butUpdate.Location = new Point(butYes.Location.X + 99, butYes.Location.Y);
+                butUpdate.FlatStyle = FlatStyle.Flat;
+                butUpdate.Name = "butUpdate";
+                butUpdate.Size = new Size(75, 23);
+                butUpdate.TabIndex = 0;
+                butUpdate.Text = "Скачать";
+                butUpdate.UseVisualStyleBackColor = false;
+                butUpdate.Click += ButUpdate_Click;
+                groupBox1.Controls.Add(butUpdate);
+            }
         }
-        
+
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -23,13 +48,14 @@ namespace Obmen
         private void CheckBoxPostPay_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxPostPay.Checked)
-                MessageBox.Show("Прежде чем обновлять модуль 'Коммунальные платяжи'\nнеобходимо выйти из программы ЕАС.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Прежде чем обновлять модуль 'Коммунальные платежи'\nнеобходимо выйти из программы ЕАС.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void НастройкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings settingsView = new Settings();
-            settingsView.Show();
+            settingsView.Owner = this;
+            settingsView.ShowDialog();
         }
 
         // Перетаскивание окна не по заголовку 
@@ -42,12 +68,6 @@ namespace Obmen
 
         private void ButYes_Click(object sender, EventArgs e)
         {
-            bool _radioButtonOps = Properties.Settings.Default.radioButtonOps;
-            bool _radioButtonIP = Properties.Settings.Default.radioButtonIP;
-            string ipAdress = Properties.Settings.Default.textBoxIP;
-            string login = Properties.Settings.Default.textBoxLogin;
-            string pass = Properties.Settings.Default.textBoxPass;
-
             if (_radioButtonOps == true)
             {
                 if (checkBoxPostPay.Checked)
@@ -62,13 +82,22 @@ namespace Obmen
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
-            else 
+            else
             {
                 if (_radioButtonIP == true)
                 {
                     Operation.CopyForIp(ipAdress, login, pass);
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
+            }
+        }
+
+        private void ButUpdate_Click(object sender, EventArgs e)
+        {
+            if (_radioButtonIP == true)
+            {
+                Operation.CopyFromFtp(ipAdress, login, pass);
+                MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
         }
 

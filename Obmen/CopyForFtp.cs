@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Net;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -57,6 +59,30 @@ namespace Obmen
                     {
                         string uploadPathIndex = d.VolumeLabel;
                         CopyToFtp(d.Name + pathFrom, uploadPathIndex + _uploadPath);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public void CopyFromFtp(string remoteFile, string localFile)
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            Session download = new Session();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                try
+                {
+                    if (d.DriveType == DriveType.Removable)
+                    {
+                        string url = "ftp://" + ipAdress + "/ToOPS";
+                        NetworkCredential credentials = new NetworkCredential(login, password);
+                        string uploadPathIndex = d.VolumeLabel;
+                        download.DownloadFtpDirectory(url + remoteFile, credentials, d.Name + localFile);
                     }
                 }
                 catch (Exception ex)

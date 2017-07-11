@@ -3,7 +3,6 @@ using System.IO;
 using NUnrar.Archive;
 using System.Windows.Forms;
 using System.IO.Compression;
-using System.Threading;
 
 namespace Obmen
 {
@@ -16,11 +15,24 @@ namespace Obmen
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
 
+                if (dirTo.Exists & dirFrom.Exists)
+                {
+                    FileInfo[] files = dirFrom.GetFiles();
 
-                FileInfo[] files = dirFrom.GetFiles();
+                    foreach (FileInfo fInfo in files)
+                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                }
+                else
+                {
+                    dirFrom.Create();
+                    dirTo.Create();
 
-                foreach (FileInfo fInfo in files)
-                    fInfo.CopyTo(pathTo + fInfo.Name, true);
+                    FileInfo[] files = dirFrom.GetFiles();
+
+                    foreach (FileInfo fInfo in files)
+                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                }
+
             }
             catch (Exception ex)
             {
@@ -35,17 +47,35 @@ namespace Obmen
             {
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-                DirectoryInfo[] dir = dirFrom.GetDirectories();
 
-
-                for (int i = 0; i < dir.Length; i++)
+                if (dirFrom.Exists)
                 {
-                    string destPath = pathTo + dir[i].Name + @"\";
-                    Directory.CreateDirectory(destPath);
+                    DirectoryInfo[] dir = dirFrom.GetDirectories();
 
-                    FileInfo[] file = dir[i].GetFiles();
-                    foreach (FileInfo fInfo in file)
-                        fInfo.CopyTo(destPath + fInfo.Name, true);
+                    for (int i = 0; i < dir.Length; i++)
+                    {
+                        string destPath = pathTo + dir[i].Name + @"\";
+                        Directory.CreateDirectory(destPath);
+
+                        FileInfo[] file = dir[i].GetFiles();
+                        foreach (FileInfo fInfo in file)
+                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                    }
+                }
+                else
+                {
+                    dirFrom.Create();
+
+                    DirectoryInfo[] dir = dirFrom.GetDirectories();
+                    for (int i = 0; i < dir.Length; i++)
+                    {
+                        string destPath = pathTo + dir[i].Name + @"\";
+                        Directory.CreateDirectory(destPath);
+
+                        FileInfo[] file = dir[i].GetFiles();
+                        foreach (FileInfo fInfo in file)
+                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                    }
                 }
             }
             catch (Exception ex)
@@ -59,13 +89,25 @@ namespace Obmen
         {
             try
             {
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 FileInfo[] files = dirFrom.GetFiles();
-
-                for (int i = 0; i < files.Length; i++)
+                if (dirTo.Exists)
                 {
-                    string _pathFrom = dirFrom + files[i].Name;
-                    RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        string _pathFrom = dirFrom + files[i].Name;
+                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    }
+                }
+                else
+                {
+                    dirTo.Create();
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        string _pathFrom = dirFrom + files[i].Name;
+                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    }
                 }
             }
             catch (Exception)
@@ -132,7 +174,7 @@ namespace Obmen
             string toF130 = GetDisk() + @"F130\";
             string fromGibrid = GetDisk() + @"Гибридные переводы";
             string toGibrid = Properties.Settings.Default.toGibrid + @"\";
-            string fromPostPayBD = GetDisk() + @"База по коммунальным платежам\";
+            string fromPostPayBD = GetDisk() + @"PostPay\DB\";
             string toPostPayBD = Properties.Settings.Default.toPostPayBD + @"\";
             string fromPension = Properties.Settings.Default.fromPension;
             string toPension = GetDisk() + @"Пенсия\";
@@ -142,10 +184,7 @@ namespace Obmen
             string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
 
-            // База по комуналке
-            Thread th1 = new Thread(() => CopyDB(fromPostPayBD, toPostPayBD)); 
-            th1.Start();
-
+            CopyDB(fromPostPayBD, toPostPayBD);     // База по комуналке
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
             Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
@@ -154,12 +193,13 @@ namespace Obmen
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
+
         }
 
         // Метод для обновления Ppsplugin
         public static void UpdatePostPay()
         {
-            string fromPostPayMod = GetDisk() + @"Обновление PostPay\";
+            string fromPostPayMod = GetDisk() + @"PostPay\Update\";
             string toPostPayMod = Properties.Settings.Default.toPostPayMod + @"\";
 
             try
@@ -180,24 +220,50 @@ namespace Obmen
             string f130From = @"F130";
             string regPostPayFrom = @"Реестр коммунальных платежей";
             string regFSGFrom = @"FSG\Реестры платежей";
-            
+
             string pensiaTo = "/Пенсия/";
             string f130To = "/F130/";
             string regPostPayTo = "/Реестр коммунальных платежей/";
-            string regFSGTo = "/FSG/Реестры платежей/";
+            string regFSGTo = "/FSG/";
             #endregion
-
 
             CopyForFtp CopyFtp = new CopyForFtp();
             CopyFtp.IpAdress = ipAdress;
             CopyFtp.Login = login;
             CopyFtp.Password = pass;
 
+            // Выгрузка на FTP
+            CopyFtp.Copy(regPostPayFrom, regPostPayTo);
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
-            //CopyFtp.Copy(regPostPayFrom, regPostPayTo);
-            //CopyFtp.Copy(regFSGFrom, regFSGTo);
+            CopyFtp.Copy(regFSGFrom, regFSGTo);
         }
-        
+
+        public static void CopyFromFtp(string ipAdress, string login, string pass)
+        {
+            string configFrom = "/Config/";
+            string esppFrom = "/ESPP/";
+            string postPayDBFrom = "/PostPay/DB/";
+            string postPayUpdate = "/PostPay/Update/";
+            string cashFsgFrom = "/FSG/";
+
+            string configTo = @"Config\";
+            string esppTo = @"Гибридные переводы\";
+            string postPayDBTo = @"PostPay\DB\";
+            string postPayUpdateTo = @"PostPay\Update\";
+            string cashFsgTo = @"FSG\Кэш\";
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.IpAdress = ipAdress;
+            CopyFtp.Login = login;
+            CopyFtp.Password = pass;
+
+            // Загрузка с FTP
+            CopyFtp.CopyFromFtp(configFrom, configTo);
+            CopyFtp.CopyFromFtp(esppFrom, esppTo);
+            CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
+            CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
+            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace ConsoleApp1
+namespace Obmen
 {
     class Session
     {
@@ -53,7 +53,7 @@ namespace ConsoleApp1
                     using (Stream sourceStream = downloadReaponse.GetResponseStream())
                     using(Stream targetStream = File.Create(localFilePath))
                     {
-                        byte[] buffer = new byte[10240];
+                        byte[] buffer = new byte[81920];
                         int read;
                         while ((read = sourceStream.Read(buffer, 0, buffer.Length)) > 0)
                         {

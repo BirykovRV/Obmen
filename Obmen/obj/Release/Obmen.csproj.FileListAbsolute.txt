@@ -1,0 +1,11 @@
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Release\Obmen.exe.config
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Release\Obmen.exe
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Release\Obmen.pdb
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\bin\Release\NUnrar.dll
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.FormObmen.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.Operation.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.Properties.Resources.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.Settings.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.csproj.GenerateResource.Cache
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.exe
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.pdb

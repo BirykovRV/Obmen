@@ -7,6 +7,9 @@ namespace Obmen
     {
         Button[] btns;
         TextBox[] txtbox;
+
+        string user = Environment.UserName;
+
         public Settings()
         {
             InitializeComponent();
@@ -15,25 +18,23 @@ namespace Obmen
             butSave.Click += ButSave_Click;
             btnReset.Click += BtnReset_Click;
         }
-
+        
         private void BtnReset_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
+
             #region Загрузка параметров
             configF130To.Text = Properties.Settings.Default.configF130To;
-            fromPostPay.Text = Properties.Settings.Default.fromPostPay;
+            fromPostPay.Text = @"C:\Users\" + user + @"\Documents\LttPpsPlugin\ExportFiles";
             fromF130.Text = Properties.Settings.Default.fromF130;
             toGibrid.Text = Properties.Settings.Default.toGibrid;
             toPostPayBD.Text = Properties.Settings.Default.toPostPayBD;
-            fromPension.Text = Properties.Settings.Default.fromPension;
+            fromPension.Text = @"C:\Users\" + user + @"\Desktop\Пенсия";
             fsgCashTo.Text = Properties.Settings.Default.fsgCashTo;
             regFSGFrom.Text = Properties.Settings.Default.regFSGFrom;
             radioButtonOps.Checked = Properties.Settings.Default.radioButtonOps;
             radioButtonIP.Checked = Properties.Settings.Default.radioButtonIP;
             toPostPayMod.Text = Properties.Settings.Default.toPostPayMod;
-            textBoxIP.Text = Properties.Settings.Default.textBoxIP;
-            textBoxLogin.Text = Properties.Settings.Default.textBoxLogin;
-            textBoxPass.Text = Properties.Settings.Default.textBoxPass;
             #endregion
         }
 
@@ -100,6 +101,8 @@ namespace Obmen
             Properties.Settings.Default.textBoxLogin = textBoxLogin.Text;
             Properties.Settings.Default.textBoxPass = textBoxPass.Text;
             Properties.Settings.Default.Save();
+            
+            Application.Restart();
             Close();
         }
 
