@@ -3,7 +3,6 @@ using System.IO;
 using NUnrar.Archive;
 using System.Windows.Forms;
 using System.IO.Compression;
-using System.Threading;
 
 namespace Obmen
 {
@@ -16,11 +15,24 @@ namespace Obmen
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
 
+                if (dirTo.Exists & dirFrom.Exists)
+                {
+                    FileInfo[] files = dirFrom.GetFiles();
 
-                FileInfo[] files = dirFrom.GetFiles();
+                    foreach (FileInfo fInfo in files)
+                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                }
+                else
+                {
+                    dirFrom.Create();
+                    dirTo.Create();
 
-                foreach (FileInfo fInfo in files)
-                    fInfo.CopyTo(pathTo + fInfo.Name, true);
+                    FileInfo[] files = dirFrom.GetFiles();
+
+                    foreach (FileInfo fInfo in files)
+                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                }
+
             }
             catch (Exception ex)
             {
@@ -35,17 +47,35 @@ namespace Obmen
             {
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-                DirectoryInfo[] dir = dirFrom.GetDirectories();
 
-
-                for (int i = 0; i < dir.Length; i++)
+                if (dirFrom.Exists)
                 {
-                    string destPath = pathTo + dir[i].Name + @"\";
-                    Directory.CreateDirectory(destPath);
+                    DirectoryInfo[] dir = dirFrom.GetDirectories();
 
-                    FileInfo[] file = dir[i].GetFiles();
-                    foreach (FileInfo fInfo in file)
-                        fInfo.CopyTo(destPath + fInfo.Name, true);
+                    for (int i = 0; i < dir.Length; i++)
+                    {
+                        string destPath = pathTo + dir[i].Name + @"\";
+                        Directory.CreateDirectory(destPath);
+
+                        FileInfo[] file = dir[i].GetFiles();
+                        foreach (FileInfo fInfo in file)
+                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                    }
+                }
+                else
+                {
+                    dirFrom.Create();
+
+                    DirectoryInfo[] dir = dirFrom.GetDirectories();
+                    for (int i = 0; i < dir.Length; i++)
+                    {
+                        string destPath = pathTo + dir[i].Name + @"\";
+                        Directory.CreateDirectory(destPath);
+
+                        FileInfo[] file = dir[i].GetFiles();
+                        foreach (FileInfo fInfo in file)
+                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                    }
                 }
             }
             catch (Exception ex)
@@ -59,13 +89,25 @@ namespace Obmen
         {
             try
             {
+                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 FileInfo[] files = dirFrom.GetFiles();
-
-                for (int i = 0; i < files.Length; i++)
+                if (dirTo.Exists)
                 {
-                    string _pathFrom = dirFrom + files[i].Name;
-                    RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        string _pathFrom = dirFrom + files[i].Name;
+                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    }
+                }
+                else
+                {
+                    dirTo.Create();
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        string _pathFrom = dirFrom + files[i].Name;
+                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                    }
                 }
             }
             catch (Exception)
@@ -141,7 +183,7 @@ namespace Obmen
             string regFSGFrom = Properties.Settings.Default.regFSGFrom;
             string regFSGTo = GetDisk() + @"FSG\Реестры платежей\";
             #endregion
-            
+
             CopyDB(fromPostPayBD, toPostPayBD);     // База по комуналке
             Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
