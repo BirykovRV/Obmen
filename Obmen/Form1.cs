@@ -97,13 +97,16 @@ namespace Obmen
         {
             if (_radioButtonIP == true)
             {
+                ProgressView load = new ProgressView();
                 Task task = new Task(() =>
                 Operation.CopyFromFtp(ipAdress, login, pass));
                 task.Start();
                 while (!task.IsCompleted)
                 {
-                    
+                    load.ShowDialog();
                 }
+                load.Close();
+
                 Text = "Обмен";
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
