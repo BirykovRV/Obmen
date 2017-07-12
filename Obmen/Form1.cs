@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -96,7 +97,14 @@ namespace Obmen
         {
             if (_radioButtonIP == true)
             {
-                Operation.CopyFromFtp(ipAdress, login, pass);
+                Task task = new Task(() =>
+                Operation.CopyFromFtp(ipAdress, login, pass));
+                task.Start();
+                while (!task.IsCompleted)
+                {
+                    
+                }
+                Text = "Обмен";
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
         }

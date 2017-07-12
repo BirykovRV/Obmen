@@ -9,7 +9,7 @@ namespace Obmen
         TextBox[] txtbox;
 
         string user = Environment.UserName;
-
+        
         public Settings()
         {
             InitializeComponent();
