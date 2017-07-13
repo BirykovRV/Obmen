@@ -20,7 +20,7 @@ namespace Obmen
                     FileInfo[] files = dirFrom.GetFiles();
 
                     foreach (FileInfo fInfo in files)
-                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                        fInfo.MoveTo(pathTo + fInfo.Name);
                 }
                 else
                 {
@@ -30,7 +30,7 @@ namespace Obmen
                     FileInfo[] files = dirFrom.GetFiles();
 
                     foreach (FileInfo fInfo in files)
-                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                        fInfo.MoveTo(pathTo + fInfo.Name);
                 }
 
             }
@@ -59,7 +59,7 @@ namespace Obmen
 
                         FileInfo[] file = dir[i].GetFiles();
                         foreach (FileInfo fInfo in file)
-                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                            fInfo.MoveTo(destPath + fInfo.Name);
                     }
                 }
                 else
@@ -74,7 +74,7 @@ namespace Obmen
 
                         FileInfo[] file = dir[i].GetFiles();
                         foreach (FileInfo fInfo in file)
-                            fInfo.CopyTo(destPath + fInfo.Name, true);
+                            fInfo.MoveTo(destPath + fInfo.Name);
                     }
                 }
             }
