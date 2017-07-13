@@ -24,9 +24,9 @@ namespace Obmen
 
             if (_radioButtonIP == true)
             {
-                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y);
+                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y + 9);
                 butYes.Text = "Выгрузить";
-                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y);
+                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y + 9);
                 butNo.Text = "Выход";
                 label1.Text = "Выбран режим работы для ИП";
                 checkBoxPostPay.Visible = false;
