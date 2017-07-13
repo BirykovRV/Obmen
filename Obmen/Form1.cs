@@ -91,6 +91,12 @@ namespace Obmen
                     Task task = new Task(() =>
                     Operation.CopyForIp(ipAdress, login, pass));
                     task.Start();
+                    ProgressView load = new ProgressView();
+                    if (!task.IsCompleted)
+                    {
+                        load.Show();
+                    }
+                    load.Close();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
@@ -100,14 +106,10 @@ namespace Obmen
         {
             if (_radioButtonIP == true)
             {
-                Task task = new Task(() =>
-                Operation.CopyFromFtp(ipAdress, login, pass));
-                task.Start();
-                while (!task.IsCompleted)
-                {
-                    label1.Text = "Идет загрузка. Пожалуйста подождите...";
-                }
-                label1.Text = "Запустить программу обмена?";
+                WaitClass Wait = new WaitClass();
+                Wait.WaitFormThread.Start();
+                Operation.CopyFromFtp(ipAdress, login, pass);
+                Wait.WaitFormThread.Abort();
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
         }
