@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -87,7 +88,9 @@ namespace Obmen
             {
                 if (_radioButtonIP == true)
                 {
-                    Operation.CopyForIp(ipAdress, login, pass);
+                    Task task = new Task(() =>
+                    Operation.CopyForIp(ipAdress, login, pass));
+                    task.Start();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
@@ -97,17 +100,14 @@ namespace Obmen
         {
             if (_radioButtonIP == true)
             {
-                ProgressView load = new ProgressView();
                 Task task = new Task(() =>
                 Operation.CopyFromFtp(ipAdress, login, pass));
                 task.Start();
                 while (!task.IsCompleted)
                 {
-                    load.ShowDialog();
+                    label1.Text = "Идет загрузка. Пожалуйста подождите...";
                 }
-                load.Close();
-
-                Text = "Обмен";
+                label1.Text = "Запустить программу обмена?";
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
         }
