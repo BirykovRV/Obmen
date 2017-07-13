@@ -577,7 +577,6 @@
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
-            this.TopMost = true;
             this.tabControl.ResumeLayout(false);
             this.tabPageOPS.ResumeLayout(false);
             this.tabPageOPS.PerformLayout();

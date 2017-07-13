@@ -59,5 +59,15 @@ namespace Obmen.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ajax_loaderw {
+            get {
+                object obj = ResourceManager.GetObject("ajax-loaderw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -86,7 +88,15 @@ namespace Obmen
             {
                 if (_radioButtonIP == true)
                 {
-                    Operation.CopyForIp(ipAdress, login, pass);
+                    Task task = new Task(() =>
+                    Operation.CopyForIp(ipAdress, login, pass));
+                    task.Start();
+                    ProgressView load = new ProgressView();
+                    if (!task.IsCompleted)
+                    {
+                        load.Show();
+                    }
+                    load.Close();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
@@ -96,7 +106,10 @@ namespace Obmen
         {
             if (_radioButtonIP == true)
             {
+                WaitClass Wait = new WaitClass();
+                Wait.WaitFormThread.Start();
                 Operation.CopyFromFtp(ipAdress, login, pass);
+                Wait.WaitFormThread.Abort();
                 MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
             }
         }
