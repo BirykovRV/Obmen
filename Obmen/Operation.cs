@@ -194,6 +194,13 @@ namespace Obmen
             CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
 
+            DelFilesDirs Del = new DelFilesDirs();
+            // Удаляем старые файлы
+            Del.DeliteAll(fromPostPay);
+            Del.DeliteAll(fromF130);
+            Del.DeliteAll(fromPension);
+            Del.DeliteAll(regFSGFrom);
+
         }
 
         // Метод для обновления Ppsplugin

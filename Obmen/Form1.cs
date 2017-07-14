@@ -24,9 +24,9 @@ namespace Obmen
 
             if (_radioButtonIP == true)
             {
-                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y);
+                butYes.Location = new Point(butYes.Location.X - 30, butYes.Location.Y + 9);
                 butYes.Text = "Выгрузить";
-                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y);
+                butNo.Location = new Point(butNo.Location.X + 38, butNo.Location.Y + 9);
                 butNo.Text = "Выход";
                 label1.Text = "Выбран режим работы для ИП";
                 checkBoxPostPay.Visible = false;
@@ -74,13 +74,19 @@ namespace Obmen
             {
                 if (checkBoxPostPay.Checked)
                 {
+                    WaitClass Wait = new WaitClass();
+                    Wait.WaitFormThread.Start();
                     Operation.UpdatePostPay();
                     Operation.CopyForOps();
+                    Wait.WaitFormThread.Abort();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
                 else
                 {
+                    WaitClass Wait = new WaitClass();
+                    Wait.WaitFormThread.Start();
                     Operation.CopyForOps();
+                    Wait.WaitFormThread.Abort();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
@@ -88,15 +94,10 @@ namespace Obmen
             {
                 if (_radioButtonIP == true)
                 {
-                    Task task = new Task(() =>
-                    Operation.CopyForIp(ipAdress, login, pass));
-                    task.Start();
-                    ProgressView load = new ProgressView();
-                    if (!task.IsCompleted)
-                    {
-                        load.Show();
-                    }
-                    load.Close();
+                    WaitClass Wait = new WaitClass();
+                    Wait.WaitFormThread.Start();
+                    Operation.CopyForIp(ipAdress, login, pass);
+                    Wait.WaitFormThread.Abort();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }

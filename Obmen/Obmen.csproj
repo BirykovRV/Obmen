@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CopyForFtp.cs" />
+    <Compile Include="DelFilesDirs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
