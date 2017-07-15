@@ -270,7 +270,7 @@ namespace Obmen
             CopyFtp.CopyFromFtp(esppFrom, esppTo);
             CopyFtp.CopyFromFtp(postPayDBFrom, postPayDBTo);
             CopyFtp.CopyFromFtp(postPayUpdate, postPayUpdateTo);
-            CopyFtp.CopyFromFtp(cashFsgFrom, cashFsgTo);
+            CopyFtp.CopyFromFtpFSG(cashFsgFrom, cashFsgTo);
         }
     }
 }
