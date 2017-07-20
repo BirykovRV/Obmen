@@ -53,7 +53,7 @@ namespace Obmen
                     using (Stream sourceStream = downloadReaponse.GetResponseStream())
                     using(Stream targetStream = File.Create(localFilePath))
                     {
-                        byte[] buffer = new byte[81920];
+                        byte[] buffer = new byte[5242880];
                         int read;
                         while ((read = sourceStream.Read(buffer, 0, buffer.Length)) > 0)
                         {

@@ -90,5 +90,29 @@ namespace Obmen
                 }
             }
         }
+
+        public void CopyFromFtpFSG(string remoteFile, string localFile)
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            Session download = new Session();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                try
+                {
+                    if (d.DriveType == DriveType.Removable)
+                    {
+                        string url = "ftp://" + ipAdress + "/ToOPS";
+                        NetworkCredential credentials = new NetworkCredential(login, password);
+                        string downloadPathIndex = d.VolumeLabel + "/";
+                        download.DownloadFtpDirectory(url + remoteFile + downloadPathIndex, credentials, d.Name + localFile);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
