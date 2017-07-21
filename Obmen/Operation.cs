@@ -14,23 +14,35 @@ namespace Obmen
             {
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+                FileInfo[] files = dirFrom.GetFiles();
+                DirectoryInfo[] dirs = dirFrom.GetDirectories();
 
                 if (dirTo.Exists & dirFrom.Exists)
                 {
-                    FileInfo[] files = dirFrom.GetFiles();
-
-                    foreach (FileInfo fInfo in files)
-                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                    foreach (FileInfo file in files)
+                    {
+                        file.CopyTo(pathTo + file.Name, true);
+                    }
+                    foreach (DirectoryInfo dir in dirs)
+                    {
+                        Directory.CreateDirectory(pathTo + dir.Name);
+                        Copy(pathFrom + @"\" + dir.Name, pathTo + dir.Name + @"\");
+                    }
                 }
                 else
                 {
                     dirFrom.Create();
                     dirTo.Create();
 
-                    FileInfo[] files = dirFrom.GetFiles();
-
-                    foreach (FileInfo fInfo in files)
-                        fInfo.CopyTo(pathTo + fInfo.Name, true);
+                    foreach (FileInfo file in files)
+                    {
+                        file.CopyTo(pathTo + file.Name, true);
+                    }
+                    foreach (DirectoryInfo dir in dirs)
+                    {
+                        Directory.CreateDirectory(pathTo + dir.Name);
+                        Copy(pathFrom + @"\" + dir.Name, pathTo + dir.Name + @"\");
+                    }
                 }
 
             }
@@ -39,51 +51,7 @@ namespace Obmen
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // Копирование коталогов с разных дисков и их содержимое
-        public static void CopyDir(string pathFrom, string pathTo)
-        {
-            try
-            {
-                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-
-                if (dirFrom.Exists)
-                {
-                    DirectoryInfo[] dir = dirFrom.GetDirectories();
-
-                    for (int i = 0; i < dir.Length; i++)
-                    {
-                        string destPath = pathTo + dir[i].Name + @"\";
-                        Directory.CreateDirectory(destPath);
-
-                        FileInfo[] file = dir[i].GetFiles();
-                        foreach (FileInfo fInfo in file)
-                            fInfo.CopyTo(destPath + fInfo.Name, true);
-                    }
-                }
-                else
-                {
-                    dirFrom.Create();
-
-                    DirectoryInfo[] dir = dirFrom.GetDirectories();
-                    for (int i = 0; i < dir.Length; i++)
-                    {
-                        string destPath = pathTo + dir[i].Name + @"\";
-                        Directory.CreateDirectory(destPath);
-
-                        FileInfo[] file = dir[i].GetFiles();
-                        foreach (FileInfo fInfo in file)
-                            fInfo.CopyTo(destPath + fInfo.Name, true);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        
         // Разархивация базы по комуналке с перемещением
         public static void CopyDB(string pathFrom, string pathTo)
         {
@@ -189,9 +157,9 @@ namespace Obmen
             Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
             Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
             Copy(fromPension, toPension);          // Файлы по пенсии
-            CopyDir(configF130From, configF130To); // Ключ для 130
+            Copy(configF130From, configF130To); // Ключ для 130
             Copy(fromGibrid, toGibrid);            // Файлы по гибридным
-            CopyDir(fromPostPay, toPostPay);       // Реестр по комуналке
+            Copy(fromPostPay, toPostPay);       // Реестр по комуналке
             Copy(fromF130, toF130);                // Файлы для АСКУ 
 
             DelFilesDirs Del = new DelFilesDirs();
