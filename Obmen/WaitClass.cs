@@ -8,12 +8,6 @@ namespace Obmen
 
         private static void WaitFormShow()
         {
-            //Form f = new Form();
-            //f.ShowInTaskbar = false;
-            //f.Height = 310;
-            //f.Width = 100;
-            //f.FormBorderStyle = FormBorderStyle.None;
-            //f.StartPosition = FormStartPosition.CenterScreen;
             #region Прогрес бар ожидания
             //ProgressBar pb = new ProgressBar();
             //pb.Style = ProgressBarStyle.Marquee;

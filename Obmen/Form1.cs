@@ -79,19 +79,15 @@ namespace Obmen
                     Wait.WaitFormThread.Start();
                     try
                     {
-                        Process[] proc = Process.GetProcesses();
-                        foreach (Process process in proc)
+                        foreach (Process process in Process.GetProcesses())
                         {
-                            if (process.ProcessName == "PpsPlugin.Scheduler")
+                            if (process.ProcessName.StartsWith("PpsPlugin.Scheduler"))
                             {
                                 process.Kill();
-                                Operation.UpdatePostPay();
-                                break;
+                                process.WaitForExit();
                             }
-                            Operation.UpdatePostPay();
-                            break;
                         }
-                        
+                        Operation.UpdatePostPay();
                     } 
                     catch(Exception ex)
                     {
