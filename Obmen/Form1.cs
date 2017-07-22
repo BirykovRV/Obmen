@@ -80,13 +80,16 @@ namespace Obmen
                     try
                     {
                         Process[] proc = Process.GetProcesses();
-                        foreach (Process process in proc)
+                        for (int i = 0; i < proc.Length; i++)
                         {
-                            if (process.ProcessName == "PpsPlugin.Scheduler.exe")
+                            if (proc[i].ProcessName == "PpsPlugin.Scheduler.exe")
                             {
-                                process.Kill();
+                                proc[i].Kill();
                                 Operation.UpdatePostPay();
+                                break;
                             }
+                            Operation.UpdatePostPay();
+                            break;
                         }
                         
                     } 
