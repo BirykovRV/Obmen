@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
@@ -76,7 +77,23 @@ namespace Obmen
                 {
                     WaitClass Wait = new WaitClass();
                     Wait.WaitFormThread.Start();
-                    Operation.UpdatePostPay();
+                    try
+                    {
+                        Process[] proc = Process.GetProcesses();
+                        foreach (Process process in proc)
+                        {
+                            if (process.ProcessName == "PpsPlugin.Scheduler.exe")
+                            {
+                                process.Kill();
+                                Operation.UpdatePostPay();
+                            }
+                        }
+                        
+                    } 
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                     Operation.CopyForOps();
                     Wait.WaitFormThread.Abort();
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
