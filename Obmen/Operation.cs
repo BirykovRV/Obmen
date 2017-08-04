@@ -10,15 +10,17 @@ namespace Obmen
     {
         public static void Copy(string pathFrom, string pathTo)
         {
+            DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+            DirectoryInfo dirTo = new DirectoryInfo(pathTo);
+
             try
             {
-                DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
-                DirectoryInfo dirTo = new DirectoryInfo(pathTo);
-                FileInfo[] files = dirFrom.GetFiles();
-                DirectoryInfo[] dirs = dirFrom.GetDirectories();
 
                 if (dirTo.Exists & dirFrom.Exists)
                 {
+                    FileInfo[] files = dirFrom.GetFiles();
+                    DirectoryInfo[] dirs = dirFrom.GetDirectories();
+
                     foreach (FileInfo file in files)
                     {
                         file.CopyTo(pathTo + file.Name, true);
@@ -33,6 +35,8 @@ namespace Obmen
                 {
                     dirFrom.Create();
                     dirTo.Create();
+                    FileInfo[] files = dirFrom.GetFiles();
+                    DirectoryInfo[] dirs = dirFrom.GetDirectories();
 
                     foreach (FileInfo file in files)
                     {
