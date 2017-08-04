@@ -127,7 +127,7 @@ namespace Obmen
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message + " " + d.VolumeLabel, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return disk;
