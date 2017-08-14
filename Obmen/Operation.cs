@@ -63,14 +63,20 @@ namespace Obmen
             {
                 DirectoryInfo dirTo = new DirectoryInfo(pathTo);
                 DirectoryInfo dirFrom = new DirectoryInfo(pathFrom);
+                string zipArch = ".zip";
                 FileInfo[] files = dirFrom.GetFiles();
                 if (dirTo.Exists)
                 {
                     for (int i = 0; i < files.Length; i++)
                     {
                         string _pathFrom = dirFrom + files[i].Name;
-                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                        if (files[i].Name.Contains(zipArch))
+                        {
+                            ExtractDistrib(pathFrom, pathTo); // Разархивация .zip
+                        } else
+                            RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
                     }
+                    
                 }
                 else
                 {
@@ -78,7 +84,11 @@ namespace Obmen
                     for (int i = 0; i < files.Length; i++)
                     {
                         string _pathFrom = dirFrom + files[i].Name;
-                        RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
+                        if (files[i].Name.Contains(zipArch))
+                        {
+                            ExtractDistrib(pathFrom, pathTo); // Разархивация .zip
+                        } else
+                            RarArchive.WriteToDirectory(_pathFrom, pathTo); // Разархивация .rar
                     }
                 }
             }
