@@ -149,7 +149,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="obmen.ico" />
-    <None Include="Resources\ajax-loaderw.gif" />
+    <Content Include="Resources\ajax-loaderw.gif" />
+    <None Include="Resources\25.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

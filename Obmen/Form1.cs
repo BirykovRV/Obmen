@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -20,7 +18,6 @@ namespace Obmen
         {
             InitializeComponent();
             настройкиToolStripMenuItem.Click += НастройкиToolStripMenuItem_Click;
-            checkBoxPostPay.CheckedChanged += CheckBoxPostPay_CheckedChanged;
             выходToolStripMenuItem.Click += ВыходToolStripMenuItem_Click;
 
             if (_radioButtonIP == true)
@@ -46,12 +43,6 @@ namespace Obmen
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void CheckBoxPostPay_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxPostPay.Checked)
-                MessageBox.Show("Прежде чем обновлять модуль 'Коммунальные платежи'\nнеобходимо выйти из программы ЕАС.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void НастройкиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +73,18 @@ namespace Obmen
                         foreach (Process process in Process.GetProcesses())
                         {
                             if (process.ProcessName.StartsWith("PpsPlugin.Scheduler"))
+                            {
+                                process.Kill();
+                                process.WaitForExit();
+                            }
+
+                            if (process.ProcessName.StartsWith("GM_Scheduler"))
+                            {
+                                process.Kill();
+                                process.WaitForExit();
+                            }
+
+                            if (process.ProcessName.StartsWith("POS"))
                             {
                                 process.Kill();
                                 process.WaitForExit();
