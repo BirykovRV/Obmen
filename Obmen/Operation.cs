@@ -182,7 +182,6 @@ namespace Obmen
             Del.DeliteAll(fromF130);
             Del.DeliteAll(fromPension);
             Del.DeliteAll(regFSGFrom);
-
         }
 
         // Метод для обновления Ppsplugin
@@ -226,6 +225,28 @@ namespace Obmen
             CopyFtp.Copy(pensiaFrom, pensiaTo);
             CopyFtp.Copy(f130From, f130To);
             CopyFtp.Copy(regFSGFrom, regFSGTo);
+
+            DelFilesDirs Del = new DelFilesDirs();
+            // Удаляем старые файлы
+            Del.DeliteAll(regPostPayFrom);
+            Del.DeliteAll(f130From);
+            Del.DeliteAll(pensiaFrom);
+        }
+
+        public static void CopyF130(string ipAdress, string login, string pass)
+        {
+            #region Присвоение путей
+            string f130From = @"F130";
+            string f130To = Properties.Settings.Default.txtPathF130;
+            #endregion
+
+            CopyForFtp CopyFtp = new CopyForFtp();
+            CopyFtp.IpAdress = ipAdress;
+            CopyFtp.Login = login;
+            CopyFtp.Password = pass;
+
+            // Выгрузка на FTP
+            CopyFtp.CopyF130(f130From, f130To);
         }
 
         public static void CopyFromFtp(string ipAdress, string login, string pass)

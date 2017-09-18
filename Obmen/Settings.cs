@@ -80,8 +80,12 @@ namespace Obmen
             textBoxIP.Text = Properties.Settings.Default.textBoxIP;
             textBoxLogin.Text = Properties.Settings.Default.textBoxLogin;
             textBoxPass.Text = Properties.Settings.Default.textBoxPass;
+            txtF130Ip.Text = Properties.Settings.Default.txtF130Ip;
+            txtF130User.Text = Properties.Settings.Default.txtF130User;
+            txtF130Pass.Text = Properties.Settings.Default.txtF130Pass;
+            txtPathF130.Text = Properties.Settings.Default.txtPathF130;
             #endregion
-            
+
         }
 
         private void ButSave_Click(object sender, EventArgs e)
@@ -100,6 +104,10 @@ namespace Obmen
             Properties.Settings.Default.textBoxIP = textBoxIP.Text;
             Properties.Settings.Default.textBoxLogin = textBoxLogin.Text;
             Properties.Settings.Default.textBoxPass = textBoxPass.Text;
+            Properties.Settings.Default.txtF130Ip = txtF130Ip.Text;
+            Properties.Settings.Default.txtF130User = txtF130User.Text;
+            Properties.Settings.Default.txtF130Pass = txtF130Pass.Text;
+            Properties.Settings.Default.txtPathF130 = txtPathF130.Text;
             Properties.Settings.Default.Save();
             
             Application.Restart();

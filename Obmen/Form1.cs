@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Obmen
@@ -13,6 +14,9 @@ namespace Obmen
         string ipAdress = Properties.Settings.Default.textBoxIP;
         string login = Properties.Settings.Default.textBoxLogin;
         string pass = Properties.Settings.Default.textBoxPass;
+        string ipAddressF130 = Properties.Settings.Default.txtF130Ip;
+        string loginF130 = Properties.Settings.Default.txtF130User;
+        string passF130 = Properties.Settings.Default.txtF130Pass;
 
         public FormObmen()
         {
@@ -106,6 +110,7 @@ namespace Obmen
                     Wait.WaitFormThread.Start();
                     Operation.CopyForOps();
                     Wait.WaitFormThread.Abort();
+                    Thread.Sleep(500);
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }
@@ -116,7 +121,9 @@ namespace Obmen
                     WaitClass Wait = new WaitClass();
                     Wait.WaitFormThread.Start();
                     Operation.CopyForIp(ipAdress, login, pass);
+                    Operation.CopyF130(ipAddressF130, loginF130, passF130);
                     Wait.WaitFormThread.Abort();
+                    Thread.Sleep(500);
                     MessageBox.Show("Копирование файлов завершено!\nЗакройте программу.");
                 }
             }

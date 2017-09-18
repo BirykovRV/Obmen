@@ -24,3 +24,4 @@ C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\
 C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.pdb
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.ProgressView.resources
 C:\Users\Роман\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.ProgressView.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Debug\Obmen.csproj.CoreCompileInputs.cache

@@ -67,6 +67,27 @@ namespace Obmen
             }
         }
 
+        public void CopyF130(string pathFrom, string _uploadPath)
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                try
+                {
+                    if (d.DriveType == DriveType.Removable)
+                    {
+                        string uploadPathIndex = d.VolumeLabel;
+                        CopyToFtp(d.Name + pathFrom, _uploadPath + uploadPathIndex + "/");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public void CopyFromFtp(string remoteFile, string localFile)
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();

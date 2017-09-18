@@ -75,10 +75,22 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtF130Pass = new System.Windows.Forms.TextBox();
+            this.txtF130User = new System.Windows.Forms.TextBox();
+            this.txtF130Ip = new System.Windows.Forms.TextBox();
+            this.txtPathF130 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageOPS.SuspendLayout();
             this.tabPageIP.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButtonOps
@@ -465,12 +477,8 @@
             // 
             // tabPageIP
             // 
-            this.tabPageIP.Controls.Add(this.textBoxPass);
-            this.tabPageIP.Controls.Add(this.textBoxLogin);
-            this.tabPageIP.Controls.Add(this.textBoxIP);
-            this.tabPageIP.Controls.Add(this.label20);
-            this.tabPageIP.Controls.Add(this.label19);
-            this.tabPageIP.Controls.Add(this.label18);
+            this.tabPageIP.Controls.Add(this.groupBox3);
+            this.tabPageIP.Controls.Add(this.groupBox2);
             this.tabPageIP.Location = new System.Drawing.Point(4, 22);
             this.tabPageIP.Name = "tabPageIP";
             this.tabPageIP.Padding = new System.Windows.Forms.Padding(3);
@@ -481,7 +489,7 @@
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(141, 71);
+            this.textBoxPass.Location = new System.Drawing.Point(140, 77);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
             this.textBoxPass.Size = new System.Drawing.Size(182, 20);
@@ -489,14 +497,14 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(141, 45);
+            this.textBoxLogin.Location = new System.Drawing.Point(140, 51);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(182, 20);
             this.textBoxLogin.TabIndex = 8;
             // 
             // textBoxIP
             // 
-            this.textBoxIP.Location = new System.Drawing.Point(141, 19);
+            this.textBoxIP.Location = new System.Drawing.Point(140, 25);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(182, 20);
             this.textBoxIP.TabIndex = 7;
@@ -504,7 +512,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 74);
+            this.label20.Location = new System.Drawing.Point(6, 80);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 13);
             this.label20.TabIndex = 2;
@@ -513,7 +521,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(7, 48);
+            this.label19.Location = new System.Drawing.Point(6, 54);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 13);
             this.label19.TabIndex = 1;
@@ -522,7 +530,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 22);
+            this.label18.Location = new System.Drawing.Point(6, 28);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(20, 13);
             this.label18.TabIndex = 0;
@@ -562,6 +570,102 @@
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 3;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.textBoxPass);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.textBoxLogin);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.textBoxIP);
+            this.groupBox2.Location = new System.Drawing.Point(16, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(341, 113);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.txtPathF130);
+            this.groupBox3.Controls.Add(this.txtF130Pass);
+            this.groupBox3.Controls.Add(this.txtF130User);
+            this.groupBox3.Controls.Add(this.txtF130Ip);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Location = new System.Drawing.Point(16, 125);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(341, 136);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "F130";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "IP:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Логин:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 83);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Пароль:";
+            // 
+            // txtF130Pass
+            // 
+            this.txtF130Pass.Location = new System.Drawing.Point(140, 80);
+            this.txtF130Pass.Name = "txtF130Pass";
+            this.txtF130Pass.PasswordChar = '*';
+            this.txtF130Pass.Size = new System.Drawing.Size(182, 20);
+            this.txtF130Pass.TabIndex = 12;
+            // 
+            // txtF130User
+            // 
+            this.txtF130User.Location = new System.Drawing.Point(140, 54);
+            this.txtF130User.Name = "txtF130User";
+            this.txtF130User.Size = new System.Drawing.Size(182, 20);
+            this.txtF130User.TabIndex = 11;
+            // 
+            // txtF130Ip
+            // 
+            this.txtF130Ip.Location = new System.Drawing.Point(140, 28);
+            this.txtF130Ip.Name = "txtF130Ip";
+            this.txtF130Ip.Size = new System.Drawing.Size(182, 20);
+            this.txtF130Ip.TabIndex = 10;
+            // 
+            // txtPathF130
+            // 
+            this.txtPathF130.Location = new System.Drawing.Point(140, 106);
+            this.txtPathF130.Name = "txtPathF130";
+            this.txtPathF130.Size = new System.Drawing.Size(182, 20);
+            this.txtPathF130.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 109);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 13);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Путь:";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,9 +686,12 @@
             this.tabPageOPS.ResumeLayout(false);
             this.tabPageOPS.PerformLayout();
             this.tabPageIP.ResumeLayout(false);
-            this.tabPageIP.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -638,5 +745,15 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtF130Pass;
+        private System.Windows.Forms.TextBox txtF130User;
+        private System.Windows.Forms.TextBox txtF130Ip;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPathF130;
     }
 }

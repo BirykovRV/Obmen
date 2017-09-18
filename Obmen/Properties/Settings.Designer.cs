@@ -202,5 +202,53 @@ namespace Obmen.Properties {
                 this["comboBoxPost"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string txtF130Ip {
+            get {
+                return ((string)(this["txtF130Ip"]));
+            }
+            set {
+                this["txtF130Ip"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string txtF130User {
+            get {
+                return ((string)(this["txtF130User"]));
+            }
+            set {
+                this["txtF130User"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string txtF130Pass {
+            get {
+                return ((string)(this["txtF130Pass"]));
+            }
+            set {
+                this["txtF130Pass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string txtPathF130 {
+            get {
+                return ((string)(this["txtPathF130"]));
+            }
+            set {
+                this["txtPathF130"] = value;
+            }
+        }
     }
 }
