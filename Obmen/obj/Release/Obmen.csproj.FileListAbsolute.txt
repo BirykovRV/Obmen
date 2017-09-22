@@ -11,3 +11,4 @@ C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Rel
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.pdb
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.csprojResolveAssemblyReference.cache
 C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.ProgressView.resources
+C:\Users\birykov.roman\Documents\Visual Studio 2017\Projects\Obmen\Obmen\obj\Release\Obmen.csproj.CoreCompileInputs.cache

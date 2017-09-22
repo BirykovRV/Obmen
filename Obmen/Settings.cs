@@ -25,7 +25,7 @@ namespace Obmen
 
             #region Загрузка параметров
             configF130To.Text = Properties.Settings.Default.configF130To;
-            fromPostPay.Text = @"C:\Users\" + user + @"\Documents\LttPpsPlugin\ExportFiles";
+            fromPostPay.Text = Properties.Settings.Default.fromPostPay;
             fromF130.Text = Properties.Settings.Default.fromF130;
             toGibrid.Text = Properties.Settings.Default.toGibrid;
             toPostPayBD.Text = Properties.Settings.Default.toPostPayBD;

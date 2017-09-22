@@ -6,7 +6,7 @@
       <Value Profile="(Default)">C:\Program Files (x86)\ИПФ Сервер\Дневник Ф130\Config</Value>
     </Setting>
     <Setting Name="fromPostPay" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\LttPpsPlugin\ExportFiles</Value>
     </Setting>
     <Setting Name="fromF130" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files (x86)\ИПФ Сервер\Дневник Ф130\Archives\ASKUExport</Value>
