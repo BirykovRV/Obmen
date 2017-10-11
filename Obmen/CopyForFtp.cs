@@ -27,7 +27,7 @@ namespace Obmen
             set { password = value; }
         }
 
-        void CopyToFtp(string pathFrom, string uploadPath)
+        public void CopyToFtp(string pathFrom, string uploadPath)
         {
             ftp ftpClient = new ftp(ipAdress, login, password);
 
