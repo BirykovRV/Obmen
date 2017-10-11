@@ -6,7 +6,7 @@ using System.IO.Compression;
 
 namespace Obmen
 {
-    class Operation : FormObmen
+    class Operation
     {
         public static void Copy(string pathFrom, string pathTo)
         {
@@ -167,14 +167,14 @@ namespace Obmen
             #endregion
 
             CopyDB(fromPostPayBD, toPostPayBD);     // База по комуналке
-            Copy(regFSGFrom, regFSGTo);            // Реестры ФСГ
-            Copy(fsgCashFrom, fsgCashTo);          // Архив для ФСГ
-            Copy(regFSGFrom, regFSGTo);            // Реестр ФСГ
-            Copy(fromPension, toPension);          // Файлы по пенсии
-            Copy(configF130From, configF130To); // Ключ для 130
-            Copy(fromGibrid, toGibrid);            // Файлы по гибридным
-            Copy(fromPostPay, toPostPay);       // Реестр по комуналке
-            Copy(fromF130, toF130);                // Файлы для АСКУ 
+            Copy(regFSGFrom, regFSGTo);             // Реестры ФСГ
+            Copy(fsgCashFrom, fsgCashTo);           // Архив для ФСГ
+            Copy(regFSGFrom, regFSGTo);             // Реестр ФСГ
+            Copy(fromPension, toPension);           // Файлы по пенсии
+            Copy(configF130From, configF130To);     // Ключ для 130
+            Copy(fromGibrid, toGibrid);             // Файлы по гибридным
+            Copy(fromPostPay, toPostPay);           // Реестр по комуналке
+            Copy(fromF130, toF130);                 // Файлы для АСКУ 
 
             DelFilesDirs Del = new DelFilesDirs();
             // Удаляем старые файлы
