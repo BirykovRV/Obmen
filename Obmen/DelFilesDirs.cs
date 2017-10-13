@@ -18,7 +18,7 @@ namespace Obmen
                 dirs = dirs.OrderBy(x => x.CreationTime).ToArray();
                 filesInfo = filesInfo.OrderBy(x => x.CreationTime).ToArray();
                 
-                for (int i = 0; i < dirs.Length - 3; i++)
+                for (int i = 0; i < dirs.Length - 7; i++)
                 {
                     FileInfo[] files = dirs[i].GetFiles();
                     foreach (FileInfo file in files)
@@ -28,7 +28,7 @@ namespace Obmen
                     dirs[i].Delete();
                 }
 
-                for (int i = 0; i < filesInfo.Length - 3; i++)
+                for (int i = 0; i < filesInfo.Length - 7; i++)
                 {
                     filesInfo[i].Delete();
                 }

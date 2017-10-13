@@ -178,7 +178,7 @@ namespace Obmen
 
             DelFilesDirs Del = new DelFilesDirs();
             // Удаляем старые файлы
-            Del.DeliteAll(fromPostPay);
+           // Del.DeliteAll(fromPostPay);
             Del.DeliteAll(fromF130);
             Del.DeliteAll(fromPension);
             Del.DeliteAll(regFSGFrom);
@@ -228,9 +228,9 @@ namespace Obmen
 
             DelFilesDirs Del = new DelFilesDirs();
             // Удаляем старые файлы
-            Del.DeliteAll(regPostPayFrom);
-            Del.DeliteAll(f130From);
-            Del.DeliteAll(pensiaFrom);
+            Del.DeliteAll(GetDisk() + regPostPayFrom);
+            Del.DeliteAll(GetDisk() + f130From);
+            Del.DeliteAll(GetDisk() + pensiaFrom);
         }
 
         public static void CopyF130(string ipAdress, string login, string pass)
